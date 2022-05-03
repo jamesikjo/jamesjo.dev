@@ -8,7 +8,6 @@ import {
   Grid,
   Chip,
   Box,
-  Breadcrumbs,
   useTheme,
   useMediaQuery,
   IconButton,
@@ -18,63 +17,42 @@ import {
 } from "@mui/material";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import OpenInNewIcon from "@mui/icons-material/OpenInNew";
+import BreadNavCrumbs from "../../BreadNavCrumbs";
 
-const SingleProjectLayout = ({ projectDetails }) => {
+const ProjectDetailLayout = ({ projectDetails }) => {
   const theme = useTheme();
-  const matches = useMediaQuery(theme.breakpoints.up("sm"));
+  const isSm = useMediaQuery(theme.breakpoints.up("sm"));
 
   const {
     title,
     description,
     stacks,
     type,
-    purpose,
+    overView,
+    process,
     projectLink,
     githubLink,
     cover,
     screenShots,
-    projectOverview,
+    takeAways,
   } = projectDetails;
   return (
-    <Container maxWidth="lg" sx={{ pt: matches ? 15 : 10 }}>
+    <Container maxWidth="lg" sx={{ pt: isSm ? 15 : 10 }}>
       <Box mb={5}>
-        <Breadcrumbs
-          aria-label="breadcrumb"
-          sx={{ "& nav": { paddingLeft: 0 }, pb: 1 }}
-        >
-          <Link href="/" passHref>
-            <Typography
-              variant="body1"
-              component="a"
-              color="secondary"
-              sx={{ textDecoration: "none" }}
-            >
-              Home
-            </Typography>
-          </Link>
-          <Link href="/portfolio" passHref>
-            <Typography
-              variant="body1"
-              component="a"
-              color="secondary"
-              sx={{ textDecoration: "none" }}
-            >
-              Projects
-            </Typography>
-          </Link>
-          <Typography color="text.primary" variant="h6">
-            {title}
-          </Typography>
-        </Breadcrumbs>
+        <BreadNavCrumbs
+          prevTitle={"portfolio"}
+          prevHref={"/portfolio"}
+          current={title}
+        />
         <Divider />
       </Box>
 
       <Box mb={1.5} display="flex" alignItems="center">
         <Typography
-          variant={matches ? "h2" : "h4"}
+          variant={isSm ? "h2" : "h4"}
           color="primary"
-          fontWeight="bold"
-          mr={2}
+          fontWeight="700"
+          mr={isSm ? 2 : 0.25}
         >
           {title}
         </Typography>
@@ -90,7 +68,7 @@ const SingleProjectLayout = ({ projectDetails }) => {
                 rel="noopener noreferrer"
                 target="_blank"
               >
-                <GitHubIcon sx={{ fontSize: "2rem" }} />
+                <GitHubIcon sx={{ fontSize: "1.8rem" }} />
               </IconButton>
             </Tooltip>
           </Link>
@@ -105,7 +83,7 @@ const SingleProjectLayout = ({ projectDetails }) => {
                 rel="noopener noreferrer"
                 target="_blank"
               >
-                <OpenInNewIcon sx={{ fontSize: "2rem" }} />
+                <OpenInNewIcon sx={{ fontSize: "1.8rem" }} />
               </IconButton>
             </Tooltip>
           </Link>
@@ -116,21 +94,21 @@ const SingleProjectLayout = ({ projectDetails }) => {
         <Stack direction="row" spacing={1} mb={6}>
           <Chip
             label="Web Development"
-            size={matches ? "small" : "small"}
+            size={isSm ? "small" : "small"}
             sx={{
               "& .MuiChip-label": { overflow: "visible", fontSize: "0.85em" },
             }}
           />
           <Chip
             label="Web Design"
-            size={matches ? "small" : "small"}
+            size={isSm ? "small" : "small"}
             sx={{
               "& .MuiChip-label": { overflow: "visible", fontSize: "0.85em" },
             }}
           />
           <Chip
             label={type}
-            size={matches ? "small" : "small"}
+            size={isSm ? "small" : "small"}
             color="info"
             sx={{
               "& .MuiChip-label": { overflow: "visible", fontSize: "0.85em" },
@@ -143,7 +121,7 @@ const SingleProjectLayout = ({ projectDetails }) => {
             color="secondary"
             sx={{ fontSize: { xs: "0.95em", sm: "1.05em" } }}
           >
-            {projectOverview}
+            {overView}
           </Typography>
         </Box>
       </Box>
@@ -174,14 +152,14 @@ const SingleProjectLayout = ({ projectDetails }) => {
             sx={{ fontSize: { xs: "0.95em", sm: "1.05em" } }}
             mb={2}
           >
-            {projectOverview}
+            {process}
           </Typography>
           <Typography
             variant="subtitle1"
             color="secondary"
             sx={{ fontSize: { xs: "0.95em", sm: "1.05em" } }}
           >
-            {purpose}
+            {process}
           </Typography>
         </Grid>
         <Grid item container xs={12} md={4} spacing={3} mb={3}>
@@ -254,7 +232,7 @@ const SingleProjectLayout = ({ projectDetails }) => {
           color="secondary"
           sx={{ fontSize: { xs: "0.95em", sm: "1.05em" } }}
         >
-          {projectOverview}
+          {takeAways}
         </Typography>
       </Box>
       <Box mb={20}>
@@ -281,4 +259,4 @@ const SingleProjectLayout = ({ projectDetails }) => {
   );
 };
 
-export default SingleProjectLayout;
+export default ProjectDetailLayout;

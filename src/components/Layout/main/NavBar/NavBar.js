@@ -12,7 +12,7 @@ import {
   useMediaQuery,
   useScrollTrigger,
 } from "@mui/material";
-import NavDrawer from "./NavDrawer";
+import NavDrawer from "./NavDrawer/NavDrawer";
 
 const NavBar = ({ navLinks }) => {
   const theme = useTheme();
@@ -45,7 +45,7 @@ const NavBar = ({ navLinks }) => {
         <Link href="/">
           <a>
             <Image
-              src="https://res.cloudinary.com/jjo/image/upload/v1650482839/Portfolio/Profile/jjo-main-logo_xxpcjz.svg"
+              src="https://res.cloudinary.com/jjo/image/upload/v1651530311/Portfolio/Profile/JJ_f59a4z.svg"
               alt="James Jo"
               width={80}
               height={matches ? 55 : 40}

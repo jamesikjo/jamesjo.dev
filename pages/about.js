@@ -1,14 +1,14 @@
 import React from "react";
-import MainLayout from "../src/components/Layout/main";
 import { Box } from "@mui/material";
+import { Main } from "../src/components/Layout";
 import About from "../src/components/About";
 
 const AboutPage = () => {
   return (
     <Box>
-      <MainLayout title="About">
+      <Main title="About">
         <About />
-      </MainLayout>
+      </Main>
     </Box>
   );
 };

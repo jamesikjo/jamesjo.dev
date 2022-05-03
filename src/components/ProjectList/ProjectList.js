@@ -13,7 +13,7 @@ import {
 } from "@mui/material";
 import projectData from "../../lib/projectData";
 
-const Projects = () => {
+const ProjectList = () => {
   const theme = useTheme();
   const matches = useMediaQuery(theme.breakpoints.up("sm"));
 
@@ -150,4 +150,4 @@ const Projects = () => {
   );
 };
 
-export default Projects;
+export default ProjectList;

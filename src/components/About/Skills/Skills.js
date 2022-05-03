@@ -1,7 +1,7 @@
 import React from "react";
 import { Grid, Typography, Stack, Box, Divider } from "@mui/material";
-import { ResumeButton, GitHubButton } from "../Buttons";
 import TechGridList from "./TechGridList";
+import { ResumeButton, GitHubButton } from "../../Buttons";
 
 const Skills = () => {
   return (

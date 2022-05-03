@@ -1,8 +1,6 @@
 import React from "react";
 import { Typography, Stack } from "@mui/material";
 
-import Photos from "./Photos";
-
 const Interests = () => {
   return (
     <>
@@ -40,7 +38,7 @@ const Interests = () => {
           dignissim enim sit amet. Sollicitudin tempor id eu nisl nunc mi ipsum.
         </Typography>
       </Stack>
-      <Photos />
+      {/* <Photos /> */}
     </>
   );
 };

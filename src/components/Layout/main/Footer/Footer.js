@@ -33,7 +33,7 @@ const Footer = ({ navLinks }) => {
         <Box display="flex" justifyContent="space-between" alignItems="center">
           <Box>
             <Image
-              src="/images/main-logo.svg"
+              src="https://res.cloudinary.com/jjo/image/upload/v1651530311/Portfolio/Profile/JJ_f59a4z.svg"
               alt="footer logo"
               width={60}
               height={45}

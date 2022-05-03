@@ -1,15 +1,15 @@
 import React from "react";
 import { Container } from "@material-ui/core";
-import MainLayout from "../../src/components/Layout/main/index";
-import Projects from "../../src/components/Portfolio/Projects";
+import { Main } from "../../src/components/Layout";
+import ProjectList from "../../src/components/ProjectList";
 
 const PortfolioPage = () => {
   return (
-    <MainLayout title="Portfolio">
+    <Main title="Portfolio">
       <Container maxWidth="false" sx={{ py: { xs: 10, sm: 15 } }}>
-        <Projects />
+        <ProjectList />
       </Container>
-    </MainLayout>
+    </Main>
   );
 };
 

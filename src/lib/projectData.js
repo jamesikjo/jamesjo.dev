@@ -1,37 +1,37 @@
 const projectData = [
-  {
-    title: "CheckSaas (Coming Soon)",
-    slug: "check-saas",
-    type: "Personal",
-    description: "Free Tier/Trial Requirements for Popular Saas",
-    purpose:
-      "I found that the best way to implement these 3 phases without having separate versions saved was to incorporate a feature flag that will pass the current state that should be displayed and then render content conditionally.",
-    stacks: [
-      {
-        name: "Next.js",
-        icon: "https://res.cloudinary.com/jjo/image/upload/v1649366494/Portfolio/Stack/next_cxgxpb.svg",
-      },
-      {
-        name: "MUI",
-        icon: "https://res.cloudinary.com/jjo/image/upload/v1649366562/Portfolio/Stack/MUI_wqakpb.svg",
-      },
-      {
-        name: "Vercel",
-        icon: "https://res.cloudinary.com/jjo/image/upload/v1649366766/Portfolio/Stack/Vercel_bcpqyd.svg",
-      },
-    ],
-    cover:
-      "https://res.cloudinary.com/jjo/image/upload/c_scale,w_400/v1647577484/Portfolio/screencapture-localhost-3001-2022-03-17-21_24_24_pzoc6m.png",
+  // {
+  //   title: "CheckSaas (Coming Soon)",
+  //   slug: "check-saas",
+  //   type: "Personal",
+  //   description: "Free Tier/Trial Requirements for Popular Saas",
+  //   purpose:
+  //     "I found that the best way to implement these 3 phases without having separate versions saved was to incorporate a feature flag that will pass the current state that should be displayed and then render content conditionally.",
+  //   stacks: [
+  //     {
+  //       name: "Next.js",
+  //       icon: "https://res.cloudinary.com/jjo/image/upload/v1649366494/Portfolio/Stack/next_cxgxpb.svg",
+  //     },
+  //     {
+  //       name: "MUI",
+  //       icon: "https://res.cloudinary.com/jjo/image/upload/v1649366562/Portfolio/Stack/MUI_wqakpb.svg",
+  //     },
+  //     {
+  //       name: "Vercel",
+  //       icon: "https://res.cloudinary.com/jjo/image/upload/v1649366766/Portfolio/Stack/Vercel_bcpqyd.svg",
+  //     },
+  //   ],
+  //   cover:
+  //     "https://res.cloudinary.com/jjo/image/upload/c_scale,w_400/v1647577484/Portfolio/screencapture-localhost-3001-2022-03-17-21_24_24_pzoc6m.png",
 
-    screenShots: [""],
-    projectLink: "",
-    githubLink: "https://github.com/jamesikjo",
-    category: "Marketing",
-    chipColor: " #FFCDD2",
+  //   screenShots: [""],
+  //   projectLink: "",
+  //   githubLink: "https://github.com/jamesikjo",
+  //   category: "Marketing",
+  //   chipColor: " #FFCDD2",
 
-    projectOverview:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut placerat orci nulla pellentesque dignissim enim sit amet. Sollicitudin tempor id eu nisl nunc mi ipsum.",
-  },
+  //   projectOverview:
+  //     "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut placerat orci nulla pellentesque dignissim enim sit amet. Sollicitudin tempor id eu nisl nunc mi ipsum.",
+  // },
   {
     title: "mykombucha",
     slug: "mykombucha",
@@ -107,41 +107,7 @@ const projectData = [
     projectOverview:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut placerat orci nulla pellentesque dignissim enim sit amet. Sollicitudin tempor id eu nisl nunc mi ipsum.",
   },
-  {
-    title: "ArmonVan Photography",
-    slug: "armonvan-photography",
-    type: "Freelance",
-    description: "Photography Portfolio",
-    purpose:
-      "I found that the best way to implement these 3 phases without having separate versions saved was to incorporate a feature flag that will pass the current state that should be displayed and then render content conditionally.",
-    stacks: [
-      {
-        name: "Next.js",
-        icon: "https://res.cloudinary.com/jjo/image/upload/v1649366494/Portfolio/Stack/next_cxgxpb.svg",
-      },
-      {
-        name: "MUI",
-        icon: "https://res.cloudinary.com/jjo/image/upload/v1649366562/Portfolio/Stack/MUI_wqakpb.svg",
-      },
-      {
-        name: "Strapi",
-        icon: "https://res.cloudinary.com/jjo/image/upload/v1649366766/Portfolio/Stack/Strapi_vlgtxu.svg",
-      },
-    ],
-    cover:
-      "https://res.cloudinary.com/jjo/image/upload/v1649443321/Portfolio/Armon%20Van%20Photography/Cover_dhfd9m.png",
-    category: "Portfolio",
 
-    screenShots: [
-      "https://res.cloudinary.com/jjo/image/upload/v1649536074/Portfolio/Armon%20Van%20Photography/screely-1649536065541_pqjjuc.png",
-      "https://res.cloudinary.com/jjo/image/upload/v1649536849/Portfolio/Armon%20Van%20Photography/screely-1649536837290_ly4oyp.png",
-    ],
-    projectLink: "https://www.armonvanphoto.com/",
-    githubLink: "https://github.com/jamesikjo/armonvan-photography-next",
-    chipColor: "#FFECB3",
-    projectOverview:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut placerat orci nulla pellentesque dignissim enim sit amet. Sollicitudin tempor id eu nisl nunc mi ipsum.",
-  },
   {
     title: "PowerTek",
     slug: "powertek",
@@ -175,6 +141,41 @@ const projectData = [
     githubLink: "https://github.com/jamesikjo",
     chipColor: "#C8E6C9",
 
+    projectOverview:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut placerat orci nulla pellentesque dignissim enim sit amet. Sollicitudin tempor id eu nisl nunc mi ipsum.",
+  },
+  {
+    title: "ArmonVan Photography",
+    slug: "armonvan-photography",
+    type: "Freelance",
+    description: "Photography Portfolio",
+    purpose:
+      "I found that the best way to implement these 3 phases without having separate versions saved was to incorporate a feature flag that will pass the current state that should be displayed and then render content conditionally.",
+    stacks: [
+      {
+        name: "Next.js",
+        icon: "https://res.cloudinary.com/jjo/image/upload/v1649366494/Portfolio/Stack/next_cxgxpb.svg",
+      },
+      {
+        name: "MUI",
+        icon: "https://res.cloudinary.com/jjo/image/upload/v1649366562/Portfolio/Stack/MUI_wqakpb.svg",
+      },
+      {
+        name: "Strapi",
+        icon: "https://res.cloudinary.com/jjo/image/upload/v1649366766/Portfolio/Stack/Strapi_vlgtxu.svg",
+      },
+    ],
+    cover:
+      "https://res.cloudinary.com/jjo/image/upload/v1649443321/Portfolio/Armon%20Van%20Photography/Cover_dhfd9m.png",
+    category: "Portfolio",
+
+    screenShots: [
+      "https://res.cloudinary.com/jjo/image/upload/v1649536074/Portfolio/Armon%20Van%20Photography/screely-1649536065541_pqjjuc.png",
+      "https://res.cloudinary.com/jjo/image/upload/v1649536849/Portfolio/Armon%20Van%20Photography/screely-1649536837290_ly4oyp.png",
+    ],
+    projectLink: "https://www.armonvanphoto.com/",
+    githubLink: "https://github.com/jamesikjo/armonvan-photography-next",
+    chipColor: "#FFECB3",
     projectOverview:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut placerat orci nulla pellentesque dignissim enim sit amet. Sollicitudin tempor id eu nisl nunc mi ipsum.",
   },
@@ -253,8 +254,10 @@ const projectData = [
     slug: "quiz-of-luchador",
     type: "Personal",
     description: "Quiz App for Nacho Libre Movie Enthusists",
-    purpose:
-      "I found that the best way to implement these 3 phases without having separate versions saved was to incorporate a feature flag that will pass the current state that should be displayed and then render content conditionally.",
+    overView:
+      "Quiz of Luchador is my first project after getting some decent understanding of React and Material-UI. A close friend of mine loved nacho libre, so I created this easy quiz app for them. This was a perfect way to learn about React and styling fundamentals using a UI library. The quiz app tracks answers, scores, and calculates the final score in the results page. Later on, I added storage for quizzes to MongoDB.",
+    process:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut placerat orci nulla pellentesque dignissim enim sit amet. Sollicitudin tempor id eu nisl nunc mi ipsum.",
     stacks: [
       {
         name: "React",
@@ -267,6 +270,10 @@ const projectData = [
       {
         name: "MongoDB",
         icon: "https://res.cloudinary.com/jjo/image/upload/v1649366766/Portfolio/Stack/Mongodb_pqduyn.svg",
+      },
+      {
+        name: "Heroku",
+        icon: "https://res.cloudinary.com/jjo/image/upload/v1651532903/Portfolio/Stack/heroku_ngyeee.svg",
       },
     ],
     cover:
@@ -281,7 +288,7 @@ const projectData = [
     githubLink: "https://github.com/jamesikjo/nacho-libre-quiz-of-luchador",
     chipColor: "#C8E6C9",
 
-    projectOverview:
+    takeAways:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut placerat orci nulla pellentesque dignissim enim sit amet. Sollicitudin tempor id eu nisl nunc mi ipsum.",
   },
 ];

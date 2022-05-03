@@ -13,7 +13,7 @@ import {
   useMediaQuery,
   Chip,
 } from "@mui/material";
-import { GitHubButton, VisitSiteButton } from "../Buttons";
+import { GitHubButton, VisitSiteButton } from "../../../Buttons";
 import DoubleArrowIcon from "@mui/icons-material/DoubleArrow";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 

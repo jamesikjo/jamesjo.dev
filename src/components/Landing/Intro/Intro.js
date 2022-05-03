@@ -1,5 +1,4 @@
 import React from "react";
-import Link from "next/link";
 import {
   Grid,
   Typography,
@@ -7,17 +6,16 @@ import {
   Divider,
   Box,
   Stack,
-  Avatar,
   useTheme,
   useMediaQuery,
   IconButton,
 } from "@mui/material";
-import { AboutMeButton } from "../Buttons";
 import WhatsappOutlinedIcon from "@mui/icons-material/WhatsappOutlined";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import KeyboardDoubleArrowDownIcon from "@mui/icons-material/KeyboardDoubleArrowDown";
+import { AboutMeButton } from "../../Buttons";
 
 const Intro = () => {
   const theme = useTheme();
@@ -29,8 +27,6 @@ const Intro = () => {
         minHeight: "100vh",
         display: "flex",
         alignItems: "center",
-        // mt: -9,
-        // pt: { xs: 9 },
       }}
     >
       <Container maxWidth="lg" sx={{ py: { xs: 4, sm: 6, md: 8 } }}>

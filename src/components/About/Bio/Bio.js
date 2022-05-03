@@ -49,7 +49,7 @@ const Bio = () => {
           >
             <Avatar
               alt="Remy Sharp"
-              src="/images/about/headshot.jpg"
+              src="https://res.cloudinary.com/jjo/image/upload/v1651530508/Portfolio/Profile/headshot-2_iudufa.png"
               sx={{
                 width: { xs: 1, sm: 1 },
                 height: { xs: 1, sm: 1 },

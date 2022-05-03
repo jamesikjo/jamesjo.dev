@@ -1,18 +1,14 @@
 import React from "react";
-import Image from "next/image";
-import { useTheme, useMediaQuery, CardContent, Box } from "@mui/material";
-import MainLayout from "../../src/components/Layout/main";
-import SingleProjectLayout from "../../src/components/Layout/SingleProjectLayout";
-
 import projectData from "../../src/lib/projectData";
+import { Main, ProjectDetailLayout } from "../../src/components/Layout";
 
 const SingleProject = ({ projectDetails }) => {
   const { title } = projectDetails;
 
   return (
-    <MainLayout title={title}>
-      <SingleProjectLayout projectDetails={projectDetails} />
-    </MainLayout>
+    <Main title={title}>
+      <ProjectDetailLayout projectDetails={projectDetails} />
+    </Main>
   );
 };
 
