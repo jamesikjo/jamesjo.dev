@@ -3,6 +3,7 @@ import Head from "next/head";
 import NavBar from "./NavBar";
 import Footer from "./Footer";
 import { Box } from "@mui/material";
+
 const NAV_LINKS = [
   { title: "About", route: "/about" },
   { title: "Portfolio", route: "/portfolio" },
