@@ -1,16 +1,16 @@
 import React from "react";
 import { Intro, Featured, Contact } from "../src/components/Landing";
-import { Main } from "../src/components/Layout";
+import { MainLayout } from "../src/components/Layout";
 import featuredData from "../src/lib/featuredData";
 
 export default function Home({ featuredData }) {
   console.log(featuredData);
   return (
-    <Main title="Dev Portfolio">
+    <MainLayout title="Dev Portfolio">
       <Intro />
       <Featured featuredData={featuredData} />
       <Contact />
-    </Main>
+    </MainLayout>
   );
 }
 

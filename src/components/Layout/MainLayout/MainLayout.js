@@ -11,7 +11,7 @@ const NAV_LINKS = [
   { title: "Resume", route: "/" },
 ];
 
-const Main = ({ children, title }) => {
+const MainLayout = ({ children, title }) => {
   return (
     <>
       <Head>
@@ -35,4 +35,4 @@ const Main = ({ children, title }) => {
   );
 };
 
-export default Main;
+export default MainLayout;
