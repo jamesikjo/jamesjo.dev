@@ -16,80 +16,73 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 
 const Contact = () => {
   return (
-    <Box
-      sx={{
-        bgcolor: "#fff",
-        py: 20,
-      }}
-    >
-      <Container component="section" sx={{ maxWidth: { xs: "sm", lg: "lg" } }}>
-        <Stack alignItems="center">
-          <Typography
-            variant="body1"
-            color="secondary"
-            mb={1}
-            sx={{ letterSpacing: ".15rem" }}
-          >
-            {"Contact".toUpperCase()}
-          </Typography>
-          <Typography
-            variant="h3"
-            color="primary"
-            fontWeight={700}
-            gutterBottom
-            sx={{ letterSpacing: "-.12rem" }}
-          >
-            {"Get in touch"}
-          </Typography>
-        </Stack>
-        <Stack alignItems="center" mb={2}>
-          <Typography
-            variant="subtitle1"
-            color="secondary"
-            gutterBottom
-            align="center"
-          >
-            Feel free to reach out if {"you're"} looking for a developer,
-            <br />
-            have a question, or just want to connect.
-          </Typography>
-
-          <Button
-            variant="text"
-            color="inherit"
-            size="large"
-            sx={{ textDecoration: "underline", pl: 0 }}
-            startIcon={<MailOutlineIcon />}
-          >
-            jamesjodev@gmail.com
-          </Button>
-        </Stack>
-        <Stack
-          direction="row"
-          justifyContent="center"
-          spacing={{ xs: 1, sm: 2 }}
+    <Box component="section">
+      <Stack
+        alignItems={{ xs: "center", sm: "flex-start" }}
+        sx={{ textAlign: { xs: "center", sm: "left" } }}
+        mb={1}
+      >
+        <Typography
+          variant="body1"
+          color="secondary"
+          sx={{ letterSpacing: ".15rem" }}
         >
-          <IconButton>
-            <LinkedInIcon fontSize="large" />
-          </IconButton>
-          <IconButton>
-            <WhatsappOutlinedIcon fontSize="large" />
-          </IconButton>
-          <IconButton>
-            <GitHubIcon fontSize="large" />
-          </IconButton>
-          <IconButton>
-            <InstagramIcon fontSize="large" />
-          </IconButton>
-          <IconButton>
-            <Avatar
-              src="https://res.cloudinary.com/jjo/image/upload/v1649368416/Portfolio/Profile/Raiders_fubors.svg"
-              sx={{ width: 36, height: 36 }}
-              variant="square"
-            />
-          </IconButton>
-        </Stack>
-      </Container>
+          {"Contact".toUpperCase()}
+        </Typography>
+        <Typography
+          variant="h4"
+          color="primary"
+          fontWeight={700}
+          gutterBottom
+          sx={{ letterSpacing: "-.10rem" }}
+        >
+          {"Get in touch"}
+        </Typography>
+        <Typography variant="subtitle1" color="secondary" gutterBottom>
+          If you are looking for a developer, have a question, or simply want to
+          connect, <br />
+          please feel free to contact me.
+        </Typography>
+
+        <Button
+          variant="text"
+          size="large"
+          color="info"
+          sx={{
+            pl: 0,
+            textDecoration: "underline",
+          }}
+          // startIcon={<MailOutlineIcon />}
+        >
+          jamesjodev@gmail.com
+        </Button>
+      </Stack>
+      {/* <Stack
+        direction="row"
+        justifyContent={{ xs: "center", sm: "flex-start" }}
+        // justifyContent="center"
+        spacing={3}
+      >
+        <IconButton sx={{ p: 0 }}>
+          <LinkedInIcon fontSize="large" />
+        </IconButton>
+        <IconButton sx={{ p: 0 }}>
+          <WhatsappOutlinedIcon fontSize="large" />
+        </IconButton>
+        <IconButton sx={{ p: 0 }}>
+          <GitHubIcon fontSize="large" />
+        </IconButton>
+        <IconButton sx={{ p: 0 }}>
+          <InstagramIcon fontSize="large" />
+        </IconButton>
+        <IconButton sx={{ p: 0 }}>
+          <Avatar
+            src="https://res.cloudinary.com/jjo/image/upload/v1649368416/Portfolio/Profile/Raiders_fubors.svg"
+            sx={{ width: 36, height: 36 }}
+            variant="square"
+          />
+        </IconButton>
+      </Stack> */}
     </Box>
   );
 };

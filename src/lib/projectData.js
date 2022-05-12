@@ -37,15 +37,13 @@ const projectData = [
     slug: "mykombucha",
     type: "Personal",
     description: "Online Kombucha Community",
-    purpose:
-      "I found that the best way to implement these 3 phases without having separate versions saved was to incorporate a feature flag that will pass the current state that should be displayed and then render content conditionally.",
-    screenShots: [
-      "https://res.cloudinary.com/jjo/image/upload/v1647626537/Portfolio/myKombucha/screely-1647626477045_augph1.png",
-      "https://res.cloudinary.com/jjo/image/upload/v1647626537/Portfolio/myKombucha/screely-1647626477045_augph1.png",
-    ],
+    overview:
+      "An online community for Kombucha lovers and enthusiasts. The site provides information on over 300 different kombucha brands from over 50 different breweries. Members are able to browse the top rated kombuchas, rate and review their favorite kombuchas, and more.",
     cover:
-      "https://res.cloudinary.com/jjo/image/upload/v1647576555/Portfolio/screely-1647576549357_i5gufy.png",
+      "https://res.cloudinary.com/jjo/image/upload/v1652226895/Portfolio/myKombucha/mykombucha-cover_maoqxh.png",
 
+    screenShots:
+      "https://res.cloudinary.com/jjo/image/upload/v1652322907/Portfolio/myKombucha/mykombucha-details_2_wsqocb.png",
     projectLink: "http://mykombucha.net/",
     githubLink: "https://github.com/jamesikjo",
     category: "Social",
@@ -68,8 +66,11 @@ const projectData = [
         icon: "https://res.cloudinary.com/jjo/image/upload/v1649366766/Portfolio/Stack/Mongodb_pqduyn.svg",
       },
     ],
-    projectOverview:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut placerat orci nulla pellentesque dignissim enim sit amet. Sollicitudin tempor id eu nisl nunc mi ipsum.",
+    highlights: [
+      "Learned how to connect to API",
+      "Static vs Server Side Rendering",
+      "Deploying with Heroku",
+    ],
   },
 
   {
@@ -77,6 +78,8 @@ const projectData = [
     slug: "personal-portfolio",
     type: "Personal",
     description: "My Dev Portfolio",
+    overview:
+      "This is my developer portfolio, which includes both freelance work and personal projects. In addition, this website is a platform for anyone interested in contacting me regarding projects or work.",
     stacks: [
       {
         name: "Next.js",
@@ -91,28 +94,29 @@ const projectData = [
         icon: "https://res.cloudinary.com/jjo/image/upload/v1649366766/Portfolio/Stack/Vercel_bcpqyd.svg",
       },
     ],
-    purpose:
-      "I found that the best way to implement these 3 phases without having separate versions saved was to incorporate a feature flag that will pass the current state that should be displayed and then render content conditionally.",
     cover:
-      "https://res.cloudinary.com/jjo/image/upload/v1649442270/Portfolio/Dev%20Portfolio/Dev-Portfolio-Cover_arryrb.png",
+      "https://res.cloudinary.com/jjo/image/upload/v1652315374/Portfolio/Dev%20Portfolio/portfolio-cover_dckyup.png",
     category: "Portfolio",
 
-    screenShots: [
-      "https://res.cloudinary.com/jjo/image/upload/v1649538845/Portfolio/Dev%20Portfolio/screely-1649538833556_f0mfca.png",
-      "https://res.cloudinary.com/jjo/image/upload/v1649543773/Portfolio/Dev%20Portfolio/Project_Details_9_nyioov.png",
-    ],
+    screenShots:
+      "https://res.cloudinary.com/jjo/image/upload/v1652316694/Portfolio/Dev%20Portfolio/portfolio-details_1_r5tl1f.png",
     projectLink: "",
     githubLink: "https://github.com/jamesikjo",
     chipColor: "#FFECB3",
-    projectOverview:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut placerat orci nulla pellentesque dignissim enim sit amet. Sollicitudin tempor id eu nisl nunc mi ipsum.",
+    highlights: [
+      "Learned how to connect to API",
+      "Static vs Server Side Rendering",
+      "Deploying with Heroku",
+    ],
   },
-
   {
     title: "PowerTek",
     slug: "powertek",
     type: "Freelance",
     description: "Website for Automotive Parts Producer",
+    overview:
+      "A website built for a manufacturer and distributor of engine management and brake products, showcasing the company's products, expertise, and product lines.",
+
     stacks: [
       {
         name: "Next.js",
@@ -130,27 +134,28 @@ const projectData = [
     purpose:
       "I found that the best way to implement these 3 phases without having separate versions saved was to incorporate a feature flag that will pass the current state that should be displayed and then render content conditionally.",
     cover:
-      "https://res.cloudinary.com/jjo/image/upload/v1649441879/Portfolio/powertek/cover.png",
+      "https://res.cloudinary.com/jjo/image/upload/v1652224294/Portfolio/powertek/powertek-cover_hjrey1.png",
     category: "Buisness",
 
-    screenShots: [
-      "https://res.cloudinary.com/jjo/image/upload/v1649544608/Portfolio/powertek/screely-1649544604426_u8dfux.png",
-      "https://res.cloudinary.com/jjo/image/upload/v1649542961/Portfolio/powertek/Project_Details_8_fsgaev.png",
-    ],
+    screenShots:
+      "https://res.cloudinary.com/jjo/image/upload/v1651807556/Portfolio/powertek/powertek-details_hd25sb.png",
     projectLink: "https://powertek.vercel.app/",
     githubLink: "https://github.com/jamesikjo",
     chipColor: "#C8E6C9",
 
-    projectOverview:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut placerat orci nulla pellentesque dignissim enim sit amet. Sollicitudin tempor id eu nisl nunc mi ipsum.",
+    highlights: [
+      "Learned how to connect to API",
+      "Static vs Server Side Rendering",
+      "Deploying with Heroku",
+    ],
   },
   {
     title: "ArmonVan Photography",
     slug: "armonvan-photography",
     type: "Freelance",
     description: "Photography Portfolio",
-    purpose:
-      "I found that the best way to implement these 3 phases without having separate versions saved was to incorporate a feature flag that will pass the current state that should be displayed and then render content conditionally.",
+    overview:
+      "A photo portfolio showcasing the work of a freelance photographer. Portfolio is integrated with Strapi, a headless CMS, so that the client can upload and manage content.",
     stacks: [
       {
         name: "Next.js",
@@ -164,27 +169,33 @@ const projectData = [
         name: "Strapi",
         icon: "https://res.cloudinary.com/jjo/image/upload/v1649366766/Portfolio/Stack/Strapi_vlgtxu.svg",
       },
+      {
+        name: "Heroku",
+        icon: "https://res.cloudinary.com/jjo/image/upload/v1651532903/Portfolio/Stack/heroku_ngyeee.svg",
+      },
     ],
     cover:
-      "https://res.cloudinary.com/jjo/image/upload/v1649443321/Portfolio/Armon%20Van%20Photography/Cover_dhfd9m.png",
+      "https://res.cloudinary.com/jjo/image/upload/v1652226975/Portfolio/Armon%20Van%20Photography/armonvan-cover_bvo0ii.png",
     category: "Portfolio",
 
-    screenShots: [
-      "https://res.cloudinary.com/jjo/image/upload/v1649536074/Portfolio/Armon%20Van%20Photography/screely-1649536065541_pqjjuc.png",
-      "https://res.cloudinary.com/jjo/image/upload/v1649536849/Portfolio/Armon%20Van%20Photography/screely-1649536837290_ly4oyp.png",
-    ],
+    screenShots:
+      "https://res.cloudinary.com/jjo/image/upload/v1651875365/Portfolio/Armon%20Van%20Photography/armonvan-details_liql7k.png",
     projectLink: "https://www.armonvanphoto.com/",
     githubLink: "https://github.com/jamesikjo/armonvan-photography-next",
     chipColor: "#FFECB3",
-    projectOverview:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut placerat orci nulla pellentesque dignissim enim sit amet. Sollicitudin tempor id eu nisl nunc mi ipsum.",
+    highlights: [
+      "Learned how to connect to API",
+      "Static vs Server Side Rendering",
+      "Deploying with Heroku",
+    ],
   },
   {
     title: "Kush Bowl",
     slug: "kush-bowl",
     type: "Freelance",
-    purpose:
-      "I found that the best way to implement these 3 phases without having separate versions saved was to incorporate a feature flag that will pass the current state that should be displayed and then render content conditionally.",
+    description: "Website for Small Restaurant",
+    overview:
+      "A website for a small family run restaurant in Orange County, California. Online orders are processed through the Square Online service which is connected to the restaurant's POS.",
     stacks: [
       {
         name: "React",
@@ -199,28 +210,28 @@ const projectData = [
         icon: "https://res.cloudinary.com/jjo/image/upload/v1649366766/Portfolio/Stack/Netlify_qq0vst.svg",
       },
     ],
-    screenShots: [
-      "https://res.cloudinary.com/jjo/image/upload/v1649544422/Portfolio/Kush%20Bowl/screely-1649544414310_gbdf0o.png",
+    screenShots:
       "https://res.cloudinary.com/jjo/image/upload/v1649539944/Portfolio/Kush%20Bowl/Project_Details_4_dmlrig.png",
-    ],
+
     projectLink: "https://www.kushbowl.net/",
     githubLink: "https://github.com/jamesikjo/kush-bowl",
-    description: "Website for Small Restaurant",
     cover:
-      "https://res.cloudinary.com/jjo/image/upload/v1649442527/Portfolio/Kush%20Bowl/Kush-Bowl-Cover_ovunbw.png",
+      "https://res.cloudinary.com/jjo/image/upload/v1652226650/Portfolio/Kush%20Bowl/kush-cover_leep75.png",
     category: "Buisness",
     chipColor: "#C8E6C9",
-
-    projectOverview:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut placerat orci nulla pellentesque dignissim enim sit amet. Sollicitudin tempor id eu nisl nunc mi ipsum.",
+    highlights: [
+      "Learned how to connect to API",
+      "Static vs Server Side Rendering",
+      "Deploying with Heroku",
+    ],
   },
   {
     title: "Choi Smog",
     slug: "choi-smog",
     type: "Freelance",
     description: "Website for Smog Testing Buisness",
-    purpose:
-      "I found that the best way to implement these 3 phases without having separate versions saved was to incorporate a feature flag that will pass the current state that should be displayed and then render content conditionally.",
+    overview:
+      "A website for a smog test station featuring services offered, areas of expertise, and company information. As this business is located in Koreatown, Los Angeles, a language drop down switch was added to enable Korean speaking visitors to change the content to Korean.",
     stacks: [
       {
         name: "React",
@@ -236,28 +247,26 @@ const projectData = [
       },
     ],
     cover:
-      "https://res.cloudinary.com/jjo/image/upload/v1649442640/Portfolio/Choi%20Smog/Choi-Smog-Full_qylibp.png",
+      "https://res.cloudinary.com/jjo/image/upload/v1652226524/Portfolio/Choi%20Smog/choismog-cover_wwjhfp.png",
     category: "Buisness",
-    screenShots: [
-      "https://res.cloudinary.com/jjo/image/upload/v1649544174/Portfolio/Choi%20Smog/screely-1649544162418_lmixu9.png",
-      "https://res.cloudinary.com/jjo/image/upload/v1649544242/Portfolio/Choi%20Smog/screely-1649544238332_ul6hhm.png",
-    ],
+    screenShots:
+      "https://res.cloudinary.com/jjo/image/upload/v1651805491/Portfolio/Choi%20Smog/choismog-details_yhtjm2.png",
     projectLink: "https://www.choismog.com/",
     githubLink: "https://github.com/jamesikjo/choi-smog",
     chipColor: "#C8E6C9",
-
-    projectOverview:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut placerat orci nulla pellentesque dignissim enim sit amet. Sollicitudin tempor id eu nisl nunc mi ipsum.",
+    highlights: [
+      "Learned how to connect to API",
+      "Static vs Server Side Rendering",
+      "Deploying with Heroku",
+    ],
   },
   {
     title: "Quiz of Luchador",
     slug: "quiz-of-luchador",
     type: "Personal",
     description: "Quiz App for Nacho Libre Movie Enthusists",
-    overView:
-      "Quiz of Luchador is my first project after getting some decent understanding of React and Material-UI. A close friend of mine loved nacho libre, so I created this easy quiz app for them. This was a perfect way to learn about React and styling fundamentals using a UI library. The quiz app tracks answers, scores, and calculates the final score in the results page. Later on, I added storage for quizzes to MongoDB.",
-    process:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut placerat orci nulla pellentesque dignissim enim sit amet. Sollicitudin tempor id eu nisl nunc mi ipsum.",
+    overview:
+      "This quiz app was developed for fans of the Nacho Libre film, but mostly for a close friend who is a die-hard fan of the film. In this application, the current question number and score are tracked, and the quiz taker's ranking is determined by the final score on the results page. MongoDB Atlas is used to store quiz-related information.",
     stacks: [
       {
         name: "React",
@@ -277,19 +286,19 @@ const projectData = [
       },
     ],
     cover:
-      "https://res.cloudinary.com/jjo/image/upload/v1649550787/Portfolio/Quiz%20of%20Luchador/screely-1649550778863_bjbqyn.png",
+      "https://res.cloudinary.com/jjo/image/upload/v1652315592/Portfolio/Quiz%20of%20Luchador/nachoquiz-cover_ejhqxe.png",
     category: "Web App",
 
-    screenShots: [
-      "https://res.cloudinary.com/jjo/image/upload/v1649552864/Portfolio/Quiz%20of%20Luchador/1_cjyiiz.png",
-      "https://res.cloudinary.com/jjo/image/upload/v1649552865/Portfolio/Quiz%20of%20Luchador/2_so7hqa.png",
-    ],
+    screenShots:
+      "https://res.cloudinary.com/jjo/image/upload/v1652320992/Portfolio/Quiz%20of%20Luchador/nachoquiz-details_5_pachgj.png",
     projectLink: "https://nacho-libre-quiz.herokuapp.com/",
     githubLink: "https://github.com/jamesikjo/nacho-libre-quiz-of-luchador",
     chipColor: "#C8E6C9",
-
-    takeAways:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut placerat orci nulla pellentesque dignissim enim sit amet. Sollicitudin tempor id eu nisl nunc mi ipsum.",
+    highlights: [
+      "Learned how to connect to API",
+      "Static vs Server Side Rendering",
+      "Deploying with Heroku",
+    ],
   },
 ];
 

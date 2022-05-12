@@ -15,6 +15,8 @@ import {
   Tooltip,
   Button,
 } from "@mui/material";
+import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
+import KeyboardArrowLeftIcon from "@mui/icons-material/KeyboardArrowLeft";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 import BreadNavCrumbs from "../../BreadNavCrumbs";
@@ -25,233 +27,140 @@ const ProjectDetailLayout = ({ projectDetails }) => {
 
   const {
     title,
-    description,
     stacks,
     type,
-    overView,
-    process,
+    overview,
+    highlights,
     projectLink,
     githubLink,
-    cover,
     screenShots,
-    takeAways,
+    takeaways,
   } = projectDetails;
   return (
-    <Container maxWidth="lg" sx={{ pt: isSm ? 15 : 10 }}>
+    <Container maxWidth="md">
+      <BreadNavCrumbs
+        prevTitle={"Portfolio"}
+        prevHref={"/portfolio"}
+        current={title}
+      />
+
+      <Box mb={8}>
+        <Stack direction="row" alignItems="center" pb={3}>
+          <Typography
+            variant={isSm ? "h3" : "h4"}
+            color="primary"
+            fontWeight="700"
+            pr={2}
+          >
+            {title}
+          </Typography>
+          <Stack direction="row" alignItems="center">
+            <Link href={githubLink} passHref>
+              <Tooltip
+                title={<Typography variant="body2">View Repository</Typography>}
+                arrow
+              >
+                <IconButton
+                  color="secondary"
+                  component="a"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  sx={{ p: 0 }}
+                >
+                  <GitHubIcon sx={{ fontSize: "1.8rem" }} />
+                </IconButton>
+              </Tooltip>
+            </Link>
+            <Link href={projectLink} passHref>
+              <Tooltip
+                title={<Typography variant="body2">View Site</Typography>}
+                arrow
+              >
+                <IconButton
+                  color="secondary"
+                  component="a"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  <OpenInNewIcon sx={{ fontSize: "1.8rem" }} />
+                </IconButton>
+              </Tooltip>
+            </Link>
+          </Stack>
+        </Stack>
+
+        <Typography variant="subtitle1" color="secondary">
+          {overview}
+        </Typography>
+      </Box>
+      <Box mb={10}>
+        <Typography variant="h5" color="primary" fontWeight="500" mb={2}>
+          Project Highlights
+        </Typography>
+        <Box component="ul">
+          {highlights.map((item) => (
+            <>
+              <Typography variant="subtitle1" color="secondary" component="li">
+                {item}
+              </Typography>
+            </>
+          ))}
+        </Box>
+      </Box>
+      <Box mb={10}>
+        <Typography variant="h5" color="primary" pb={2} fontWeight="500">
+          Web Stack
+        </Typography>
+        <Grid container spacing={2}>
+          {stacks.map((stack) => (
+            <Grid item xs={6} md={4} key={stack.name}>
+              <Box
+                display="flex"
+                alignItems="center"
+                sx={{
+                  border: `0.5px solid #c9cfd6`,
+                  // boxShadow: "2px 4px 4px 4px rgb(0 0 0 / 10%)",
+                  borderRadius: 1,
+                  bgcolor: "background.paper",
+                  px: 2.5,
+                  py: 1,
+                  width: 1,
+                }}
+                key={stack.name}
+              >
+                <Avatar
+                  src={stack.icon}
+                  sx={{
+                    width: { xs: 30, sm: 30 },
+                    height: { xs: 30, sm: 30 },
+                  }}
+                  variant="square"
+                />
+                <Typography variant="body1" ml={2} fontWeight="400">
+                  {stack.name}
+                </Typography>
+              </Box>
+            </Grid>
+          ))}
+        </Grid>
+      </Box>
+
       <Box mb={5}>
-        <BreadNavCrumbs
-          prevTitle={"portfolio"}
-          prevHref={"/portfolio"}
-          current={title}
-        />
-        <Divider />
-      </Box>
-
-      <Box mb={1.5} display="flex" alignItems="center">
-        <Typography
-          variant={isSm ? "h2" : "h4"}
-          color="primary"
-          fontWeight="700"
-          mr={isSm ? 2 : 0.25}
-        >
-          {title}
+        <Typography variant="h5" color="primary" mb={2} fontWeight="500">
+          Preview
         </Typography>
-        <Stack direction="row" alignItems="center">
-          <Link href={githubLink} passHref>
-            <Tooltip
-              title={<Typography variant="body2">View Repository</Typography>}
-              arrow
-            >
-              <IconButton
-                color="secondary"
-                component="a"
-                rel="noopener noreferrer"
-                target="_blank"
-              >
-                <GitHubIcon sx={{ fontSize: "1.8rem" }} />
-              </IconButton>
-            </Tooltip>
-          </Link>
-          <Link href={projectLink} passHref>
-            <Tooltip
-              title={<Typography variant="body2">View Site</Typography>}
-              arrow
-            >
-              <IconButton
-                color="secondary"
-                component="a"
-                rel="noopener noreferrer"
-                target="_blank"
-              >
-                <OpenInNewIcon sx={{ fontSize: "1.8rem" }} />
-              </IconButton>
-            </Tooltip>
-          </Link>
-        </Stack>
+        <Box component="img" src={screenShots} alt={title} width={1} />
       </Box>
 
-      <Box mb={{ xs: 8, sm: 10 }}>
-        <Stack direction="row" spacing={1} mb={6}>
-          <Chip
-            label="Web Development"
-            size={isSm ? "small" : "small"}
-            sx={{
-              "& .MuiChip-label": { overflow: "visible", fontSize: "0.85em" },
-            }}
-          />
-          <Chip
-            label="Web Design"
-            size={isSm ? "small" : "small"}
-            sx={{
-              "& .MuiChip-label": { overflow: "visible", fontSize: "0.85em" },
-            }}
-          />
-          <Chip
-            label={type}
-            size={isSm ? "small" : "small"}
-            color="info"
-            sx={{
-              "& .MuiChip-label": { overflow: "visible", fontSize: "0.85em" },
-            }}
-          />
-        </Stack>
-        <Box maxWidth={850}>
-          <Typography
-            variant="subtitle1"
-            color="secondary"
-            sx={{ fontSize: { xs: "0.95em", sm: "1.05em" } }}
-          >
-            {overView}
-          </Typography>
-        </Box>
-      </Box>
-      {screenShots[0] !== "" && (
-        <Box sx={{ mb: { xs: 10, sm: 25 } }}>
-          <Box
-            component="img"
-            src={screenShots[0]}
-            alt={title}
-            width={1}
-            sx={{
-              borderRadius: 2,
-              boxShadow: "4px 4px 15px 5px rgb(0 0 0 / 15%)",
-            }}
-          />
-        </Box>
-      )}
-
-      <Grid container spacing={10} mb={{ xs: 10, sm: 20 }}>
-        <Grid item xs={12} md={8}>
-          <Typography variant="h5" color="primary" mb={3}>
-            Project Process and Goal
-          </Typography>
-          <Typography
-            variant="subtitle1"
-            color="secondary"
-            // sx={{ fontSize: "1.05em" }}
-            sx={{ fontSize: { xs: "0.95em", sm: "1.05em" } }}
-            mb={2}
-          >
-            {process}
-          </Typography>
-          <Typography
-            variant="subtitle1"
-            color="secondary"
-            sx={{ fontSize: { xs: "0.95em", sm: "1.05em" } }}
-          >
-            {process}
-          </Typography>
-        </Grid>
-        <Grid item container xs={12} md={4} spacing={3} mb={3}>
-          <Grid item xs={12}>
-            <Typography variant="h5" color="primary">
-              Web Stack
-            </Typography>
-          </Grid>
-          <Grid item xs={12}>
-            <Stack spacing={2}>
-              {stacks.map((stack) => (
-                <>
-                  <Box
-                    display="flex"
-                    alignItems="center"
-                    sx={{
-                      border: "none",
-                      boxShadow: "2px 4px 4px 4px rgb(0 0 0 / 10%)",
-                      fontWeight: "500",
-                      borderRadius: 2,
-                      fontSize: "0.8rem",
-                      bgcolor: "background.paper",
-                      px: 2.5,
-                      py: 1,
-                      width: { xs: 240, sm: 300 },
-                    }}
-                    key={stack.name}
-                  >
-                    <Avatar
-                      src={stack.icon}
-                      sx={{
-                        width: { xs: 30, sm: 40 },
-                        height: { xs: 30, sm: 40 },
-                      }}
-                      variant="square"
-                    />
-                    <Typography variant="body1" ml={2} fontWeight="400">
-                      {stack.name}
-                    </Typography>
-                  </Box>
-                </>
-              ))}
-            </Stack>
-          </Grid>
-        </Grid>
-      </Grid>
-      <Box mb={15}>
-        <Box
-          component="img"
-          src={screenShots[1]}
-          alt={title}
-          width={1}
-          sx={{
-            borderRadius: 2,
-            boxShadow:
-              title === !"PowerTek" ||
-              (!"Kush Bowl" && "4px 4px 24px 2px rgb(0 0 0 / 15%)"),
-          }}
-        />
-      </Box>
-
-      {/* <Divider sx={{ mt: 3, mb: 10 }} /> */}
-
-      <Box maxWidth={850} mb={6}>
-        <Typography variant="h5" color="primary" fontWeight="400" mb={3}>
-          Take Aways
-        </Typography>
-        <Typography
-          variant="subtitle1"
-          color="secondary"
-          sx={{ fontSize: { xs: "0.95em", sm: "1.05em" } }}
-        >
-          {takeAways}
-        </Typography>
-      </Box>
-      <Box mb={20}>
+      <Box mb={10} display="flex" justifyContent="flex-end">
         <Link href="/portfolio" passHref>
           <Button
-            variant="contained"
+            variant="text"
             color="primary"
             component="a"
-            sx={{
-              border: "none",
-              boxShadow: "4px 4px 24px 2px rgb(0 0 0 / 20%)",
-              fontWeight: "400",
-              borderRadius: 1.5,
-              fontSize: "0.8rem",
-              py: { xs: 1, sm: 1 },
-              // px: 2,
-            }}
+            startIcon={<KeyboardArrowLeftIcon />}
           >
-            More Projects
+            Back to Portfolio
           </Button>
         </Link>
       </Box>

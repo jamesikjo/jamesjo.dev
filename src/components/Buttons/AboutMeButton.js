@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import { Button } from "@material-ui/core";
+import { Button } from "@mui/material";
 import InfoOutlinedIcon from "@mui/icons-material/InfoOutlined";
 
 const AboutMeButton = ({ variant, color, size }) => {

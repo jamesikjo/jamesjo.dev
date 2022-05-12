@@ -6,33 +6,20 @@ import { ResumeButton, GitHubButton } from "../../Buttons";
 const Skills = () => {
   return (
     <>
-      <Stack mb={4}>
+      <Stack mb={3}>
         <Typography
-          variant="body1"
-          color="secondary"
-          gutterBottom
-          sx={{ letterSpacing: ".15rem" }}
-        >
-          {"Development".toUpperCase()}
-        </Typography>
-
-        <Typography
-          variant="h3"
+          variant="h4"
           color="primary"
-          fontWeight={700}
-          sx={{ letterSpacing: "-.12rem" }}
+          fontWeight="700"
+          sx={{ letterSpacing: "-.10rem" }}
         >
           Skills
         </Typography>
       </Stack>
       <Grid container spacing={4}>
-        <Grid item xs={12} md={7} alignItems={"flex-start"}>
-          <Box mb={4}>
-            <Typography
-              variant="subtitle1"
-              color="text.secondary"
-              sx={{ fontSize: { xs: "1em", md: "1.15em" } }}
-            >
+        <Grid item xs={12} md={6} alignItems={"flex-start"}>
+          <Box>
+            <Typography variant="subtitle1" color="secondary">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               placerat orci nulla pellentesque dignissim enim sit amet.
@@ -45,13 +32,8 @@ const Skills = () => {
               Sollicitudin tempor id eu nisl nunc mi ipsum.
             </Typography>
           </Box>
-          <Stack direction="row" spacing={1}>
-            <ResumeButton size="medium" color="primary" />
-            <Divider orientation="vertical" flexItem />
-            <GitHubButton size="medium" color="primary" />
-          </Stack>
         </Grid>
-        <Grid item container spacing={2} xs={12} md={5} justifyContent="center">
+        <Grid item container spacing={1} xs={12} md={6} justifyContent="center">
           <TechGridList />
         </Grid>
       </Grid>

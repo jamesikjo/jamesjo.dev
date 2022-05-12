@@ -24,7 +24,6 @@ const MainLayout = ({ children, title }) => {
           display: "flex",
           flexDirection: "column",
           scrollBehavior: "smooth",
-          background: "linear-gradient(90deg, #FDFDFD 30%, #F1F1F1 60%)",
         }}
       >
         <NavBar navLinks={NAV_LINKS} />

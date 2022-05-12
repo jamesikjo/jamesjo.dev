@@ -1,23 +1,22 @@
 import React from "react";
-import { Button } from "@material-ui/core";
+import { Button } from "@mui/material";
 import GitHubIcon from "@mui/icons-material/GitHub";
 
-const GitHubButton = ({ variant, color, size }) => {
+const GitHubButton = ({
+  variant = "text",
+  size,
+  href = "https://github.com/jamesikjo",
+}) => {
   return (
     <>
       <Button
         variant={variant}
-        color={color}
+        color="primary"
         size={size}
-        href={"https://github.com/jamesikjo"}
+        href={href}
         rel="noopener noreferrer"
         target="_blank"
         startIcon={<GitHubIcon />}
-        sx={{
-          "&:hover": {
-            textDecoration: "underline",
-          },
-        }}
       >
         GitHub
       </Button>

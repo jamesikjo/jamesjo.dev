@@ -1,21 +1,17 @@
 import React, { useState } from "react";
 import Link from "next/link";
-
 import Image from "next/image";
-
 import {
-  Dialog,
   IconButton,
-  Button,
   Box,
   Drawer,
   List,
   ListItem,
   ListItemText,
   Divider,
-} from "@material-ui/core";
-import CloseIcon from "@material-ui/icons/Close";
-import MenuIcon from "@material-ui/icons/Menu";
+} from "@mui/material";
+import CloseIcon from "@mui/icons-material/Close";
+import MenuIcon from "@mui/icons-material/Menu";
 
 const NavDrawer = ({ navLinks }) => {
   const [open, setOpen] = useState(false);

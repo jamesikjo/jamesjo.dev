@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import {
   Stack,
   Grid,
@@ -10,8 +11,10 @@ import {
   Breadcrumbs,
   Divider,
   useMediaQuery,
+  Button,
 } from "@mui/material";
 import projectData from "../../lib/projectData";
+import BreadNavCrumbs from "../BreadNavCrumbs";
 
 const ProjectList = () => {
   const theme = useTheme();
@@ -19,56 +22,88 @@ const ProjectList = () => {
 
   return (
     <Box>
-      <Box>
-        <Breadcrumbs
-          aria-label="breadcrumb"
-          sx={{ "& nav": { paddingLeft: 0 }, pb: 1 }}
-        >
-          <Link href="/" passHref>
-            <Typography
-              variant="body1"
-              component="a"
-              color="secondary"
-              sx={{ textDecoration: "none" }}
-            >
-              Home
-            </Typography>
-          </Link>
-          <Link href="/portfolio" passHref>
-            <Typography variant="h6" color="text.primary">
-              Portfolio
-            </Typography>
-          </Link>
-        </Breadcrumbs>
-        <Divider />
+      <Box mb={3}>
+        <BreadNavCrumbs current="Portfolio" />
       </Box>
-      <Stack my={5}>
-        <Typography
-          variant="body1"
-          color="secondary"
-          sx={{ letterSpacing: ".15rem" }}
-        >
-          {"Portfolio".toUpperCase()}
-        </Typography>
-
-        <Typography
-          variant="h3"
-          color="primary"
-          fontWeight={700}
-          sx={{ letterSpacing: "-.12rem" }}
-        >
-          Projects
-        </Typography>
-      </Stack>
-      <Grid container columnSpacing={3} rowSpacing={8}>
+      <Typography
+        variant="h4"
+        color="primary"
+        fontWeight={700}
+        mb={3}
+        sx={{ letterSpacing: "-.10rem" }}
+      >
+        Projects
+      </Typography>
+      <Grid container rowSpacing={6} columnSpacing={4}>
         {projectData.map((item, i) => (
-          <Grid item xs={12} md={4} key={i}>
+          <Grid item xs={12} sm={6} key={i}>
             <Box
+              position="relative"
+              sx={{
+                "&: hover": {
+                  "& button": {
+                    opacity: 1,
+                    transition: "opacity 0.65s ease-in-out",
+                  },
+                },
+              }}
+            >
+              <Box
+                component={"a"}
+                href={`/portfolio/${item.slug}`}
+                sx={{
+                  "& img": {
+                    borderRadius: 1,
+                    border: `0.5px solid #c9cfd6 !important`,
+                  },
+                }}
+              >
+                <Image
+                  src={item.cover}
+                  alt={item.title}
+                  width={520}
+                  height={285}
+                />
+              </Box>
+              <Box
+                component={"a"}
+                href={`/portfolio/${item.slug}`}
+                sx={{
+                  position: "absolute",
+                  bottom: 20,
+                  right: 15,
+                  textDecoration: "none",
+                }}
+              >
+                <Button
+                  variant="contained"
+                  size="small"
+                  sx={{
+                    opacity: 0,
+                    // px: 1.5,
+                    bgcolor: "info.dark",
+                    "&: hover": { bgcolor: "info.light" },
+                  }}
+                >
+                  Project Page
+                </Button>
+              </Box>
+            </Box>
+
+            <Typography
+              variant="subtitle1"
+              color="primary"
+              fontWeight="600"
+              mt={1}
+            >
+              {item.title}
+            </Typography>
+            <Typography variant="body2" color="secondary">
+              {item.description}
+            </Typography>
+            {/* <Box
               component={"a"}
               href={`/portfolio/${item.slug}`}
-              display={"block"}
-              width={1}
-              height={1}
               sx={{
                 textDecoration: "none",
                 transition: "all .2s ease-in-out",
@@ -80,7 +115,7 @@ const ProjectList = () => {
             >
               <Box
                 width={1}
-                height={500}
+                height={1}
                 sx={{
                   bgcolor: "#F7F9FC",
                   border: "5px solid #F7F9FC",
@@ -96,7 +131,6 @@ const ProjectList = () => {
                   width={1}
                   sx={{
                     position: "relative",
-                    overflow: "hidden",
                     height: "auto",
                   }}
                 />
@@ -142,7 +176,7 @@ const ProjectList = () => {
                   </Typography>
                 </Box>
               </Box>
-            </Box>
+            </Box> */}
           </Grid>
         ))}
       </Grid>

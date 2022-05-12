@@ -1,7 +1,5 @@
 import React from "react";
-import Link from "next/link";
-
-import { Button } from "@material-ui/core";
+import { Button } from "@mui/material";
 import FeedOutlinedIcon from "@mui/icons-material/FeedOutlined";
 
 const ResumeButton = ({ variant, color, size }) => {

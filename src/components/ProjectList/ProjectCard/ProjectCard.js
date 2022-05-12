@@ -1,17 +1,12 @@
 import * as React from "react";
-import Image from "next/image";
-import Link from "next/link";
 import {
   Typography,
-  Stack,
-  Grid,
   CardContent,
   Box,
   useTheme,
   Card,
-  Avatar,
   Button,
-} from "@material-ui/core";
+} from "@mui/material";
 import ArrowRightIcon from "@mui/icons-material/ArrowRight";
 
 const ProjectCard = ({ title, subtitle, icon, name, idx }) => {

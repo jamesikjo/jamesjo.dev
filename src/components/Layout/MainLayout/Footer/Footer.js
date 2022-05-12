@@ -10,7 +10,7 @@ import {
   Button,
   useTheme,
   useMediaQuery,
-} from "@material-ui/core";
+} from "@mui/material";
 
 const Copyright = () => {
   return (
@@ -22,14 +22,9 @@ const Copyright = () => {
 
 const Footer = ({ navLinks }) => {
   const theme = useTheme();
-  const matches = useMediaQuery(theme.breakpoints.up("sm"));
   return (
-    <Box
-      component="footer"
-      sx={{ py: 6, mt: "auto", bgcolor: "#EDEDED" }}
-      id="contact"
-    >
-      <Container maxWidth="lg">
+    <Box component="footer" sx={{ py: 6, mt: "auto" }} id="contact">
+      <Container maxWidth="md">
         <Box display="flex" justifyContent="space-between" alignItems="center">
           <Box>
             <Image
@@ -48,19 +43,14 @@ const Footer = ({ navLinks }) => {
             sx={{
               "& .MuiButtonBase-root": {
                 fontSize: 12,
-                fontWeight: "bolder",
+                fontWeight: "500",
               },
             }}
           >
             {navLinks.map(({ title, route }) => (
               <React.Fragment key={title}>
                 <Link href={route} passHref>
-                  <Button
-                    variant="text"
-                    component="a"
-                    color="secondary"
-                    sx={{ fontWeight: 600 }}
-                  >
+                  <Button variant="text" component="a" color="primary">
                     {title}
                   </Button>
                 </Link>

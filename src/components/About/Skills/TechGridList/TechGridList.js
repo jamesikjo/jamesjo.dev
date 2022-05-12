@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import {
   Stack,
   Divider,
@@ -10,7 +11,6 @@ import {
   useTheme,
 } from "@mui/material";
 import { alpha } from "@mui/material/styles";
-import { LazyLoadImage } from "react-lazy-load-image-component";
 
 export const STACKS = [
   {
@@ -57,7 +57,6 @@ const TechList = () => {
   return STACKS.map((item, i) => (
     <Grid item xs={4} key={i}>
       <Box
-        display={"block"}
         width={1}
         height={1}
         sx={{
@@ -74,18 +73,10 @@ const TechList = () => {
               flexDirection: "column",
               justifyContent: "center",
               alignItems: "center",
-              p: "20px",
-              pb: "20px !important",
+              p: 3,
             }}
           >
-            <Box
-              component={LazyLoadImage}
-              height={50}
-              width={50}
-              src={item.logo}
-              alt={item.name}
-              effect="blur"
-            />
+            <Image height={35} width={35} src={item.logo} alt={item.name} />
             <Typography
               component="div"
               variant="caption"

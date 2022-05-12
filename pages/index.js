@@ -1,23 +1,28 @@
 import React from "react";
-import { Intro, Featured, Contact } from "../src/components/Landing";
+import { Container } from "@mui/material";
+import { Intro, Latest, Contact } from "../src/components/Landing";
 import { MainLayout } from "../src/components/Layout";
-import featuredData from "../src/lib/featuredData";
 
-export default function Home({ featuredData }) {
-  console.log(featuredData);
+export default function Home() {
   return (
     <MainLayout title="Dev Portfolio">
-      <Intro />
-      <Featured featuredData={featuredData} />
-      <Contact />
+      <Container maxWidth="md" sx={{ py: 8 }}>
+        <Intro />
+      </Container>
+      <Container maxWidth="md" sx={{ py: 8 }}>
+        <Latest />
+      </Container>
+      <Container maxWidth="md" sx={{ py: 8 }}>
+        <Contact />
+      </Container>
     </MainLayout>
   );
 }
 
-export async function getStaticProps() {
-  return {
-    props: {
-      featuredData,
-    },
-  };
-}
+// export async function getStaticProps() {
+//   return {
+//     props: {
+//       latestProjData,
+//     },
+//   };
+// }

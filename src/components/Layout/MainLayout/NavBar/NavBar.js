@@ -4,42 +4,34 @@ import Link from "next/link";
 import Image from "next/image";
 import {
   AppBar,
-  Toolbar,
   Container,
   Button,
   Stack,
   useTheme,
   useMediaQuery,
-  useScrollTrigger,
 } from "@mui/material";
 import NavDrawer from "./NavDrawer/NavDrawer";
 
 const NavBar = ({ navLinks }) => {
   const theme = useTheme();
-  const matches = useMediaQuery(theme.breakpoints.up("sm"));
-
-  const trigger = useScrollTrigger({
-    disableHysteresis: true,
-    threshold: 35,
-  });
+  const isSm = useMediaQuery(theme.breakpoints.up("sm"));
 
   return (
     <AppBar
-      position="fixed"
+      position="static"
       elevation={0}
       sx={{
-        backgroundColor: trigger ? "#fff" : "transparent",
-        transition: "all ease .85s",
-        // borderBottom: "1px solid #ece7e0 ",
+        pt: 4,
+        pb: 5,
+        bgcolor: "transparent",
       }}
     >
       <Container
-        maxWidth="lg"
+        maxWidth="md"
         sx={{
           display: "flex",
           justifyContent: "space-between",
           alignItems: "center",
-          py: 2,
         }}
       >
         <Link href="/">
@@ -48,7 +40,7 @@ const NavBar = ({ navLinks }) => {
               src="https://res.cloudinary.com/jjo/image/upload/v1651530311/Portfolio/Profile/JJ_f59a4z.svg"
               alt="James Jo"
               width={80}
-              height={matches ? 55 : 40}
+              height={isSm ? 50 : 45}
             />
           </a>
         </Link>
@@ -62,11 +54,7 @@ const NavBar = ({ navLinks }) => {
           {navLinks.map(({ title, route }) => (
             <React.Fragment key={title}>
               <Link href={route} passHref>
-                <Button
-                  variant="text"
-                  component="a"
-                  sx={{ "&:hover": { fontWeight: "bold" } }}
-                >
+                <Button variant="text" component="a">
                   {title}
                 </Button>
               </Link>

@@ -1,4 +1,5 @@
-import { createTheme } from "@material-ui/core/styles";
+import { createTheme } from "@mui/material/styles";
+import { blue } from "@mui/material/colors";
 
 let theme = createTheme({
   palette: {
@@ -8,14 +9,25 @@ let theme = createTheme({
       dark: "#777777",
     },
     secondary: {
-      main: "#777777",
+      main: "#5c5c5c",
       light: "#bababa",
+    },
+    info: {
+      light: blue[400],
+      main: blue[500],
+      dark: blue[700],
     },
   },
   typography: {
     fontFamily: ["Poppins, Montserrat, serif"],
     h6: {
       fontSize: "1.3em",
+    },
+    subtitle1: {
+      lineHeight: 1.85,
+    },
+    subtitle2: {
+      lineHeight: 1.85,
     },
   },
   components: {
@@ -24,7 +36,7 @@ let theme = createTheme({
         root: {
           "&:hover": {
             backgroundColor: "transparent",
-            color: "#2b2b2b",
+            color: blue[800],
           },
         },
       },
@@ -37,6 +49,7 @@ let theme = createTheme({
         text: {
           "&:hover": {
             backgroundColor: "transparent",
+            color: blue[800],
           },
         },
       },
@@ -45,6 +58,8 @@ let theme = createTheme({
       styleOverrides: {
         root: {
           maxWidth: "1300px",
+          paddingLeft: "20px",
+          paddingRight: "20px",
         },
       },
     },
