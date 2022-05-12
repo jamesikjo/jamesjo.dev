@@ -1,11 +1,8 @@
 import React from "react";
 import Link from "next/link";
-
 import {
   Typography,
-  Divider,
   Box,
-  Stack,
   useTheme,
   useMediaQuery,
   IconButton,
@@ -21,6 +18,7 @@ import { AboutMeButton } from "../../Buttons";
 const Intro = () => {
   const theme = useTheme();
   const isSm = useMediaQuery(theme.breakpoints.up("sm"));
+
   return (
     <Box component="section">
       <Box display="flex" flexDirection={{ xs: "column-reverse", sm: "row" }}>
@@ -70,14 +68,11 @@ const Intro = () => {
         </Box>
         <Box mb={{ xs: 2, sm: 0 }}>
           <Avatar
-            alt="Remy Sharp"
+            alt="headshot"
             src="https://res.cloudinary.com/jjo/image/upload/v1651530508/Portfolio/Profile/headshot-2_iudufa.png"
             sx={{
               width: { xs: 120, sm: 150 },
               height: { xs: 120, sm: 150 },
-              // border: "1px solid #EDEDED",
-              // transform: "scale(1.2)",
-              boxShadow: "4px 0px 10px 5px rgb(0 0 0 / 15%)",
             }}
           />
         </Box>

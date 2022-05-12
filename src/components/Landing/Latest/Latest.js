@@ -1,8 +1,7 @@
 import React from "react";
 import Link from "next/link";
-import { Container, Box, Grid, Typography, Button } from "@mui/material";
-import ChevronRightIcon from "@mui/icons-material/ChevronRight";
-
+import { Box, Typography, Button } from "@mui/material";
+import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 import CardLatest from "./CardList/CardList";
 
 const Latest = () => {
@@ -35,10 +34,9 @@ const Latest = () => {
             color="primary"
             size="large"
             component="a"
-            endIcon={<ChevronRightIcon />}
+            endIcon={<KeyboardArrowRightIcon />}
             sx={{
               "& .MuiButton-endIcon": { ml: 0 },
-              justifyContent: "flex-end",
               ml: 1,
               p: 0,
             }}

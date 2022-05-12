@@ -1,25 +1,10 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import {
-  Stack,
-  Grid,
-  Typography,
-  Box,
-  Chip,
-  useTheme,
-  Breadcrumbs,
-  Divider,
-  useMediaQuery,
-  Button,
-} from "@mui/material";
-import projectData from "../../lib/projectData";
+import { Grid, Typography, Box, Button } from "@mui/material";
 import BreadNavCrumbs from "../BreadNavCrumbs";
 
-const ProjectList = () => {
-  const theme = useTheme();
-  const matches = useMediaQuery(theme.breakpoints.up("sm"));
-
+const ProjectList = ({ projectData }) => {
   return (
     <Box>
       <Box mb={3}>
@@ -48,46 +33,49 @@ const ProjectList = () => {
                 },
               }}
             >
-              <Box
-                component={"a"}
-                href={`/portfolio/${item.slug}`}
-                sx={{
-                  "& img": {
-                    borderRadius: 1,
-                    border: `0.5px solid #c9cfd6 !important`,
-                  },
-                }}
-              >
-                <Image
-                  src={item.cover}
-                  alt={item.title}
-                  width={520}
-                  height={285}
-                />
-              </Box>
-              <Box
-                component={"a"}
-                href={`/portfolio/${item.slug}`}
-                sx={{
-                  position: "absolute",
-                  bottom: 20,
-                  right: 15,
-                  textDecoration: "none",
-                }}
-              >
-                <Button
-                  variant="contained"
-                  size="small"
+              <Link href={`/portfolio/${item.slug}`} alt={item.title} passHref>
+                <Box
+                  component="a"
                   sx={{
-                    opacity: 0,
-                    // px: 1.5,
-                    bgcolor: "info.dark",
-                    "&: hover": { bgcolor: "info.light" },
+                    "& img": {
+                      borderRadius: 1,
+                      border: `0.5px solid #c9cfd6 !important`,
+                    },
                   }}
                 >
-                  Project Page
-                </Button>
-              </Box>
+                  <Image
+                    src={item.cover}
+                    alt={item.title}
+                    width={520}
+                    height={285}
+                  />
+                </Box>
+              </Link>
+              <Link href={`/portfolio/${item.slug}`} alt={item.title} passHref>
+                <Box
+                  component={"a"}
+                  href={`/portfolio/${item.slug}`}
+                  sx={{
+                    position: "absolute",
+                    bottom: 20,
+                    right: 15,
+                    textDecoration: "none",
+                  }}
+                >
+                  <Button
+                    variant="contained"
+                    size="small"
+                    sx={{
+                      opacity: 0,
+                      px: 1,
+                      bgcolor: "info.dark",
+                      "&: hover": { bgcolor: "info.light" },
+                    }}
+                  >
+                    Project Page
+                  </Button>
+                </Box>
+              </Link>
             </Box>
 
             <Typography
@@ -101,82 +89,6 @@ const ProjectList = () => {
             <Typography variant="body2" color="secondary">
               {item.description}
             </Typography>
-            {/* <Box
-              component={"a"}
-              href={`/portfolio/${item.slug}`}
-              sx={{
-                textDecoration: "none",
-                transition: "all .2s ease-in-out",
-                "&:hover": {
-                  transform:
-                    matches && `translateY(-${theme.spacing(1)}) scale(1.03)`,
-                },
-              }}
-            >
-              <Box
-                width={1}
-                height={1}
-                sx={{
-                  bgcolor: "#F7F9FC",
-                  border: "5px solid #F7F9FC",
-                  overflow: "hidden",
-                  borderRadius: 2,
-                  boxShadow: "4px 4px 24px 2px rgb(0 0 0 / 15%)",
-                }}
-              >
-                <Box
-                  component="img"
-                  src={item.cover}
-                  alt={item.title}
-                  width={1}
-                  sx={{
-                    position: "relative",
-                    height: "auto",
-                  }}
-                />
-              </Box>
-
-              <Box
-                width="90%"
-                margin="0 auto"
-                display="flex"
-                flexDirection="column"
-                bgcolor="background.paper"
-                position="relative"
-                zIndex={3}
-                sx={{
-                  transform: "translateY(-50px)",
-                  borderRadius: 2,
-                  p: 2,
-                  boxShadow: "4px 4px 24px 2px rgb(0 0 0 / 15%)",
-                }}
-              >
-                <Box display="flex" justifyContent="space-between">
-                  <Typography
-                    variant="body1"
-                    gutterBottom
-                    color="primary"
-                    fontWeight="600"
-                  >
-                    {item.title}
-                  </Typography>
-                  <Chip
-                    label={item.category}
-                    size="small"
-                    sx={{
-                      "& .MuiChip-label": { overflow: "visible" },
-                      fontSize: "12px",
-                      bgcolor: item.chipColor,
-                    }}
-                  />
-                </Box>
-                <Box>
-                  <Typography variant="subtitle2" color="text.secondary">
-                    {item.description}
-                  </Typography>
-                </Box>
-              </Box>
-            </Box> */}
           </Grid>
         ))}
       </Grid>

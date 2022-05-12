@@ -15,7 +15,6 @@ import {
   Tooltip,
   Button,
 } from "@mui/material";
-import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import KeyboardArrowLeftIcon from "@mui/icons-material/KeyboardArrowLeft";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import OpenInNewIcon from "@mui/icons-material/OpenInNew";
@@ -34,7 +33,6 @@ const ProjectDetailLayout = ({ projectDetails }) => {
     projectLink,
     githubLink,
     screenShots,
-    takeaways,
   } = projectDetails;
   return (
     <Container maxWidth="md">
@@ -119,7 +117,6 @@ const ProjectDetailLayout = ({ projectDetails }) => {
                 alignItems="center"
                 sx={{
                   border: `0.5px solid #c9cfd6`,
-                  // boxShadow: "2px 4px 4px 4px rgb(0 0 0 / 10%)",
                   borderRadius: 1,
                   bgcolor: "background.paper",
                   px: 2.5,
