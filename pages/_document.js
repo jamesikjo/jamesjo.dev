@@ -58,7 +58,7 @@ export default class MyDocument extends Document {
         <body
           style={{
             lineHeight: 0,
-            background: "linear-gradient(90deg, #fff 50%, #F1F1F1 90%)",
+            backgroundColor: "#F9FAFB",
             // backgroundImage: `url("/images/main-background.svg")`,
           }}
         >
