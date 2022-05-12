@@ -1,37 +1,4 @@
 const projectData = [
-  // {
-  //   title: "CheckSaas (Coming Soon)",
-  //   slug: "check-saas",
-  //   type: "Personal",
-  //   description: "Free Tier/Trial Requirements for Popular Saas",
-  //   purpose:
-  //     "I found that the best way to implement these 3 phases without having separate versions saved was to incorporate a feature flag that will pass the current state that should be displayed and then render content conditionally.",
-  //   stacks: [
-  //     {
-  //       name: "Next.js",
-  //       icon: "https://res.cloudinary.com/jjo/image/upload/v1649366494/Portfolio/Stack/next_cxgxpb.svg",
-  //     },
-  //     {
-  //       name: "MUI",
-  //       icon: "https://res.cloudinary.com/jjo/image/upload/v1649366562/Portfolio/Stack/MUI_wqakpb.svg",
-  //     },
-  //     {
-  //       name: "Vercel",
-  //       icon: "https://res.cloudinary.com/jjo/image/upload/v1649366766/Portfolio/Stack/Vercel_bcpqyd.svg",
-  //     },
-  //   ],
-  //   cover:
-  //     "https://res.cloudinary.com/jjo/image/upload/c_scale,w_400/v1647577484/Portfolio/screencapture-localhost-3001-2022-03-17-21_24_24_pzoc6m.png",
-
-  //   screenShots: [""],
-  //   projectLink: "",
-  //   githubLink: "https://github.com/jamesikjo",
-  //   category: "Marketing",
-  //   chipColor: " #FFCDD2",
-
-  //   projectOverview:
-  //     "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut placerat orci nulla pellentesque dignissim enim sit amet. Sollicitudin tempor id eu nisl nunc mi ipsum.",
-  // },
   {
     title: "mykombucha",
     slug: "mykombucha",
@@ -42,8 +9,12 @@ const projectData = [
     cover:
       "https://res.cloudinary.com/jjo/image/upload/v1652226895/Portfolio/myKombucha/mykombucha-cover_maoqxh.png",
 
-    screenShots:
-      "https://res.cloudinary.com/jjo/image/upload/v1652322907/Portfolio/myKombucha/mykombucha-details_2_wsqocb.png",
+    preview: {
+      image:
+        "https://res.cloudinary.com/jjo/image/upload/v1652322907/Portfolio/myKombucha/mykombucha-details_2_wsqocb.png",
+      width: 2000,
+      height: 2400,
+    },
     projectLink: "http://mykombucha.net/",
     githubLink: "https://github.com/jamesikjo",
     category: "Social",
@@ -97,9 +68,13 @@ const projectData = [
     cover:
       "https://res.cloudinary.com/jjo/image/upload/v1652315374/Portfolio/Dev%20Portfolio/portfolio-cover_dckyup.png",
     category: "Portfolio",
+    preview: {
+      image:
+        "https://res.cloudinary.com/jjo/image/upload/v1652316694/Portfolio/Dev%20Portfolio/portfolio-details_1_r5tl1f.png",
 
-    screenShots:
-      "https://res.cloudinary.com/jjo/image/upload/v1652316694/Portfolio/Dev%20Portfolio/portfolio-details_1_r5tl1f.png",
+      width: 3000,
+      height: 2600,
+    },
     projectLink: "",
     githubLink: "https://github.com/jamesikjo",
     chipColor: "#FFECB3",
@@ -136,9 +111,13 @@ const projectData = [
     cover:
       "https://res.cloudinary.com/jjo/image/upload/v1652224294/Portfolio/powertek/powertek-cover_hjrey1.png",
     category: "Buisness",
+    preview: {
+      image:
+        "https://res.cloudinary.com/jjo/image/upload/v1651807556/Portfolio/powertek/powertek-details_hd25sb.png",
 
-    screenShots:
-      "https://res.cloudinary.com/jjo/image/upload/v1651807556/Portfolio/powertek/powertek-details_hd25sb.png",
+      width: 3000,
+      height: 3500,
+    },
     projectLink: "https://powertek.vercel.app/",
     githubLink: "https://github.com/jamesikjo",
     chipColor: "#C8E6C9",
@@ -177,9 +156,13 @@ const projectData = [
     cover:
       "https://res.cloudinary.com/jjo/image/upload/v1652226975/Portfolio/Armon%20Van%20Photography/armonvan-cover_bvo0ii.png",
     category: "Portfolio",
+    preview: {
+      image:
+        "https://res.cloudinary.com/jjo/image/upload/v1651875365/Portfolio/Armon%20Van%20Photography/armonvan-details_liql7k.png",
 
-    screenShots:
-      "https://res.cloudinary.com/jjo/image/upload/v1651875365/Portfolio/Armon%20Van%20Photography/armonvan-details_liql7k.png",
+      width: 3000,
+      height: 1500,
+    },
     projectLink: "https://www.armonvanphoto.com/",
     githubLink: "https://github.com/jamesikjo/armonvan-photography-next",
     chipColor: "#FFECB3",
@@ -210,8 +193,13 @@ const projectData = [
         icon: "https://res.cloudinary.com/jjo/image/upload/v1649366766/Portfolio/Stack/Netlify_qq0vst.svg",
       },
     ],
-    screenShots:
-      "https://res.cloudinary.com/jjo/image/upload/v1649539944/Portfolio/Kush%20Bowl/Project_Details_4_dmlrig.png",
+    preview: {
+      image:
+        "https://res.cloudinary.com/jjo/image/upload/v1649539944/Portfolio/Kush%20Bowl/Project_Details_4_dmlrig.png",
+
+      width: 3000,
+      height: 4700,
+    },
 
     projectLink: "https://www.kushbowl.net/",
     githubLink: "https://github.com/jamesikjo/kush-bowl",
@@ -249,8 +237,13 @@ const projectData = [
     cover:
       "https://res.cloudinary.com/jjo/image/upload/v1652226524/Portfolio/Choi%20Smog/choismog-cover_wwjhfp.png",
     category: "Buisness",
-    screenShots:
-      "https://res.cloudinary.com/jjo/image/upload/v1651805491/Portfolio/Choi%20Smog/choismog-details_yhtjm2.png",
+    preview: {
+      image:
+        "https://res.cloudinary.com/jjo/image/upload/v1651805491/Portfolio/Choi%20Smog/choismog-details_yhtjm2.png",
+
+      width: 3000,
+      height: 2500,
+    },
     projectLink: "https://www.choismog.com/",
     githubLink: "https://github.com/jamesikjo/choi-smog",
     chipColor: "#C8E6C9",
@@ -288,9 +281,13 @@ const projectData = [
     cover:
       "https://res.cloudinary.com/jjo/image/upload/v1652315592/Portfolio/Quiz%20of%20Luchador/nachoquiz-cover_ejhqxe.png",
     category: "Web App",
+    preview: {
+      image:
+        "https://res.cloudinary.com/jjo/image/upload/v1652320992/Portfolio/Quiz%20of%20Luchador/nachoquiz-details_5_pachgj.png",
 
-    screenShots:
-      "https://res.cloudinary.com/jjo/image/upload/v1652320992/Portfolio/Quiz%20of%20Luchador/nachoquiz-details_5_pachgj.png",
+      width: 3000,
+      height: 4600,
+    },
     projectLink: "https://nacho-libre-quiz.herokuapp.com/",
     githubLink: "https://github.com/jamesikjo/nacho-libre-quiz-of-luchador",
     chipColor: "#C8E6C9",

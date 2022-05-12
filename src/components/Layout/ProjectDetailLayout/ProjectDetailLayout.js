@@ -3,7 +3,6 @@ import Link from "next/link";
 import {
   Container,
   Typography,
-  Divider,
   Stack,
   Grid,
   Chip,
@@ -19,6 +18,7 @@ import KeyboardArrowLeftIcon from "@mui/icons-material/KeyboardArrowLeft";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 import BreadNavCrumbs from "../../BreadNavCrumbs";
+import Image from "next/image";
 
 const ProjectDetailLayout = ({ projectDetails }) => {
   const theme = useTheme();
@@ -32,7 +32,7 @@ const ProjectDetailLayout = ({ projectDetails }) => {
     highlights,
     projectLink,
     githubLink,
-    screenShots,
+    preview,
   } = projectDetails;
   return (
     <Container maxWidth="md">
@@ -146,7 +146,12 @@ const ProjectDetailLayout = ({ projectDetails }) => {
         <Typography variant="h5" color="primary" mb={2} fontWeight="500">
           Preview
         </Typography>
-        <Box component="img" src={screenShots} alt={title} width={1} />
+        <Image
+          src={preview.image}
+          alt={title}
+          width={preview.width}
+          height={preview.height}
+        />
       </Box>
 
       <Box mb={10} display="flex" justifyContent="flex-end">

@@ -4,7 +4,7 @@ import { Box, Typography, Button } from "@mui/material";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 import CardLatest from "./CardList/CardList";
 
-const Latest = () => {
+const Latest = ({ latestProjectData }) => {
   return (
     <Box component="section" id="featured">
       <Typography
@@ -25,7 +25,7 @@ const Latest = () => {
         Latest
       </Typography>
 
-      <CardLatest />
+      <CardLatest latestProjectData={latestProjectData} />
 
       <Box display="flex" justifyContent="flex-end" mt={5}>
         <Link href="/portfolio" passHref>
