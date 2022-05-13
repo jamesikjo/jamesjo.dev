@@ -115,8 +115,8 @@ const projectData = [
       image:
         "https://res.cloudinary.com/jjo/image/upload/v1651807556/Portfolio/powertek/powertek-details_hd25sb.png",
 
-      width: 1000,
-      height: 1500,
+      width: 2000,
+      height: 2500,
     },
     projectLink: "https://powertek.vercel.app/",
     githubLink: "https://github.com/jamesikjo",
@@ -166,6 +166,50 @@ const projectData = [
     projectLink: "https://www.armonvanphoto.com/",
     githubLink: "https://github.com/jamesikjo/armonvan-photography-next",
     chipColor: "#FFECB3",
+    highlights: [
+      "Learned how to connect to API",
+      "Static vs Server Side Rendering",
+      "Deploying with Heroku",
+    ],
+  },
+  {
+    title: "Quiz of Luchador",
+    slug: "quiz-of-luchador",
+    type: "Personal",
+    description: "Quiz App for Nacho Libre Movie Enthusists",
+    overview:
+      "This quiz app was developed for fans of the Nacho Libre film, but mostly for a close friend who is a die-hard fan of the film. In this application, the current question number and score are tracked, and the quiz taker's ranking is determined by the final score on the results page. MongoDB Atlas is used to store quiz-related information.",
+    stacks: [
+      {
+        name: "React",
+        icon: "https://res.cloudinary.com/jjo/image/upload/v1649366041/Portfolio/Stack/React_rpjiw5.svg",
+      },
+      {
+        name: "MUI",
+        icon: "https://res.cloudinary.com/jjo/image/upload/v1649366562/Portfolio/Stack/MUI_wqakpb.svg",
+      },
+      {
+        name: "MongoDB",
+        icon: "https://res.cloudinary.com/jjo/image/upload/v1649366766/Portfolio/Stack/Mongodb_pqduyn.svg",
+      },
+      {
+        name: "Heroku",
+        icon: "https://res.cloudinary.com/jjo/image/upload/v1651532903/Portfolio/Stack/heroku_ngyeee.svg",
+      },
+    ],
+    cover:
+      "https://res.cloudinary.com/jjo/image/upload/v1652315592/Portfolio/Quiz%20of%20Luchador/nachoquiz-cover_ejhqxe.png",
+    category: "Web App",
+    preview: {
+      image:
+        "https://res.cloudinary.com/jjo/image/upload/v1652320992/Portfolio/Quiz%20of%20Luchador/nachoquiz-details_5_pachgj.png",
+
+      width: 1500,
+      height: 2300,
+    },
+    projectLink: "https://nacho-libre-quiz.herokuapp.com/",
+    githubLink: "https://github.com/jamesikjo/nacho-libre-quiz-of-luchador",
+    chipColor: "#C8E6C9",
     highlights: [
       "Learned how to connect to API",
       "Static vs Server Side Rendering",
@@ -241,55 +285,11 @@ const projectData = [
       image:
         "https://res.cloudinary.com/jjo/image/upload/v1651805491/Portfolio/Choi%20Smog/choismog-details_yhtjm2.png",
 
-      width: 2000,
-      height: 1500,
+      width: 2048,
+      height: 1707,
     },
     projectLink: "https://www.choismog.com/",
     githubLink: "https://github.com/jamesikjo/choi-smog",
-    chipColor: "#C8E6C9",
-    highlights: [
-      "Learned how to connect to API",
-      "Static vs Server Side Rendering",
-      "Deploying with Heroku",
-    ],
-  },
-  {
-    title: "Quiz of Luchador",
-    slug: "quiz-of-luchador",
-    type: "Personal",
-    description: "Quiz App for Nacho Libre Movie Enthusists",
-    overview:
-      "This quiz app was developed for fans of the Nacho Libre film, but mostly for a close friend who is a die-hard fan of the film. In this application, the current question number and score are tracked, and the quiz taker's ranking is determined by the final score on the results page. MongoDB Atlas is used to store quiz-related information.",
-    stacks: [
-      {
-        name: "React",
-        icon: "https://res.cloudinary.com/jjo/image/upload/v1649366041/Portfolio/Stack/React_rpjiw5.svg",
-      },
-      {
-        name: "MUI",
-        icon: "https://res.cloudinary.com/jjo/image/upload/v1649366562/Portfolio/Stack/MUI_wqakpb.svg",
-      },
-      {
-        name: "MongoDB",
-        icon: "https://res.cloudinary.com/jjo/image/upload/v1649366766/Portfolio/Stack/Mongodb_pqduyn.svg",
-      },
-      {
-        name: "Heroku",
-        icon: "https://res.cloudinary.com/jjo/image/upload/v1651532903/Portfolio/Stack/heroku_ngyeee.svg",
-      },
-    ],
-    cover:
-      "https://res.cloudinary.com/jjo/image/upload/v1652315592/Portfolio/Quiz%20of%20Luchador/nachoquiz-cover_ejhqxe.png",
-    category: "Web App",
-    preview: {
-      image:
-        "https://res.cloudinary.com/jjo/image/upload/v1652320992/Portfolio/Quiz%20of%20Luchador/nachoquiz-details_5_pachgj.png",
-
-      width: 1500,
-      height: 2300,
-    },
-    projectLink: "https://nacho-libre-quiz.herokuapp.com/",
-    githubLink: "https://github.com/jamesikjo/nacho-libre-quiz-of-luchador",
     chipColor: "#C8E6C9",
     highlights: [
       "Learned how to connect to API",

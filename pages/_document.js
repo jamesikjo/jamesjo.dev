@@ -4,7 +4,6 @@ import { CacheProvider } from "@emotion/react";
 import createCache from "@emotion/cache";
 import Document, { Html, Head, Main, NextScript } from "next/document";
 import createEmotionServer from "@emotion/server/create-instance";
-import theme from "../src/theme";
 
 const getCache = () => {
   const cache = createCache({ key: "css", prepend: true });
@@ -57,9 +56,7 @@ export default class MyDocument extends Document {
         </Head>
         <body
           style={{
-            lineHeight: 0,
             backgroundColor: "#F9FAFB",
-            // backgroundImage: `url("/images/main-background.svg")`,
           }}
         >
           <Main />

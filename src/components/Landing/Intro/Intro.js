@@ -51,7 +51,7 @@ const Intro = () => {
             sx={{
               lineHeight: "1.8em",
               "& a": {
-                color: "info.dark",
+                color: "info.main",
                 fontWeight: "600",
               },
             }}

@@ -152,6 +152,7 @@ const ProjectDetailLayout = ({ projectDetails }) => {
           width={preview.width}
           height={preview.height}
           priority={true}
+          loading="eager"
         />
       </Box>
 
