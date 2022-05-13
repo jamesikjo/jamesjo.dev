@@ -12,8 +12,8 @@ const projectData = [
     preview: {
       image:
         "https://res.cloudinary.com/jjo/image/upload/v1652322907/Portfolio/myKombucha/mykombucha-details_2_wsqocb.png",
-      width: 2000,
-      height: 2400,
+      width: 1000,
+      height: 1200,
     },
     projectLink: "http://mykombucha.net/",
     githubLink: "https://github.com/jamesikjo",
@@ -72,15 +72,15 @@ const projectData = [
       image:
         "https://res.cloudinary.com/jjo/image/upload/v1652316694/Portfolio/Dev%20Portfolio/portfolio-details_1_r5tl1f.png",
 
-      width: 3000,
-      height: 2600,
+      width: 1500,
+      height: 1300,
     },
     projectLink: "",
     githubLink: "https://github.com/jamesikjo",
     chipColor: "#FFECB3",
     highlights: [
-      "Learned how to connect to API",
-      "Static vs Server Side Rendering",
+      "Built with Next.js framework for better performance and SEO",
+      "Utilize nextjs image to optimize image load performance",
       "Deploying with Heroku",
     ],
   },
@@ -115,8 +115,8 @@ const projectData = [
       image:
         "https://res.cloudinary.com/jjo/image/upload/v1651807556/Portfolio/powertek/powertek-details_hd25sb.png",
 
-      width: 3000,
-      height: 3500,
+      width: 1000,
+      height: 1500,
     },
     projectLink: "https://powertek.vercel.app/",
     githubLink: "https://github.com/jamesikjo",
@@ -197,8 +197,8 @@ const projectData = [
       image:
         "https://res.cloudinary.com/jjo/image/upload/v1649539944/Portfolio/Kush%20Bowl/Project_Details_4_dmlrig.png",
 
-      width: 3000,
-      height: 4700,
+      width: 1500,
+      height: 2350,
     },
 
     projectLink: "https://www.kushbowl.net/",
@@ -241,8 +241,8 @@ const projectData = [
       image:
         "https://res.cloudinary.com/jjo/image/upload/v1651805491/Portfolio/Choi%20Smog/choismog-details_yhtjm2.png",
 
-      width: 3000,
-      height: 2500,
+      width: 2000,
+      height: 1500,
     },
     projectLink: "https://www.choismog.com/",
     githubLink: "https://github.com/jamesikjo/choi-smog",
@@ -285,8 +285,8 @@ const projectData = [
       image:
         "https://res.cloudinary.com/jjo/image/upload/v1652320992/Portfolio/Quiz%20of%20Luchador/nachoquiz-details_5_pachgj.png",
 
-      width: 3000,
-      height: 4600,
+      width: 1500,
+      height: 2300,
     },
     projectLink: "https://nacho-libre-quiz.herokuapp.com/",
     githubLink: "https://github.com/jamesikjo/nacho-libre-quiz-of-luchador",
