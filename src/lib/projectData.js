@@ -38,9 +38,9 @@ const projectData = [
       },
     ],
     highlights: [
-      "Learned how to connect to API",
-      "Static vs Server Side Rendering",
-      "Deploying with Heroku",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do",
     ],
   },
 
@@ -79,9 +79,9 @@ const projectData = [
     githubLink: "https://github.com/jamesikjo",
     chipColor: "#FFECB3",
     highlights: [
-      "Built with Next.js framework for better performance and SEO",
-      "Utilize nextjs image to optimize image load performance",
-      "Deploying with Heroku",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do",
     ],
   },
   {
@@ -121,11 +121,10 @@ const projectData = [
     projectLink: "https://powertek.vercel.app/",
     githubLink: "https://github.com/jamesikjo",
     chipColor: "#C8E6C9",
-
     highlights: [
-      "Learned how to connect to API",
-      "Static vs Server Side Rendering",
-      "Deploying with Heroku",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do",
     ],
   },
   {
@@ -167,9 +166,9 @@ const projectData = [
     githubLink: "https://github.com/jamesikjo/armonvan-photography-next",
     chipColor: "#FFECB3",
     highlights: [
-      "Learned how to connect to API",
-      "Static vs Server Side Rendering",
-      "Deploying with Heroku",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do",
     ],
   },
   {
@@ -211,9 +210,9 @@ const projectData = [
     githubLink: "https://github.com/jamesikjo/nacho-libre-quiz-of-luchador",
     chipColor: "#C8E6C9",
     highlights: [
-      "Learned how to connect to API",
-      "Static vs Server Side Rendering",
-      "Deploying with Heroku",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do",
     ],
   },
   {
@@ -252,9 +251,9 @@ const projectData = [
     category: "Buisness",
     chipColor: "#C8E6C9",
     highlights: [
-      "Learned how to connect to API",
-      "Static vs Server Side Rendering",
-      "Deploying with Heroku",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do",
     ],
   },
   {
@@ -292,9 +291,9 @@ const projectData = [
     githubLink: "https://github.com/jamesikjo/choi-smog",
     chipColor: "#C8E6C9",
     highlights: [
-      "Learned how to connect to API",
-      "Static vs Server Side Rendering",
-      "Deploying with Heroku",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do",
     ],
   },
 ];

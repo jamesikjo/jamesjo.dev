@@ -61,8 +61,9 @@ const Intro = () => {
             libraries and frameworks such as React/Next.js and MUI. I invite you
             to visit my{" "}
             <Link href="/about" alt="about">
-              <a>about page </a>
+              <a>about page</a>
             </Link>
+            {"  "}
             to learn a bit more about me and my journey to becoming a developer.
           </Typography>
         </Box>
