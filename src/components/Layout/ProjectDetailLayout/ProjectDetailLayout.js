@@ -151,6 +151,7 @@ const ProjectDetailLayout = ({ projectDetails }) => {
           alt={title}
           width={preview.width}
           height={preview.height}
+          priority={true}
         />
       </Box>
 
