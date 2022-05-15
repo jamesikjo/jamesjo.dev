@@ -6,7 +6,7 @@ import About from "../src/components/About";
 const AboutPage = () => {
   return (
     <Box>
-      <MainLayout title="About">
+      <MainLayout title="About Me">
         <Container maxWidth="md">
           <About />
         </Container>

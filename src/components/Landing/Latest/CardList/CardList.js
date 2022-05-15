@@ -5,7 +5,6 @@ import {
   Stack,
   Typography,
   Box,
-  Card,
   CardContent,
   Divider,
   useTheme,
@@ -24,23 +23,26 @@ const CardList = ({ latestProjectData }) => {
       {latestProjectData.map((item) => (
         <Box
           key={item.title}
-          component={Card}
           width={1}
           height={1}
-          elevation={0}
-          display={"flex"}
+          display="flex"
           flexDirection={{ xs: "column", sm: "row-reverse" }}
           alignItems="center"
+          borderRadius={1}
           sx={{
-            border: { xs: "none", sm: `0.5px solid #c9cfd6` },
-            backgroundImage: "none",
+            border: `0.5px solid #c9cfd6`,
+            bgcolor: theme.palette.background.paper,
           }}
         >
           <Box
             sx={{
               width: { xs: 1, md: "50%" },
-              height: { xs: 280, md: 260 },
+              height: { xs: 280, md: 240 },
               position: "relative",
+
+              "& img": {
+                filter: "drop-shadow(10px 5px 5px rgba(0, 0, 0, 0.2))",
+              },
             }}
           >
             <Image

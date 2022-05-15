@@ -6,7 +6,7 @@ import latestProjectData from "../src/lib/latestProjectData";
 
 export default function Home({ latestProjectData }) {
   return (
-    <MainLayout title="Dev Portfolio">
+    <MainLayout title="Web Developer">
       <Container maxWidth="md" sx={{ py: 8 }}>
         <Intro />
       </Container>

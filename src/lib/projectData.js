@@ -50,7 +50,7 @@ const projectData = [
     type: "Personal",
     description: "My Dev Portfolio",
     overview:
-      "This is my developer portfolio, which includes both freelance work and personal projects. In addition, this website is a platform for anyone interested in contacting me regarding projects or work.",
+      "This is my developer portfolio, which includes both freelance work and my personal projects. In addition, this website is a platform for anyone interested in contacting me regarding projects or work. Built with Next.js, MUI v5 (Material-UI) and deployed with Vercel.",
     stacks: [
       {
         name: "Next.js",
@@ -70,10 +70,10 @@ const projectData = [
     category: "Portfolio",
     preview: {
       image:
-        "https://res.cloudinary.com/jjo/image/upload/v1652316694/Portfolio/Dev%20Portfolio/portfolio-details_1_r5tl1f.png",
+        "https://res.cloudinary.com/jjo/image/upload/v1652413116/Portfolio/Dev%20Portfolio/portfolio-preview_1_gpipwf.png",
 
-      width: 1500,
-      height: 1300,
+      width: 3000,
+      height: 2250,
     },
     projectLink: "",
     githubLink: "https://github.com/jamesikjo",
@@ -90,7 +90,7 @@ const projectData = [
     type: "Freelance",
     description: "Website for Automotive Parts Producer",
     overview:
-      "A website built for a manufacturer and distributor of engine management and brake products, showcasing the company's products, expertise, and product lines.",
+      "A website for an automotive engine and brake management company based in Southern California that showcases the company's products and services. Built with Next.js, MUI v5 (Material-UI) and deployed with Vercel. ",
 
     stacks: [
       {
@@ -113,7 +113,7 @@ const projectData = [
     category: "Buisness",
     preview: {
       image:
-        "https://res.cloudinary.com/jjo/image/upload/v1651807556/Portfolio/powertek/powertek-details_hd25sb.png",
+        "https://res.cloudinary.com/jjo/image/upload/v1649542961/Portfolio/powertek/Project_Details_8_fsgaev.png",
 
       width: 2000,
       height: 2500,
@@ -122,9 +122,10 @@ const projectData = [
     githubLink: "https://github.com/jamesikjo",
     chipColor: "#C8E6C9",
     highlights: [
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do",
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do",
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do",
+      "My first ever paid freelance assignment!",
+      "Next.js framework to provides faster loading performance and enhanced SEO capabilities.",
+      "Pages are pre-rendered using Static Generation - Next.js generates a single HTML file for each page during build time. ",
+      "With the Next Image API component , product images are automatically optimized, with lazy loading enabled.",
     ],
   },
   {
@@ -203,8 +204,8 @@ const projectData = [
       image:
         "https://res.cloudinary.com/jjo/image/upload/v1652320992/Portfolio/Quiz%20of%20Luchador/nachoquiz-details_5_pachgj.png",
 
-      width: 1500,
-      height: 2300,
+      width: 3000,
+      height: 4600,
     },
     projectLink: "https://nacho-libre-quiz.herokuapp.com/",
     githubLink: "https://github.com/jamesikjo/nacho-libre-quiz-of-luchador",

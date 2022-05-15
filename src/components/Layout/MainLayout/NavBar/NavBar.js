@@ -28,6 +28,7 @@ const NavBar = ({ navLinks }) => {
     >
       <Container
         maxWidth="md"
+        disableGutters
         sx={{
           display: "flex",
           justifyContent: "space-between",
@@ -41,6 +42,7 @@ const NavBar = ({ navLinks }) => {
               alt="James Jo"
               width={80}
               height={isSm ? 50 : 45}
+              quality={100}
             />
           </a>
         </Link>
