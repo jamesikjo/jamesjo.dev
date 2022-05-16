@@ -26,12 +26,12 @@ const Footer = ({ navLinks }) => {
     <Box component="footer" sx={{ py: 6, mt: "auto" }} id="contact">
       <Container maxWidth="md">
         <Box display="flex" justifyContent="space-between" alignItems="center">
-          <Box>
+          <Box width={60} height={45} position="relative">
             <Image
               src="https://res.cloudinary.com/jjo/image/upload/v1651530311/Portfolio/Profile/JJ_f59a4z.svg"
               alt="footer logo"
-              width={60}
-              height={45}
+              layout="fill"
+              objectFit="contain"
             />
           </Box>
 
