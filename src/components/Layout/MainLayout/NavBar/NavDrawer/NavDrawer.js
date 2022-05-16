@@ -38,7 +38,7 @@ const NavDrawer = ({ navLinks }) => {
         onClose={handleDrawerClose}
       >
         <Box sx={{ width: 200 }}>
-          <List>
+          <List sx={{ py: 1 }}>
             {navLinks.map(({ title, route }) => (
               <ListItem button key={title}>
                 <Link href={route} passHref>
@@ -57,12 +57,13 @@ const NavDrawer = ({ navLinks }) => {
           </List>
           <Divider sx={{ mb: 2 }} />
           <Box display="flex" justifyContent="center">
-            <Image
-              src="/images/main-logo.svg"
-              alt="James Jo"
-              width={55}
-              height={45}
-            />
+            <Box width={50} height={45} position="relative">
+              <Image
+                src="https://res.cloudinary.com/jjo/image/upload/v1651530311/Portfolio/Profile/JJ_f59a4z.svg"
+                alt="Nav drawer logo"
+                layout="fill"
+              />
+            </Box>
           </Box>
         </Box>
       </Drawer>

@@ -39,10 +39,9 @@ const Footer = ({ navLinks }) => {
             direction="row"
             alignItems="center"
             divider={<Divider orientation="vertical" flexItem />}
-            height={35}
             sx={{
               "& .MuiButtonBase-root": {
-                fontSize: 12,
+                fontSize: { xs: 10, sm: 12 },
                 fontWeight: "500",
               },
             }}

@@ -9,6 +9,7 @@ import {
   Stack,
   useTheme,
   useMediaQuery,
+  Box,
 } from "@mui/material";
 import NavDrawer from "./NavDrawer/NavDrawer";
 
@@ -35,16 +36,14 @@ const NavBar = ({ navLinks }) => {
           alignItems: "center",
         }}
       >
-        <Link href="/">
-          <a>
+        <Link href="/" passHref>
+          <Box component="a" width={80} height={50} position="relative">
             <Image
               src="https://res.cloudinary.com/jjo/image/upload/v1651530311/Portfolio/Profile/JJ_f59a4z.svg"
               alt="James Jo"
-              width={80}
-              height={isSm ? 50 : 45}
-              quality={100}
+              layout="fill"
             />
-          </a>
+          </Box>
         </Link>
         <Stack
           direction="row"
