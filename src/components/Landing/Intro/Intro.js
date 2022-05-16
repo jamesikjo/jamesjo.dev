@@ -68,17 +68,13 @@ const Intro = () => {
             to learn a bit more about me and my journey to becoming a developer.
           </Typography>
         </Box>
-        <Box
-          minWidth={{ xs: 120, sm: 150 }}
-          height={"auto"}
-          mb={{ xs: 2, sm: 0 }}
-          position="relative"
-        >
+        <Box width={{ xs: 120, sm: 1 }} height={1} mb={{ xs: 2, sm: 0 }}>
           <Image
             alt="headshot"
             src="https://res.cloudinary.com/jjo/image/upload/v1651530508/Portfolio/Profile/headshot-2_iudufa.png"
             width={150}
             height={150}
+            priority
           />
         </Box>
         {/* <Stack
