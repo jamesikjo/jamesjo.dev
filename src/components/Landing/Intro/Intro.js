@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import Link from "next/link";
 import {
   Typography,
@@ -67,14 +68,17 @@ const Intro = () => {
             to learn a bit more about me and my journey to becoming a developer.
           </Typography>
         </Box>
-        <Box mb={{ xs: 2, sm: 0 }}>
-          <Avatar
+        <Box
+          minWidth={{ xs: 120, sm: 150 }}
+          height={"auto"}
+          mb={{ xs: 2, sm: 0 }}
+          position="relative"
+        >
+          <Image
             alt="headshot"
             src="https://res.cloudinary.com/jjo/image/upload/v1651530508/Portfolio/Profile/headshot-2_iudufa.png"
-            sx={{
-              width: { xs: 120, sm: 150 },
-              height: { xs: 120, sm: 150 },
-            }}
+            width={150}
+            height={150}
           />
         </Box>
         {/* <Stack
