@@ -23,7 +23,7 @@ const Intro = () => {
   return (
     <Box component="section">
       <Box display="flex" flexDirection={{ xs: "column-reverse", sm: "row" }}>
-        <Box pr={4}>
+        <Box pr={10}>
           <Typography
             variant={isSm ? "h3" : "h4"}
             component="h1"
@@ -68,13 +68,18 @@ const Intro = () => {
             to learn a bit more about me and my journey to becoming a developer.
           </Typography>
         </Box>
-        <Box width={{ xs: 120, sm: 1 }} height={1} mb={{ xs: 2, sm: 0 }}>
+        <Box
+          minWidth={150}
+          width={{ xs: 120, sm: 150 }}
+          height={{ xs: 120, sm: 150 }}
+          mb={{ xs: 2, sm: 0 }}
+          position="relative"
+        >
           <Image
             alt="headshot"
             src="https://res.cloudinary.com/jjo/image/upload/v1651530508/Portfolio/Profile/headshot-2_iudufa.png"
-            width={150}
-            height={150}
-            priority
+            layout="fill"
+            objectFit="contain"
           />
         </Box>
         {/* <Stack

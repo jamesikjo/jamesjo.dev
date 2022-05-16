@@ -50,6 +50,7 @@ const CardList = ({ latestProjectData }) => {
               objectFit="contain"
               src={item.image}
               alt={item.title}
+              priority
             />
           </Box>
 
