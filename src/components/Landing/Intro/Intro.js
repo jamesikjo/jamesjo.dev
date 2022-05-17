@@ -58,14 +58,14 @@ const Intro = () => {
             }}
           >
             {`I'm`} a self-taught developer based in Oakland, California. My
-            main focus is on developing web applications using modern software
-            libraries and frameworks such as React/Next.js and MUI. I invite you
-            to visit my{" "}
+            main focus is on developing modern web applications using the latest
+            libraries and frameworks such as React and Next.js. I invite you to
+            visit my{" "}
             <Link href="/about" alt="about">
               <a>about page</a>
             </Link>
             {"  "}
-            to learn a bit more about me and my journey to becoming a developer.
+            to learn a bit more about my history and background.
           </Typography>
         </Box>
         <Box

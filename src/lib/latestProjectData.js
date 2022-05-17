@@ -4,7 +4,7 @@ const latestProjectData = [
     image:
       "https://res.cloudinary.com/jjo/image/upload/v1652504342/Portfolio/myKombucha/mykombucha-latest_1_lugmeh.png",
     description:
-      "An online community for kombucha lovers and professionals. Site features over 500 different kombuchas from 100 different breweries.",
+      "An online resource and community for enthusiasts who are passionate about kombucha beverages.",
     links: {
       github: "https://github.com/jamesikjo",
       project: "https://www.mykombucha.net",
@@ -16,7 +16,7 @@ const latestProjectData = [
     image:
       "https://res.cloudinary.com/jjo/image/upload/v1652503504/Portfolio/powertek/powertek-latest_czmv68.png",
     description:
-      "Website built for PowerTek - a high performance automotive parts company specializing in engine management and brakes.",
+      "Website for an automotive parts company specializing in brakes and engine management.",
     links: {
       github: "https://github.com/jamesikjo",
       project: "https://powertek.vercel.app/",
@@ -28,7 +28,7 @@ const latestProjectData = [
     image:
       "https://res.cloudinary.com/jjo/image/upload/v1652503474/Portfolio/Armon%20Van%20Photography/armonvan-photo-latest_sh4fbd.png",
     description:
-      "Photography portfolio. Strapi integration allows client to upload and delete photos from the CMS.",
+      "Photography portfolio integrated with Strapi headless CMS for client.",
     links: {
       github: "https://github.com/jamesikjo/armonvan-photography-next",
       project: "https://www.armonvanphoto.com/",

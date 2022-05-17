@@ -43,14 +43,13 @@ const projectData = [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do",
     ],
   },
-
   {
     title: "jamesjo.dev",
     slug: "personal-portfolio",
     type: "Personal",
     description: "My Dev Portfolio",
     overview:
-      "This is my developer portfolio, which includes both freelance work and my personal projects. In addition, this website is a platform for anyone interested in contacting me regarding projects or work. Built with Next.js, MUI v5 (Material-UI) and deployed with Vercel.",
+      "This is my developer portfolio, which includes both freelance work and personal projects, along with a curated list of tools and resources I've found useful during my journey as a self-taught developer. In addition, this website is a platform for anyone interested in contacting me regarding projects or work. Built with Next.js, Material-UI for styling, and deployed with Vercel",
     stacks: [
       {
         name: "Next.js",
@@ -78,20 +77,14 @@ const projectData = [
     projectLink: "",
     githubLink: "https://github.com/jamesikjo",
     chipColor: "#FFECB3",
-    highlights: [
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do",
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do",
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do",
-    ],
   },
   {
     title: "PowerTek",
     slug: "powertek",
     type: "Freelance",
     description: "Website for Automotive Parts Producer",
-    overview:
-      "A website for an automotive engine and brake management company based in Southern California that showcases the company's products and services. Built with Next.js, MUI v5 (Material-UI) and deployed with Vercel. ",
-
+    overview: `A previous client who I helped build <a class="innerLink" href="/portfolio/choi-smog" alt="choi smog">choismog.com</a>, referred me to build this company's website. Based in Southern California, Powertek parts supply engine management and brake parts for the automotive industry. This website features information about the company's products and services.`,
+    innerHTML: true,
     stacks: [
       {
         name: "Next.js",
@@ -122,10 +115,9 @@ const projectData = [
     githubLink: "https://github.com/jamesikjo",
     chipColor: "#C8E6C9",
     highlights: [
-      "My first ever paid freelance assignment!",
-      "Next.js framework to provides faster loading performance and enhanced SEO capabilities.",
-      "Pages are pre-rendered using Static Generation - Next.js generates a single HTML file for each page during build time. ",
-      "With the Next Image API component , product images are automatically optimized, with lazy loading enabled.",
+      "Built with Next.js, Material-UI for styling and deployed with Vercel.",
+      "Product pages statically generated to improve loading times and for enhanced SEO capabilities.",
+      "Next Image API component is used to automatically serve optimize product images and enables lazy loading.",
     ],
   },
   {
@@ -134,7 +126,7 @@ const projectData = [
     type: "Freelance",
     description: "Photography Portfolio",
     overview:
-      "A photo portfolio showcasing the work of a freelance photographer. Portfolio is integrated with Strapi, a headless CMS, so that the client can upload and manage content.",
+      " A photography portfolio showcasing the work of an independent photographer. Client can upload, create, delete, and edit own content using Strapi, a headless Content Management System (CMS) connected with the application's front-end.",
     stacks: [
       {
         name: "Next.js",
@@ -152,6 +144,10 @@ const projectData = [
         name: "Heroku",
         icon: "https://res.cloudinary.com/jjo/image/upload/v1651532903/Portfolio/Stack/heroku_ngyeee.svg",
       },
+      {
+        name: "Vercel",
+        icon: "https://res.cloudinary.com/jjo/image/upload/v1649366766/Portfolio/Stack/Vercel_bcpqyd.svg",
+      },
     ],
     cover:
       "https://res.cloudinary.com/jjo/image/upload/v1652226975/Portfolio/Armon%20Van%20Photography/armonvan-cover_bvo0ii.png",
@@ -167,18 +163,20 @@ const projectData = [
     githubLink: "https://github.com/jamesikjo/armonvan-photography-next",
     chipColor: "#FFECB3",
     highlights: [
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do",
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do",
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do",
+      "Built with Next.js, Strapi, Material-UI for styling and deployed with Vercel (client) & Heroku (server).",
+      "Responsive photo gallery with thumbnails that automatically reposition on smaller screens.",
+      "Client access to the Strapi admin panel with custom credentials to manage own collections.",
+      "Static pages are dynamically generated with data fetched from Strapi API endpoints during build.",
     ],
   },
+
   {
     title: "Quiz of Luchador",
     slug: "quiz-of-luchador",
     type: "Personal",
     description: "Quiz App for Nacho Libre Movie Enthusists",
     overview:
-      "This quiz app was developed for fans of the Nacho Libre film, but mostly for a close friend who is a die-hard fan of the film. In this application, the current question number and score are tracked, and the quiz taker's ranking is determined by the final score on the results page. MongoDB Atlas is used to store quiz-related information.",
+      "As part of my continuous effort to improve my understanding of React fundamentals, I created this simple quiz app. It was also created for a friend of mine who is an avid fan of the film. Working on this project was an excellent way to get more experience with managing local and global states and conditional rendering. In this app, the quiz taker's scores are tracked, and at the end of the test, the final score determines the quiz taker's ranking. Later on, I decided to store the quiz data on an external server to get some experience with setting up and connecting to servers and databases.",
     stacks: [
       {
         name: "React",
@@ -187,6 +185,10 @@ const projectData = [
       {
         name: "MUI",
         icon: "https://res.cloudinary.com/jjo/image/upload/v1649366562/Portfolio/Stack/MUI_wqakpb.svg",
+      },
+      {
+        name: "Node.js",
+        icon: "https://res.cloudinary.com/jjo/image/upload/v1649366617/Portfolio/Stack/Nodejs_kqlqm5.svg",
       },
       {
         name: "MongoDB",
@@ -211,9 +213,50 @@ const projectData = [
     githubLink: "https://github.com/jamesikjo/nacho-libre-quiz-of-luchador",
     chipColor: "#C8E6C9",
     highlights: [
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do",
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do",
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do",
+      "Built with React, Material-UI, Node.js, Express.",
+      "Quiz data stored externally using MongoDB.",
+      "Both client and server side files are deployed with Heroku.",
+    ],
+  },
+  {
+    title: "Choi Smog",
+    slug: "choi-smog",
+    type: "Freelance",
+    description: "Website for Smog Testing Buisness",
+    overview:
+      "I built this website as my first freelance assignment for a smog test station in Koreatown, Los Angeles. The site features information about services offered, areas of expertise, and business details. A language button on the landing page allows visitors to switch the language between English and Korean. Since this was my first freelance assignment, the whole process from concept to completion was a valuable learning experience.",
+    stacks: [
+      {
+        name: "React",
+        icon: "https://res.cloudinary.com/jjo/image/upload/v1649366041/Portfolio/Stack/React_rpjiw5.svg",
+      },
+      {
+        name: "MUI",
+        icon: "https://res.cloudinary.com/jjo/image/upload/v1649366562/Portfolio/Stack/MUI_wqakpb.svg",
+      },
+      {
+        name: "Netlify",
+        icon: "https://res.cloudinary.com/jjo/image/upload/v1649366766/Portfolio/Stack/Netlify_qq0vst.svg",
+      },
+    ],
+    cover:
+      "https://res.cloudinary.com/jjo/image/upload/v1652226524/Portfolio/Choi%20Smog/choismog-cover_wwjhfp.png",
+    category: "Buisness",
+    preview: {
+      image:
+        "https://res.cloudinary.com/jjo/image/upload/v1651805491/Portfolio/Choi%20Smog/choismog-details_yhtjm2.png",
+
+      width: 2048,
+      height: 1707,
+    },
+    projectLink: "https://www.choismog.com/",
+    githubLink: "https://github.com/jamesikjo/choi-smog",
+    chipColor: "#C8E6C9",
+    highlights: [
+      "Built with React, Material-UI for styling and deployed with Netlify.",
+      "Toggle between English and Korean language for content on the site.",
+      "React Context API is used to share language state across multiple components.",
+      "Contact form submissions are handled with Netlify built-in form handling.",
     ],
   },
   {
@@ -250,46 +293,6 @@ const projectData = [
     cover:
       "https://res.cloudinary.com/jjo/image/upload/v1652226650/Portfolio/Kush%20Bowl/kush-cover_leep75.png",
     category: "Buisness",
-    chipColor: "#C8E6C9",
-    highlights: [
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do",
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do",
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do",
-    ],
-  },
-  {
-    title: "Choi Smog",
-    slug: "choi-smog",
-    type: "Freelance",
-    description: "Website for Smog Testing Buisness",
-    overview:
-      "A website for a smog test station featuring services offered, areas of expertise, and company information. As this business is located in Koreatown, Los Angeles, a language drop down switch was added to enable Korean speaking visitors to change the content to Korean.",
-    stacks: [
-      {
-        name: "React",
-        icon: "https://res.cloudinary.com/jjo/image/upload/v1649366041/Portfolio/Stack/React_rpjiw5.svg",
-      },
-      {
-        name: "MUI",
-        icon: "https://res.cloudinary.com/jjo/image/upload/v1649366562/Portfolio/Stack/MUI_wqakpb.svg",
-      },
-      {
-        name: "Netlify",
-        icon: "https://res.cloudinary.com/jjo/image/upload/v1649366766/Portfolio/Stack/Netlify_qq0vst.svg",
-      },
-    ],
-    cover:
-      "https://res.cloudinary.com/jjo/image/upload/v1652226524/Portfolio/Choi%20Smog/choismog-cover_wwjhfp.png",
-    category: "Buisness",
-    preview: {
-      image:
-        "https://res.cloudinary.com/jjo/image/upload/v1651805491/Portfolio/Choi%20Smog/choismog-details_yhtjm2.png",
-
-      width: 2048,
-      height: 1707,
-    },
-    projectLink: "https://www.choismog.com/",
-    githubLink: "https://github.com/jamesikjo/choi-smog",
     chipColor: "#C8E6C9",
     highlights: [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do",
