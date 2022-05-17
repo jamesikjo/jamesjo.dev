@@ -33,6 +33,7 @@ const ProjectDetailLayout = ({ projectDetails }) => {
     projectLink,
     githubLink,
     preview,
+    innerHTML,
   } = projectDetails;
   return (
     <Container maxWidth="md">
@@ -88,7 +89,15 @@ const ProjectDetailLayout = ({ projectDetails }) => {
         </Stack>
 
         <Typography variant="subtitle1" color="secondary">
-          {overview}
+          {!innerHTML ? (
+            overview
+          ) : (
+            <div
+              dangerouslySetInnerHTML={{
+                __html: overview,
+              }}
+            />
+          )}
         </Typography>
       </Box>
       <Box mb={10}>

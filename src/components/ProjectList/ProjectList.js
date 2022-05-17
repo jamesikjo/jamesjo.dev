@@ -59,7 +59,6 @@ const ProjectList = ({ projectData }) => {
                     position: "absolute",
                     bottom: 20,
                     right: 15,
-                    textDecoration: "none",
                   }}
                 >
                   <Button

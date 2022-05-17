@@ -20,23 +20,13 @@ const BreadNavCrumbs = ({ prevTitle, prevHref, current }) => {
         sx={{ "& nav": { paddingLeft: 0 }, pb: 1 }}
       >
         <Link href="/" passHref>
-          <Typography
-            variant="body2"
-            component="a"
-            color="secondary"
-            sx={{ textDecoration: "none" }}
-          >
+          <Typography variant="body2" component="a" color="secondary">
             Home
           </Typography>
         </Link>
         {prevTitle && (
           <Link href={`${prevHref}`} passHref>
-            <Typography
-              variant="body2"
-              component="a"
-              color="secondary"
-              sx={{ textDecoration: "none" }}
-            >
+            <Typography variant="body2" component="a" color="secondary">
               {prevTitle}
             </Typography>
           </Link>

@@ -42,7 +42,7 @@ const Links = () => {
                   component="a"
                   href={link.href}
                   fontWeight="500"
-                  sx={{ textDecoration: "none", color: "info.main" }}
+                  sx={{ color: "info.main" }}
                 >
                   {link.at}
                 </Typography>
