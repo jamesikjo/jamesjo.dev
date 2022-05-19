@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { Grid, Typography, Box, Button } from "@mui/material";
+import { Grid, Typography, Box, Button, Chip } from "@mui/material";
 import BreadNavCrumbs from "../BreadNavCrumbs";
 
 const ProjectList = ({ projectData }) => {
@@ -13,7 +13,7 @@ const ProjectList = ({ projectData }) => {
       <Typography
         variant="h4"
         color="primary"
-        fontWeight={700}
+        fontWeight="600"
         mb={3}
         sx={{ letterSpacing: "-.10rem" }}
       >
@@ -67,8 +67,8 @@ const ProjectList = ({ projectData }) => {
                     sx={{
                       opacity: 0,
                       px: 1,
-                      bgcolor: "info.dark",
-                      "&: hover": { bgcolor: "info.light" },
+                      bgcolor: "info.main",
+                      "&: hover": { bgcolor: "info.dark" },
                     }}
                   >
                     Project Page
@@ -77,15 +77,10 @@ const ProjectList = ({ projectData }) => {
               </Link>
             </Box>
 
-            <Typography
-              variant="subtitle1"
-              color="primary"
-              fontWeight="600"
-              mt={1}
-            >
+            <Typography variant="subtitle1" color="primary" fontWeight="600">
               {item.title}
             </Typography>
-            <Typography variant="body2" color="secondary">
+            <Typography variant="body1" color="secondary">
               {item.description}
             </Typography>
           </Grid>

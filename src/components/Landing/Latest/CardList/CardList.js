@@ -24,24 +24,23 @@ const CardList = ({ latestProjectData }) => {
         <Box
           key={item.title}
           width={1}
-          height={1}
           display="flex"
           flexDirection={{ xs: "column", sm: "row-reverse" }}
           alignItems="center"
           borderRadius={1}
           sx={{
-            border: `0.5px solid #c9cfd6`,
-            bgcolor: theme.palette.background.paper,
+            border: { xs: "none", sm: `0.5px solid #c9cfd6` },
+            bgcolor: "common.white",
           }}
         >
           <Box
             sx={{
               width: { xs: 1, md: "50%" },
-              height: { xs: 280, md: 240 },
+              height: { xs: 280, sm: 240 },
+              maxHeight: { sm: 240 },
               position: "relative",
-
               "& img": {
-                filter: "drop-shadow(10px 5px 5px rgba(0, 0, 0, 0.2))",
+                filter: "drop-shadow(0px 4px 3px rgba(0, 0, 0, 0.2))",
               },
             }}
           >
@@ -65,7 +64,7 @@ const CardList = ({ latestProjectData }) => {
               variant={isSm ? "h5" : "h5"}
               gutterBottom
               color="primary"
-              fontWeight="700"
+              fontWeight="600"
             >
               {item.title}
             </Typography>
@@ -73,35 +72,36 @@ const CardList = ({ latestProjectData }) => {
               color="secondary"
               variant={isSm ? "body1" : "subtitle2"}
               fontWeight="400"
-              pb={1.5}
             >
               {item.description}
             </Typography>
-            <Link href={item.links.details} passHref>
-              <Button
-                variant="text"
-                color="secondary"
-                component="a"
-                size="small"
-                endIcon={<KeyboardArrowRightIcon />}
-                sx={{
-                  "& .MuiButton-endIcon": { ml: 0 },
-                  p: 0,
-                  fontWeight: 600,
-                }}
-              >
-                Project Page
-              </Button>
-            </Link>
+            <Divider sx={{ my: 2 }} />
 
-            <Divider sx={{ my: 1.5 }} />
-
-            <Box display="flex" alignItems="center" justifyContent="flex-end">
+            <Stack
+              direction="row"
+              justifyContent="space-between"
+              alignItems="center"
+            >
+              <Link href={item.links.details} passHref>
+                <Button
+                  color="info"
+                  component="a"
+                  size="small"
+                  endIcon={<KeyboardArrowRightIcon />}
+                  sx={{
+                    "& .MuiButton-endIcon": { ml: 0 },
+                    pl: 0,
+                    fontWeight: 600,
+                  }}
+                >
+                  Project Page
+                </Button>
+              </Link>
               <Stack direction="row" spacing={1}>
-                <GitHubButton href={item.links.github} />
-                <VisitSiteButton href={item.links.project} />
+                <GitHubButton size="small" href={item.links.github} />
+                <VisitSiteButton size="small" href={item.links.project} />
               </Stack>
-            </Box>
+            </Stack>
           </CardContent>
         </Box>
       ))}

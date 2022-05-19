@@ -32,13 +32,13 @@ const Contact = () => {
         <Typography
           variant="h4"
           color="primary"
-          fontWeight={700}
+          fontWeight="600"
           gutterBottom
           sx={{ letterSpacing: "-.10rem" }}
         >
           {"Get in touch"}
         </Typography>
-        <Typography variant="subtitle1" color="secondary" gutterBottom>
+        <Typography variant="subtitle1" color="primary" gutterBottom>
           If you are looking for a developer, have a question, or simply want to
           connect, <br />
           please feel free to contact me.

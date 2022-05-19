@@ -10,7 +10,7 @@ const About = () => {
     <Box component="section">
       <BreadNavCrumbs current="About" />
       <Links />
-      <Box py={10}>
+      <Box py={8}>
         <Bio />
       </Box>
       <Box>

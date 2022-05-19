@@ -10,7 +10,7 @@ export default function Home({ latestProjectData }) {
       <Container maxWidth="md" sx={{ py: 8 }}>
         <Intro />
       </Container>
-      <Container maxWidth="md" sx={{ py: 8 }}>
+      <Container maxWidth="md" sx={{ py: 4 }}>
         <Latest latestProjectData={latestProjectData} />
       </Container>
       <Container maxWidth="md" sx={{ py: 8 }}>

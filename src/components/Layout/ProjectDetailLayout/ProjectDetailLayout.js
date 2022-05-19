@@ -33,6 +33,7 @@ const ProjectDetailLayout = ({ projectDetails }) => {
     projectLink,
     githubLink,
     preview,
+    links,
     innerHTML,
   } = projectDetails;
   return (
@@ -88,16 +89,12 @@ const ProjectDetailLayout = ({ projectDetails }) => {
           </Stack>
         </Stack>
 
-        <Typography variant="subtitle1" color="secondary">
-          {!innerHTML ? (
-            overview
-          ) : (
-            <div
-              dangerouslySetInnerHTML={{
-                __html: overview,
-              }}
-            />
-          )}
+        <Typography variant="subtitle1" color="primary">
+          <div
+            dangerouslySetInnerHTML={{
+              __html: overview,
+            }}
+          />
         </Typography>
       </Box>
       <Box mb={10}>
@@ -107,20 +104,25 @@ const ProjectDetailLayout = ({ projectDetails }) => {
         <Box component="ul">
           {highlights.map((item) => (
             <>
-              <Typography variant="subtitle1" color="secondary" component="li">
-                {item}
+              <Typography variant="subtitle1" color="primary" component="li">
+                <div
+                  dangerouslySetInnerHTML={{
+                    __html: item,
+                  }}
+                />
               </Typography>
             </>
           ))}
         </Box>
       </Box>
+
       <Box mb={10}>
         <Typography variant="h5" color="primary" pb={2} fontWeight="500">
           Web Stack
         </Typography>
         <Grid container spacing={2}>
           {stacks.map((stack) => (
-            <Grid item xs={6} md={4} key={stack.name}>
+            <Grid item xs={6} sm={4} key={stack.name}>
               <Box
                 display="flex"
                 alignItems="center"
@@ -142,7 +144,12 @@ const ProjectDetailLayout = ({ projectDetails }) => {
                   }}
                   variant="square"
                 />
-                <Typography variant="body1" ml={2} fontWeight="400">
+                <Typography
+                  variant="body1"
+                  color="primary"
+                  ml={2}
+                  fontWeight="400"
+                >
                   {stack.name}
                 </Typography>
               </Box>
@@ -150,7 +157,27 @@ const ProjectDetailLayout = ({ projectDetails }) => {
           ))}
         </Grid>
       </Box>
-
+      <Box mb={10}>
+        <Typography variant="h5" color="primary" fontWeight="500" mb={2}>
+          Links
+        </Typography>
+        {links.map((link) => (
+          <React.Fragment key={link.title}>
+            <Typography variant="body1" color="primary" gutterBottom>
+              {link.title}:{" "}
+              <Typography
+                component="a"
+                target="_blank"
+                href={link.href}
+                color="info.main"
+                fontWeight="500"
+              >
+                {link.href.replace(/^https?:\/\//, "")}
+              </Typography>
+            </Typography>
+          </React.Fragment>
+        ))}
+      </Box>
       <Box mb={5}>
         <Typography variant="h5" color="primary" mb={2} fontWeight="500">
           Preview
@@ -161,7 +188,7 @@ const ProjectDetailLayout = ({ projectDetails }) => {
           width={preview.width}
           height={preview.height}
           loading="eager"
-          quality={80}
+          quality={100}
         />
       </Box>
 
@@ -171,6 +198,7 @@ const ProjectDetailLayout = ({ projectDetails }) => {
             variant="text"
             color="primary"
             component="a"
+            size="large"
             startIcon={<KeyboardArrowLeftIcon />}
           >
             Back to Portfolio

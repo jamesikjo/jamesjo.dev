@@ -10,7 +10,6 @@ import {
   ListItemText,
   Divider,
 } from "@mui/material";
-import CloseIcon from "@mui/icons-material/Close";
 import MenuIcon from "@mui/icons-material/Menu";
 
 const NavDrawer = ({ navLinks }) => {

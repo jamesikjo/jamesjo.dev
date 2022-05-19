@@ -26,8 +26,8 @@ const Links = () => {
       <Typography
         variant="h4"
         color="primary"
-        fontWeight="700"
-        sx={{ letterSpacing: "-.12rem" }}
+        fontWeight="600"
+        sx={{ letterSpacing: "-.10rem" }}
       >
         Links
       </Typography>

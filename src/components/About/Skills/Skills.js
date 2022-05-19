@@ -10,16 +10,16 @@ const Skills = () => {
         <Typography
           variant="h4"
           color="primary"
-          fontWeight="700"
+          fontWeight="600"
           sx={{ letterSpacing: "-.10rem" }}
         >
           Skills
         </Typography>
       </Stack>
       <Grid container spacing={4}>
-        <Grid item xs={12} md={6} alignItems={"flex-start"}>
+        <Grid item xs={12} md={6} alignItems="flex-start">
           <Box>
-            <Typography variant="subtitle1" color="secondary">
+            <Typography variant="subtitle1" color="primary">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               placerat orci nulla pellentesque dignissim enim sit amet.

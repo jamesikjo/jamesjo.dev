@@ -18,7 +18,7 @@ const Latest = ({ latestProjectData }) => {
         variant="h4"
         component="h3"
         color="primary"
-        fontWeight="700"
+        fontWeight="600"
         mb={5}
         sx={{ letterSpacing: "-.10rem" }}
       >
@@ -27,7 +27,11 @@ const Latest = ({ latestProjectData }) => {
 
       <CardLatest latestProjectData={latestProjectData} />
 
-      <Box display="flex" justifyContent="flex-end" mt={5}>
+      <Box
+        display="flex"
+        justifyContent={{ xs: "center", sm: "flex-end" }}
+        mt={5}
+      >
         <Link href="/portfolio" passHref>
           <Button
             variant="text"
