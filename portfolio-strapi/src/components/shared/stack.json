@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_shared_stacks",
+  "info": {
+    "displayName": "Stack",
+    "icon": "swatchbook"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "icon": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    },
+    "url": {
+      "type": "string",
+      "default": "https://"
+    }
+  }
+}

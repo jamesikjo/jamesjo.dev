@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_links_visits",
+  "info": {
+    "displayName": "Visit",
+    "icon": "external-link-square-alt",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "default": "Visit",
+      "required": true
+    },
+    "url": {
+      "type": "string",
+      "default": "https://",
+      "required": true
+    }
+  }
+}

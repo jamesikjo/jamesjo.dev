@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_shared_links",
+  "info": {
+    "displayName": "Link",
+    "icon": "link",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "enumeration",
+      "enum": [
+        "GitHub",
+        "Visit",
+        "Project Page",
+        "Website",
+        "LinkedIn",
+        "Instagram",
+        "Resume"
+      ],
+      "required": false
+    },
+    "url": {
+      "type": "string",
+      "default": "https://"
+    }
+  }
+}

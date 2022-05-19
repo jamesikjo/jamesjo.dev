@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "stacks",
+  "info": {
+    "singularName": "stack",
+    "pluralName": "stacks",
+    "displayName": "Stack",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "stack": {
+      "type": "enumeration",
+      "enum": [
+        "React",
+        "Next.js",
+        "MUI",
+        "Node.js",
+        "MongoDB",
+        "Strapi",
+        "Vercel",
+        "Netlify",
+        "Heroku"
+      ],
+      "required": true
+    },
+    "url": {
+      "type": "string",
+      "default": "https://"
+    },
+    "icon": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    }
+  }
+}

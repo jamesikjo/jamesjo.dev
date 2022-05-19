@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_sections_skills",
+  "info": {
+    "displayName": "Skills",
+    "icon": "atlas"
+  },
+  "options": {},
+  "attributes": {
+    "content": {
+      "type": "richtext"
+    }
+  }
+}
