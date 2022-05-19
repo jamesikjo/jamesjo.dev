@@ -23,7 +23,7 @@ const Intro = () => {
   return (
     <Box component="section">
       <Box display="flex" flexDirection={{ xs: "column-reverse", sm: "row" }}>
-        <Box pr={10}>
+        <Box pr={{ xs: 5, sm: 10 }}>
           <Typography
             variant={isSm ? "h3" : "h4"}
             component="h1"
@@ -59,13 +59,14 @@ const Intro = () => {
           >
             {`I'm`} a self-taught developer based in Oakland, California. My
             main focus is on developing modern web applications using the latest
-            libraries and frameworks such as React and Next.js. I invite you to
+            libraries and frameworks such as React and Next.js.
+            {/* I invite you to
             visit my{" "}
             <Link href="/about" alt="about">
-              <a>about page</a>
+              <a>About page</a>
             </Link>
             {"  "}
-            to learn a bit more about my history and background.
+            to get to know a bit more about my me and background. */}
           </Typography>
         </Box>
         <Box
