@@ -14,7 +14,8 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import InstagramIcon from "@mui/icons-material/Instagram";
 
-const Contact = () => {
+const Contact = ({ contact }) => {
+  const { description, email } = contact;
   return (
     <Box component="section">
       <Stack
@@ -39,9 +40,7 @@ const Contact = () => {
           {"Get in touch"}
         </Typography>
         <Typography variant="subtitle1" color="primary" gutterBottom>
-          If you are looking for a developer, have a question, or simply want to
-          connect, <br />
-          please feel free to contact me.
+          {description}
         </Typography>
 
         <Button
@@ -54,7 +53,7 @@ const Contact = () => {
           }}
           // startIcon={<MailOutlineIcon />}
         >
-          jamesjodev@gmail.com
+          {email}
         </Button>
       </Stack>
       {/* <Stack

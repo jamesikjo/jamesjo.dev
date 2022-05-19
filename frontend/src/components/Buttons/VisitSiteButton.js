@@ -1,24 +1,46 @@
 import React from "react";
+import { Button, IconButton, useMediaQuery, useTheme } from "@mui/material";
 import OpenInNewIcon from "@mui/icons-material/OpenInNew";
-import { Button } from "@mui/material";
 
-const VisitSiteButton = ({ variant = "text", size = "medium", href }) => {
+const VisitSiteButton = ({
+  variant = "text",
+  color = "primary",
+  size = "medium",
+  href,
+}) => {
+  const theme = useTheme();
+  const isSm = useMediaQuery(theme.breakpoints.up("sm"));
   return (
     <>
-      <Button
-        variant={variant}
-        color="primary"
-        size={size}
-        href={href}
-        rel="noopener noreferrer"
-        target="_blank"
-        startIcon={<OpenInNewIcon />}
-        sx={{
-          "& .MuiButton-startIcon": { mr: 0.5 },
-        }}
-      >
-        Visit
-      </Button>
+      {isSm ? (
+        <Button
+          variant={variant}
+          component="a"
+          color={color}
+          size={size}
+          href={href}
+          rel="noopener noreferrer"
+          target="_blank"
+          startIcon={<OpenInNewIcon />}
+          sx={{
+            "& .MuiButton-startIcon": { mr: 0.5 },
+          }}
+        >
+          Visit
+        </Button>
+      ) : (
+        <IconButton
+          variant={variant}
+          component="a"
+          color={color}
+          size={size}
+          href={href}
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <OpenInNewIcon />
+        </IconButton>
+      )}
     </>
   );
 };

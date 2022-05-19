@@ -16,7 +16,7 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 import KeyboardDoubleArrowDownIcon from "@mui/icons-material/KeyboardDoubleArrowDown";
 import { AboutMeButton } from "../../Buttons";
 
-const Intro = () => {
+const Intro = ({ profession, intro }) => {
   const theme = useTheme();
   const isSm = useMediaQuery(theme.breakpoints.up("sm"));
 
@@ -42,7 +42,7 @@ const Intro = () => {
             mb={2}
             sx={{ letterSpacing: "-.05rem" }}
           >
-            Front-end / UI Developer
+            {profession}
           </Typography>
 
           <Typography
@@ -57,16 +57,7 @@ const Intro = () => {
               },
             }}
           >
-            {`I'm`} a self-taught developer based in Oakland, California. My
-            main focus is on developing modern web applications using the latest
-            libraries and frameworks such as React and Next.js.
-            {/* I invite you to
-            visit my{" "}
-            <Link href="/about" alt="about">
-              <a>About page</a>
-            </Link>
-            {"  "}
-            to get to know a bit more about my me and background. */}
+            {intro}
           </Typography>
         </Box>
         <Box

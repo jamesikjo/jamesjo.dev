@@ -13,16 +13,17 @@ import {
 } from "@mui/material";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 import { GitHubButton, VisitSiteButton } from "../../../Buttons";
+import getStrapiMedia from "../../../../lib/media";
 
-const CardList = ({ latestProjectData }) => {
+const CardList = ({ latestProjects }) => {
   const theme = useTheme();
   const isSm = useMediaQuery(theme.breakpoints.up("sm"));
 
   return (
     <Stack spacing={4}>
-      {latestProjectData.map((item) => (
+      {latestProjects.map(({ attributes }) => (
         <Box
-          key={item.title}
+          key={attributes.title}
           width={1}
           display="flex"
           flexDirection={{ xs: "column", sm: "row-reverse" }}
@@ -30,12 +31,12 @@ const CardList = ({ latestProjectData }) => {
           borderRadius={1}
           sx={{
             border: { xs: "none", sm: `0.5px solid #c9cfd6` },
-            bgcolor: "common.white",
+            bgcolor: { xs: "none", sm: "common.white" },
           }}
         >
           <Box
             sx={{
-              width: { xs: 1, md: "50%" },
+              width: { xs: 1, md: "40%" },
               height: { xs: 280, sm: 240 },
               maxHeight: { sm: 240 },
               position: "relative",
@@ -47,8 +48,8 @@ const CardList = ({ latestProjectData }) => {
             <Image
               layout="fill"
               objectFit="contain"
-              src={item.image}
-              alt={item.title}
+              src={getStrapiMedia(attributes.cover)}
+              alt={attributes.title}
               priority
             />
           </Box>
@@ -66,14 +67,14 @@ const CardList = ({ latestProjectData }) => {
               color="primary"
               fontWeight="600"
             >
-              {item.title}
+              {attributes.title}
             </Typography>
             <Typography
               color="secondary"
               variant={isSm ? "body1" : "subtitle2"}
               fontWeight="400"
             >
-              {item.description}
+              {attributes.description}
             </Typography>
             <Divider sx={{ my: 2 }} />
 
@@ -82,11 +83,10 @@ const CardList = ({ latestProjectData }) => {
               justifyContent="space-between"
               alignItems="center"
             >
-              <Link href={item.links.details} passHref>
+              <Link href={attributes.page.url} passHref>
                 <Button
                   color="info"
                   component="a"
-                  size="small"
                   endIcon={<KeyboardArrowRightIcon />}
                   sx={{
                     "& .MuiButton-endIcon": { ml: 0 },
@@ -97,9 +97,9 @@ const CardList = ({ latestProjectData }) => {
                   Project Page
                 </Button>
               </Link>
-              <Stack direction="row" spacing={1}>
-                <GitHubButton size="small" href={item.links.github} />
-                <VisitSiteButton size="small" href={item.links.project} />
+              <Stack direction="row" spacing={{ xs: 0, sm: 1 }}>
+                <GitHubButton href={attributes.github.url} />
+                <VisitSiteButton href={attributes.visit.url} />
               </Stack>
             </Stack>
           </CardContent>

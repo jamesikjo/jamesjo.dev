@@ -1,26 +1,7 @@
 import React from "react";
 import { Typography, Box } from "@mui/material";
 
-const links = [
-  {
-    name: "GitHub",
-    at: "@jamesikjo",
-    href: "https://www.github.com/jamesikjo",
-  },
-  { name: "Website", at: "https://jamesjo.dev", href: "https://jamesjo.dev" },
-  {
-    name: "LinkedIn",
-    at: "https://www.linkedin.com",
-    href: "https://www.linkedin.com",
-  },
-  {
-    name: "Resume",
-    at: "James Jo | Resume",
-    href: "",
-  },
-];
-
-const Links = () => {
+const Links = ({ links }) => {
   return (
     <>
       <Typography
@@ -35,16 +16,16 @@ const Links = () => {
         {links.map((link) => (
           <Box key={link.at} component="li">
             <Typography variant="subtitle1" color="primary">
-              {link.name}:{" "}
+              {link.title}:{" "}
               {
                 <Typography
                   variant="subtitle1"
                   component="a"
-                  href={link.href}
+                  href={link.url}
                   fontWeight="500"
                   sx={{ color: "info.main" }}
                 >
-                  {link.at}
+                  {link.url.replace("https://", "")}
                 </Typography>
               }
             </Typography>

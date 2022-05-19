@@ -3,41 +3,50 @@ import { Grid, Typography, Stack, Box, Divider } from "@mui/material";
 import TechGridList from "./TechGridList";
 import { ResumeButton, GitHubButton } from "../../Buttons";
 
-const Skills = () => {
+const Skills = ({ skills }) => {
   return (
-    <>
-      <Stack mb={3}>
+    <Box mb={3}>
+      <Typography
+        variant="h4"
+        color="primary"
+        fontWeight="600"
+        mb={3}
+        sx={{ letterSpacing: "-.10rem" }}
+      >
+        Skills
+      </Typography>
+
+      <Box>
         <Typography
-          variant="h4"
+          variant="subtitle1"
           color="primary"
+          gutterBottom
           fontWeight="600"
-          sx={{ letterSpacing: "-.10rem" }}
+          // sx={{ fontStyle: "italic" }}
         >
-          Skills
+          Technologies
         </Typography>
-      </Stack>
-      <Grid container spacing={4}>
-        <Grid item xs={12} md={6} alignItems="flex-start">
-          <Box>
-            <Typography variant="subtitle1" color="primary">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              placerat orci nulla pellentesque dignissim enim sit amet.
-              Sollicitudin tempor id eu nisl nunc mi ipsum.
-              <br />
-              <br />
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              placerat orci nulla pellentesque dignissim enim sit amet.
-              Sollicitudin tempor id eu nisl nunc mi ipsum.
-            </Typography>
-          </Box>
+        <Grid container spacing={4}>
+          <Grid item xs={12} md={6} alignItems="flex-start">
+            <Box>
+              <Typography variant="subtitle1" color="primary">
+                {skills.content}
+              </Typography>
+            </Box>
+          </Grid>
+          <Grid
+            item
+            container
+            spacing={1}
+            xs={12}
+            md={6}
+            justifyContent="center"
+          >
+            <TechGridList />
+          </Grid>
         </Grid>
-        <Grid item container spacing={1} xs={12} md={6} justifyContent="center">
-          <TechGridList />
-        </Grid>
-      </Grid>
-    </>
+      </Box>
+    </Box>
   );
 };
 
