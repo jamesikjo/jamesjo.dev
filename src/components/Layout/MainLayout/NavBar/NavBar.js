@@ -16,6 +16,18 @@ import NavDrawer from "./NavDrawer/NavDrawer";
 const NavBar = ({ navLinks }) => {
   const theme = useTheme();
   const isSm = useMediaQuery(theme.breakpoints.up("sm"));
+  const router = useRouter();
+
+  const activeLinkStyles = (path) => {
+    if (router.pathname.includes(path)) {
+      return {
+        fontWeight: "600",
+        color: "info.dark",
+        textTransform: "capitalize",
+      };
+    }
+    return { textTransform: "capitalize" };
+  };
 
   return (
     <AppBar
@@ -55,7 +67,15 @@ const NavBar = ({ navLinks }) => {
           {navLinks.map(({ title, route }) => (
             <React.Fragment key={title}>
               <Link href={route} passHref>
-                <Button variant="text" component="a">
+                <Button
+                  variant="text"
+                  component="a"
+                  color="secondary"
+                  size="large"
+                  disableRipple
+                  target={title === "Resume" ? "_blank" : "_self"}
+                  sx={activeLinkStyles(route)}
+                >
                   {title}
                 </Button>
               </Link>
