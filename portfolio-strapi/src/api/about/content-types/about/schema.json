@@ -21,6 +21,11 @@
       "type": "component",
       "repeatable": false,
       "component": "sections.skills"
+    },
+    "links": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.link"
     }
   }
 }

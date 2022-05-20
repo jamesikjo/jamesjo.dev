@@ -59,6 +59,11 @@
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::stack.stack"
+    },
+    "links": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.link"
     }
   }
 }

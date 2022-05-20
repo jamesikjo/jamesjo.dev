@@ -32,6 +32,21 @@
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::project.project"
+    },
+    "github": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.link"
+    },
+    "visit": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.link"
+    },
+    "page": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.link"
     }
   }
 }
