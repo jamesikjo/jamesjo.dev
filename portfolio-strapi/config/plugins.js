@@ -9,6 +9,9 @@ module.exports = ({ env }) => ({
         api_secret: env("CLOUDINARY_SECRET"),
       },
       actionOptions: {
+        uploadStream: {
+          folder: env("CLOUDINARY_FOLDER", ""),
+        },
         upload: {},
         delete: {},
       },
