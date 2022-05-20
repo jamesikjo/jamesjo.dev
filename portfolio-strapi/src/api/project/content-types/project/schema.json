@@ -14,11 +14,11 @@
   "attributes": {
     "title": {
       "type": "string",
-      "required": true
+      "required": false
     },
     "subtitle": {
       "type": "string",
-      "required": true
+      "required": false
     },
     "type": {
       "type": "enumeration",
@@ -42,7 +42,7 @@
     "thumbnail": {
       "type": "media",
       "multiple": false,
-      "required": true,
+      "required": false,
       "allowedTypes": [
         "images"
       ]
@@ -59,11 +59,6 @@
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::stack.stack"
-    },
-    "links": {
-      "type": "component",
-      "repeatable": true,
-      "component": "shared.link"
     }
   }
 }

@@ -28,22 +28,6 @@
         "images"
       ]
     },
-    "github": {
-      "type": "component",
-      "repeatable": false,
-      "component": "latest.link",
-      "required": true
-    },
-    "visit": {
-      "type": "component",
-      "repeatable": false,
-      "component": "latest.visit"
-    },
-    "page": {
-      "type": "component",
-      "repeatable": false,
-      "component": "latest.project-page"
-    },
     "project": {
       "type": "relation",
       "relation": "oneToOne",
