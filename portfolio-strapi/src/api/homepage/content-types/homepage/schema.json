@@ -14,11 +14,6 @@
     "draftAndPublish": false
   },
   "attributes": {
-    "seo": {
-      "type": "component",
-      "repeatable": false,
-      "component": "shared.seo"
-    },
     "profession": {
       "type": "string",
       "required": true

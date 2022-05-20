@@ -31,18 +31,18 @@
     "github": {
       "type": "component",
       "repeatable": false,
-      "component": "links.link",
+      "component": "latest.link",
       "required": true
     },
     "visit": {
       "type": "component",
       "repeatable": false,
-      "component": "links.visit"
+      "component": "latest.visit"
     },
     "page": {
       "type": "component",
       "repeatable": false,
-      "component": "links.project-page"
+      "component": "latest.project-page"
     },
     "project": {
       "type": "relation",
