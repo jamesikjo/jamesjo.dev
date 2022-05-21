@@ -47,6 +47,9 @@
       "type": "component",
       "repeatable": false,
       "component": "shared.link"
+    },
+    "order": {
+      "type": "integer"
     }
   }
 }

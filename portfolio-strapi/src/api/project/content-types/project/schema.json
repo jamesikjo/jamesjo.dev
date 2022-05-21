@@ -64,6 +64,9 @@
       "type": "component",
       "repeatable": true,
       "component": "shared.link"
+    },
+    "order": {
+      "type": "integer"
     }
   }
 }
