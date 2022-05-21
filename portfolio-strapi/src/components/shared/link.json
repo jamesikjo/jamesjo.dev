@@ -16,7 +16,9 @@
         "Website",
         "LinkedIn",
         "Instagram",
-        "Resume"
+        "Resume",
+        "Visit Page",
+        "Repository"
       ],
       "required": false
     },
