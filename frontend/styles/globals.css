@@ -7,8 +7,8 @@ a {
   text-decoration: none;
 }
 
-a.innerLink {
-  color: #2196f3;
-  font-weight: 600;
-  text-decoration: none;
+div.markdown a{
+    color: #2196f3;
+    font-weight: 600;
+  
 }
