@@ -1,11 +1,11 @@
 import React from "react";
+import Image from "next/image";
 import Link from "next/link";
 import {
   Container,
   Typography,
   Stack,
   Grid,
-  Chip,
   Box,
   useTheme,
   useMediaQuery,
@@ -18,24 +18,15 @@ import KeyboardArrowLeftIcon from "@mui/icons-material/KeyboardArrowLeft";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 import BreadNavCrumbs from "../../BreadNavCrumbs";
-import Image from "next/image";
+import getStrapiMedia from "../../../lib/media";
+import ReactMarkdown from "react-markdown";
 
-const ProjectDetailLayout = ({ projectDetails }) => {
+const ProjectDetailLayout = ({ singleProject }) => {
   const theme = useTheme();
   const isSm = useMediaQuery(theme.breakpoints.up("sm"));
 
-  const {
-    title,
-    stacks,
-    type,
-    overview,
-    highlights,
-    projectLink,
-    githubLink,
-    preview,
-    links,
-    innerHTML,
-  } = projectDetails;
+  const { title, stacks, summary, highlights, thumbnail, links } =
+    singleProject;
   return (
     <Container maxWidth="md">
       <BreadNavCrumbs
@@ -43,9 +34,8 @@ const ProjectDetailLayout = ({ projectDetails }) => {
         prevHref={"/portfolio"}
         current={title}
       />
-
       <Box mb={8}>
-        <Stack direction="row" alignItems="center" pb={3}>
+        <Stack direction="row" alignItems="center">
           <Typography
             variant={isSm ? "h3" : "h4"}
             color="primary"
@@ -54,75 +44,68 @@ const ProjectDetailLayout = ({ projectDetails }) => {
           >
             {title}
           </Typography>
-          <Stack direction="row" alignItems="center">
-            <Link href={githubLink} passHref>
-              <Tooltip
-                title={<Typography variant="body2">View Repository</Typography>}
-                arrow
+          <Link href={links[0].url} passHref>
+            <Tooltip
+              title={<Typography variant="body2">View Repository</Typography>}
+              arrow
+            >
+              <IconButton
+                color="secondary"
+                component="a"
+                rel="noopener noreferrer"
+                target="_blank"
+                sx={{ p: 0 }}
               >
-                <IconButton
-                  color="secondary"
-                  component="a"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                  sx={{ p: 0 }}
-                >
-                  <GitHubIcon sx={{ fontSize: "1.8rem" }} />
-                </IconButton>
-              </Tooltip>
-            </Link>
-            <Link href={projectLink} passHref>
-              <Tooltip
-                title={<Typography variant="body2">View Site</Typography>}
-                arrow
+                <GitHubIcon sx={{ fontSize: "1.8rem" }} />
+              </IconButton>
+            </Tooltip>
+          </Link>
+          <Link href={links[1].url} passHref>
+            <Tooltip
+              title={<Typography variant="body2">View Site</Typography>}
+              arrow
+            >
+              <IconButton
+                color="secondary"
+                component="a"
+                rel="noopener noreferrer"
+                target="_blank"
               >
-                <IconButton
-                  color="secondary"
-                  component="a"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  <OpenInNewIcon sx={{ fontSize: "1.8rem" }} />
-                </IconButton>
-              </Tooltip>
-            </Link>
-          </Stack>
+                <OpenInNewIcon sx={{ fontSize: "1.8rem" }} />
+              </IconButton>
+            </Tooltip>
+          </Link>
         </Stack>
-
-        <Typography variant="subtitle1" color="primary">
-          <div
-            dangerouslySetInnerHTML={{
-              __html: overview,
-            }}
-          />
+        <Typography
+          variant="subtitle1"
+          component="div"
+          color="primary"
+          className="markdown"
+        >
+          <ReactMarkdown children={summary} />
         </Typography>
       </Box>
+
       <Box mb={10}>
         <Typography variant="h5" color="primary" fontWeight="500" mb={2}>
           Project Highlights
         </Typography>
-        <Box component="ul">
-          {highlights.map((item) => (
-            <>
-              <Typography variant="subtitle1" color="primary" component="li">
-                <div
-                  dangerouslySetInnerHTML={{
-                    __html: item,
-                  }}
-                />
-              </Typography>
-            </>
-          ))}
-        </Box>
+        <Typography
+          variant="subtitle1"
+          component="div"
+          color="primary"
+          className="markdown"
+        >
+          <ReactMarkdown children={highlights} />
+        </Typography>
       </Box>
-
       <Box mb={10}>
         <Typography variant="h5" color="primary" pb={2} fontWeight="500">
           Web Stack
         </Typography>
         <Grid container spacing={2}>
-          {stacks.map((stack) => (
-            <Grid item xs={6} sm={4} key={stack.name}>
+          {stacks.data.map(({ attributes: stack }) => (
+            <Grid item xs={6} sm={4} key={stack.stack}>
               <Box
                 display="flex"
                 alignItems="center"
@@ -134,7 +117,7 @@ const ProjectDetailLayout = ({ projectDetails }) => {
                   py: 1,
                   width: 1,
                 }}
-                key={stack.name}
+                key={stack.stack}
               >
                 <Avatar
                   src={stack.icon}
@@ -145,12 +128,12 @@ const ProjectDetailLayout = ({ projectDetails }) => {
                   variant="square"
                 />
                 <Typography
-                  variant="body1"
+                  variant="body2"
                   color="primary"
                   ml={2}
                   fontWeight="400"
                 >
-                  {stack.name}
+                  {stack.stack}
                 </Typography>
               </Box>
             </Grid>
@@ -164,15 +147,15 @@ const ProjectDetailLayout = ({ projectDetails }) => {
         {links.map((link) => (
           <React.Fragment key={link.title}>
             <Typography variant="body1" color="primary" gutterBottom>
-              {link.title}:{" "}
+              {link.title !== "GitHub" ? "Visit Site" : "Repository"}:{" "}
               <Typography
                 component="a"
                 target="_blank"
-                href={link.href}
+                href={link.url}
                 color="info.main"
                 fontWeight="500"
               >
-                {link.href.replace(/^https?:\/\//, "")}
+                {link.url.replace(/^https?:\/\//, "")}
               </Typography>
             </Typography>
           </React.Fragment>
@@ -183,15 +166,14 @@ const ProjectDetailLayout = ({ projectDetails }) => {
           Preview
         </Typography>
         <Image
-          src={preview.image}
+          src={getStrapiMedia(thumbnail)}
           alt={title}
-          width={preview.width}
-          height={preview.height}
-          loading="eager"
+          width={thumbnail.data.attributes.width}
+          height={thumbnail.data.attributes.height}
+          priority
           quality={100}
         />
       </Box>
-
       <Box mb={10} display="flex" justifyContent="flex-end">
         <Link href="/portfolio" passHref>
           <Button

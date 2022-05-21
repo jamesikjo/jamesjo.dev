@@ -4,9 +4,7 @@ import { Intro, Latest, Contact } from "../src/components/Landing";
 import { MainLayout } from "../src/components/Layout";
 import { fetchData } from "../src/lib/fetchData";
 
-export default function Home({ latestProjects, homeData, projects }) {
-  console.log(projects);
-
+export default function Home({ latestProjects, homeData }) {
   const { profession, intro, contact } = homeData;
   return (
     <MainLayout title="Web Developer">
@@ -29,15 +27,10 @@ export const getStaticProps = async () => {
     populate: "*",
   });
 
-  const projectRes = await fetchData("/projects", {
-    populate: "*",
-  });
-
   return {
     props: {
       homeData: homepageRes.data.attributes,
       latestProjects: latestRes.data,
-      projects: projectRes.data,
     },
   };
 };

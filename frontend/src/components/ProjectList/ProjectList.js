@@ -3,8 +3,9 @@ import Link from "next/link";
 import Image from "next/image";
 import { Grid, Typography, Box, Button, Chip } from "@mui/material";
 import BreadNavCrumbs from "../BreadNavCrumbs";
+import getStrapiMedia from "../../lib/media";
 
-const ProjectList = ({ projectData }) => {
+const ProjectList = ({ projects }) => {
   return (
     <Box>
       <Box mb={3}>
@@ -20,7 +21,7 @@ const ProjectList = ({ projectData }) => {
         Projects
       </Typography>
       <Grid container rowSpacing={6} columnSpacing={4}>
-        {projectData.map((item, i) => (
+        {projects.map(({ attributes: item }, i) => (
           <Grid item xs={12} sm={6} key={i}>
             <Box
               position="relative"
@@ -44,7 +45,7 @@ const ProjectList = ({ projectData }) => {
                   }}
                 >
                   <Image
-                    src={item.cover}
+                    src={getStrapiMedia(item.thumbnail)}
                     alt={item.title}
                     width={520}
                     height={285}
@@ -54,7 +55,6 @@ const ProjectList = ({ projectData }) => {
               <Link href={`/portfolio/${item.slug}`} alt={item.title} passHref>
                 <Box
                   component={"a"}
-                  href={`/portfolio/${item.slug}`}
                   sx={{
                     position: "absolute",
                     bottom: 20,
@@ -81,7 +81,7 @@ const ProjectList = ({ projectData }) => {
               {item.title}
             </Typography>
             <Typography variant="body1" color="secondary">
-              {item.description}
+              {item.subtitle}
             </Typography>
           </Grid>
         ))}
