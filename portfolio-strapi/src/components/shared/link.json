@@ -18,13 +18,17 @@
         "Instagram",
         "Resume",
         "Visit Page",
-        "Repository"
+        "Repository",
+        "Project Details"
       ],
       "required": false
     },
     "url": {
       "type": "string",
       "default": "https://"
+    },
+    "name": {
+      "type": "string"
     }
   }
 }
