@@ -38,6 +38,9 @@
       "allowedTypes": [
         "images"
       ]
+    },
+    "order": {
+      "type": "integer"
     }
   }
 }

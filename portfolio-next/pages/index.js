@@ -6,6 +6,7 @@ import { fetchData } from "../src/lib/fetchData";
 
 export default function Home({ latestProjects, homeData }) {
   const { profession, intro, contact } = homeData;
+
   return (
     <MainLayout title="Web Developer">
       <Container maxWidth="md" sx={{ py: 8 }}>
@@ -24,6 +25,7 @@ export default function Home({ latestProjects, homeData }) {
 export const getStaticProps = async () => {
   const homepageRes = await fetchData("/homepage", { populate: "*" });
   const latestRes = await fetchData("/latests", {
+    sort: ["order"],
     populate: "*",
   });
 
