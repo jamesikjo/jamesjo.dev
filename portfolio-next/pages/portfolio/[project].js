@@ -27,7 +27,14 @@ export const getStaticProps = async ({ params }) => {
 
   const res = await fetchData("/projects", {
     filters: { slug: project },
-    populate: "*",
+    //You can populate either as a whole on the 1st level or
+    //populate each field indiviually to populate deeper levels
+    //can't combine to do both
+    populate: {
+      stacks: { populate: "*" },
+      links: { populate: "*" },
+      thumbnail: { populate: "*" },
+    },
   });
 
   const singleProject = res.data[0].attributes;
