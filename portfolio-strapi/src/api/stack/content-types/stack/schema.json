@@ -23,7 +23,8 @@
         "Strapi",
         "Vercel",
         "Netlify",
-        "Heroku"
+        "Heroku",
+        "Javascript"
       ],
       "required": true
     },
