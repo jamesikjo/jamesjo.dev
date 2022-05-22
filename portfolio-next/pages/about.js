@@ -1,16 +1,18 @@
 import React from "react";
 import { Box, Container } from "@mui/material";
+
 import { MainLayout } from "../src/components/Layout";
 import About from "../src/components/About";
 import { fetchData } from "../src/lib/fetchData";
 
-const AboutPage = ({ about }) => {
+const AboutPage = ({ about, stacks }) => {
   const { attributes: aboutData } = about;
+
   return (
     <Box>
       <MainLayout title="About Me">
         <Container maxWidth="md">
-          <About aboutData={aboutData} />
+          <About aboutData={aboutData} stacks={stacks} />
         </Container>
       </MainLayout>
     </Box>
@@ -18,9 +20,11 @@ const AboutPage = ({ about }) => {
 };
 export const getStaticProps = async () => {
   const aboutRes = await fetchData("/about", { populate: "*" });
+  const stackRes = await fetchData("/stacks", { sort: ["order"] });
   return {
     props: {
       about: aboutRes.data,
+      stacks: stackRes.data,
     },
   };
 };

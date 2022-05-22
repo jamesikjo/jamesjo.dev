@@ -18,6 +18,7 @@ export default PortfolioPage;
 
 export const getStaticProps = async () => {
   const projectRes = await fetchData("/projects", {
+    sort: ["order"],
     populate: "*",
   });
 

@@ -1,51 +1,49 @@
 import React from "react";
 import { Grid, Typography, Stack, Box, Divider } from "@mui/material";
 import TechGridList from "./TechGridList";
-import { ResumeButton, GitHubButton } from "../../Buttons";
+import ReactMarkdown from "react-markdown";
 
-const Skills = ({ skills }) => {
+const Skills = ({ skills, stacks }) => {
   return (
     <Box mb={3}>
       <Typography
         variant="h4"
         color="primary"
         fontWeight="600"
-        mb={3}
+        mb={2}
         sx={{ letterSpacing: "-.10rem" }}
       >
         Skills
       </Typography>
 
-      <Box>
+      <Box mb={3}>
         <Typography
           variant="subtitle1"
           color="primary"
-          gutterBottom
-          fontWeight="600"
-          // sx={{ fontStyle: "italic" }}
+          component="div"
+          className="markdown"
         >
-          Technologies
+          <ReactMarkdown children={skills.content} />
         </Typography>
-        <Grid container spacing={4}>
-          <Grid item xs={12} md={6} alignItems="flex-start">
-            <Box>
-              <Typography variant="subtitle1" color="primary">
-                {skills.content}
-              </Typography>
-            </Box>
-          </Grid>
-          <Grid
-            item
-            container
-            spacing={1}
-            xs={12}
-            md={6}
-            justifyContent="center"
-          >
-            <TechGridList />
-          </Grid>
-        </Grid>
       </Box>
+      <Grid container spacing={4}>
+        <Grid item xs={12} md={6} alignItems="flex-start">
+          <Typography variant="subtitle1" color="primary" fontWeight="600">
+            Technologies
+          </Typography>
+          <Typography
+            variant="subtitle1"
+            color="primary"
+            component="div"
+            className="markdown"
+          >
+            <ReactMarkdown children={skills.technologies} />
+          </Typography>
+        </Grid>
+        <Grid item container spacing={1} xs={12} md={6} justifyContent="center">
+          <TechGridList stacks={stacks} />
+        </Grid>
+      </Grid>
     </Box>
   );
 };

@@ -76,12 +76,13 @@ const CardList = ({ latestProjects }) => {
             >
               {attributes.description}
             </Typography>
-            <Divider sx={{ my: 2 }} />
+            <Divider sx={{ my: 1.5, display: { xs: "none", sm: "block" } }} />
 
             <Stack
               direction="row"
               justifyContent="space-between"
               alignItems="center"
+              mt={{ xs: 1, sm: 0 }}
             >
               <Link href={attributes.page.url} passHref>
                 <Button

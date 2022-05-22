@@ -6,17 +6,18 @@ import Skills from "./Skills";
 import BreadNavCrumbs from "../BreadNavCrumbs";
 import Links from "./Links";
 
-const About = ({ aboutData }) => {
+const About = ({ aboutData, stacks }) => {
   const { bio, skills, links } = aboutData;
+
   return (
     <Box component="section">
       <BreadNavCrumbs current="About" />
       <Links links={links} />
-      <Box py={8}>
+      <Box pt={6} pb={8}>
         <Bio bio={bio} />
       </Box>
       <Box>
-        <Skills skills={skills} />
+        <Skills skills={skills} stacks={stacks} />
       </Box>
     </Box>
   );

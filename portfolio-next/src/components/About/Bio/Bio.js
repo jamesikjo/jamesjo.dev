@@ -1,12 +1,21 @@
 import React, { useState } from "react";
-import { Typography, Stack, Box, Avatar, Grid } from "@mui/material";
+import { Typography, Box } from "@mui/material";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
+import ArrowDropUpIcon from "@mui/icons-material/ArrowDropUp";
 import ReactMarkdown from "react-markdown";
 
 const Bio = ({ bio }) => {
   const [showText, setShowText] = useState(false);
+
   const toggleShowText = () => {
     setShowText(!showText);
+  };
+  const switchToggleIcon = () => {
+    return showText ? (
+      <ArrowDropUpIcon color="info" sx={{ verticalAlign: "middle" }} />
+    ) : (
+      <ArrowDropDownIcon color="info" sx={{ verticalAlign: "middle" }} />
+    );
   };
   return (
     <Box>
@@ -20,13 +29,8 @@ const Bio = ({ bio }) => {
         Bio
       </Typography>
 
-      <Box>
-        <Typography
-          variant="subtitle1"
-          color="primary"
-          fontWeight="600"
-          mb={-1}
-        >
+      <Box mb={3}>
+        <Typography variant="subtitle1" color="primary" fontWeight="600">
           Short
         </Typography>
         <Typography
@@ -34,21 +38,13 @@ const Bio = ({ bio }) => {
           component="div"
           color="primary"
           className="markdown"
-          mb={3}
         >
           <ReactMarkdown children={bio.short} />
         </Typography>
       </Box>
 
       <Box>
-        <Typography
-          variant="subtitle1"
-          component="div"
-          color="primary"
-          fontWeight="600"
-          onClick={toggleShowText}
-          sx={{ cursor: "pointer" }}
-        >
+        <Typography variant="subtitle1" color="primary" fontWeight="600">
           Long
         </Typography>
         <Typography
@@ -57,10 +53,12 @@ const Bio = ({ bio }) => {
           color="primary"
           fontWeight="400"
           onClick={toggleShowText}
+          className="markdown"
+          display="inline"
           sx={{ cursor: "pointer" }}
         >
-          dropdown
-          <ArrowDropDownIcon color="info" sx={{ verticalAlign: "middle" }} />
+          {showText ? "hide" : "dropdown"}
+          {switchToggleIcon()}
         </Typography>
 
         {showText && (

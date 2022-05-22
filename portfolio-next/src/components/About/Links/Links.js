@@ -12,7 +12,7 @@ const Links = ({ links }) => {
       >
         Links
       </Typography>
-      <Box component="ul" mb={0}>
+      <Box component="ul" mb={0} pl={2.5}>
         {links.map((link) => (
           <Box key={link.at} component="li">
             <Typography variant="subtitle1" color="primary">

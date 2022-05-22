@@ -29,19 +29,19 @@ const Latest = ({ latestProjects }) => {
 
       <Box
         display="flex"
-        justifyContent={{ xs: "center", sm: "flex-end" }}
+        justifyContent={{ xs: "center", sm: "flex-start" }}
         mt={5}
       >
         <Link href="/portfolio" passHref>
           <Button
             variant="text"
             color="primary"
-            size="large"
             component="a"
+            size="large"
             endIcon={<KeyboardArrowRightIcon />}
             sx={{
               "& .MuiButton-endIcon": { ml: 0 },
-              ml: 1,
+              ml: 0,
               p: 0,
             }}
           >

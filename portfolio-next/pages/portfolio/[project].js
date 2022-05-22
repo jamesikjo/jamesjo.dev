@@ -17,7 +17,7 @@ export const getStaticPaths = async () => {
   const paths = res.data.map(({ attributes: p }) => ({
     params: { project: p.slug },
   }));
-
+  console.log(paths);
   return { paths, fallback: false };
 };
 
@@ -30,10 +30,12 @@ export const getStaticProps = async ({ params }) => {
     //You can populate either as a whole on the 1st level or
     //populate each field indiviually to populate deeper levels
     //can't combine to do both
+    //look back into this later
     populate: {
-      stacks: { populate: "*" },
+      stacks: { populate: "*", sort: ["order"] },
       links: { populate: "*" },
       thumbnail: { populate: "*" },
+      preview: { populate: "*" },
     },
   });
 

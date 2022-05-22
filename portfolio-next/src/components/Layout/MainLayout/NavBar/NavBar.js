@@ -22,7 +22,7 @@ const NavBar = ({ navLinks }) => {
     if (router.pathname.includes(path)) {
       return {
         fontWeight: "600",
-        color: "info.dark",
+        color: "info.main",
         textTransform: "capitalize",
       };
     }
@@ -70,7 +70,7 @@ const NavBar = ({ navLinks }) => {
                 <Button
                   variant="text"
                   component="a"
-                  color="secondary"
+                  color="primary"
                   size="large"
                   disableRipple
                   target={title === "Resume" ? "_blank" : "_self"}

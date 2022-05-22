@@ -24,9 +24,8 @@ import ReactMarkdown from "react-markdown";
 const ProjectDetailLayout = ({ singleProject }) => {
   const theme = useTheme();
   const isSm = useMediaQuery(theme.breakpoints.up("sm"));
-  const { title, stacks, summary, highlights, thumbnail, links } =
+  const { title, stacks, summary, highlights, thumbnail, links, preview } =
     singleProject;
-  console.log(stacks.data);
 
   return (
     <Container maxWidth="md">
@@ -36,15 +35,11 @@ const ProjectDetailLayout = ({ singleProject }) => {
         current={title}
       />
       <Box mb={8}>
-        <Stack direction="row" alignItems="center">
-          <Typography
-            variant={isSm ? "h3" : "h4"}
-            color="primary"
-            fontWeight="700"
-            pr={2}
-          >
+        <Stack direction="row" alignItems="center" pb={2}>
+          <Typography variant={"h4"} color="primary" fontWeight="700" pr={2}>
             {title}
           </Typography>
+
           <Link href={links[0].url} passHref>
             <Tooltip
               title={<Typography variant="body2">View Repository</Typography>}
@@ -87,8 +82,8 @@ const ProjectDetailLayout = ({ singleProject }) => {
         </Typography>
       </Box>
 
-      <Box mb={10}>
-        <Typography variant="h5" color="primary" fontWeight="500" mb={2}>
+      <Box mb={8}>
+        <Typography variant="h6" color="primary" fontWeight="500" mb={2}>
           Project Highlights
         </Typography>
         <Typography
@@ -101,7 +96,7 @@ const ProjectDetailLayout = ({ singleProject }) => {
         </Typography>
       </Box>
       <Box mb={10}>
-        <Typography variant="h5" color="primary" pb={2} fontWeight="500">
+        <Typography variant="h6" color="primary" pb={2} fontWeight="500">
           Web Stack
         </Typography>
         <Grid container spacing={2}>
@@ -132,7 +127,7 @@ const ProjectDetailLayout = ({ singleProject }) => {
                   variant="body2"
                   color="primary"
                   ml={2}
-                  fontWeight="400"
+                  fontWeight="500"
                 >
                   {stack.stack}
                 </Typography>
@@ -142,7 +137,7 @@ const ProjectDetailLayout = ({ singleProject }) => {
         </Grid>
       </Box>
       <Box mb={10}>
-        <Typography variant="h5" color="primary" fontWeight="500" mb={2}>
+        <Typography variant="h6" color="primary" fontWeight="500" mb={2}>
           Links
         </Typography>
         {links.map((link) => (
@@ -163,14 +158,14 @@ const ProjectDetailLayout = ({ singleProject }) => {
         ))}
       </Box>
       <Box mb={5}>
-        <Typography variant="h5" color="primary" mb={2} fontWeight="500">
-          Preview
+        <Typography variant="h6" color="primary" mb={2} fontWeight="500">
+          Site Preview
         </Typography>
         <Image
-          src={getStrapiMedia(thumbnail)}
+          src={getStrapiMedia(preview)}
           alt={title}
-          width={thumbnail.data.attributes.width}
-          height={thumbnail.data.attributes.height}
+          width={preview.data.attributes.width}
+          height={preview.data.attributes.height}
           priority
           quality={100}
         />

@@ -13,6 +13,7 @@ import WhatsappOutlinedIcon from "@mui/icons-material/WhatsappOutlined";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import InstagramIcon from "@mui/icons-material/Instagram";
+import ReactMarkdown from "react-markdown";
 
 const Contact = ({ contact }) => {
   const { description, email } = contact;
@@ -39,8 +40,14 @@ const Contact = ({ contact }) => {
         >
           {"Get in touch"}
         </Typography>
-        <Typography variant="subtitle1" color="primary" gutterBottom>
-          {description}
+        <Typography
+          variant="subtitle1"
+          component="div"
+          color="primary"
+          gutterBottom
+          className="markdown"
+        >
+          <ReactMarkdown children={description} />
         </Typography>
 
         <Button

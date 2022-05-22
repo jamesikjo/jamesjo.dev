@@ -9,12 +9,6 @@ import {
   IconButton,
   Avatar,
 } from "@mui/material";
-import WhatsappOutlinedIcon from "@mui/icons-material/WhatsappOutlined";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import GitHubIcon from "@mui/icons-material/GitHub";
-import InstagramIcon from "@mui/icons-material/Instagram";
-import KeyboardDoubleArrowDownIcon from "@mui/icons-material/KeyboardDoubleArrowDown";
-import { AboutMeButton } from "../../Buttons";
 
 const Intro = ({ profession, intro }) => {
   const theme = useTheme();
@@ -74,28 +68,6 @@ const Intro = ({ profession, intro }) => {
             objectFit="contain"
           />
         </Box>
-        {/* <Stack
-          direction="row"
-          spacing={{ xs: 1, sm: 2 }}
-          alignItems="center"
-          mb={3}
-        >
-          <AboutMeButton variant="outlined" size="small" color="primary" />
-          <Divider orientation="vertical" flexItem sx={{ pl: 0.5 }} />
-
-          <IconButton sx={{ pl: 0 }}>
-            <LinkedInIcon fontSize="large" />
-          </IconButton>
-          <IconButton>
-            <WhatsappOutlinedIcon fontSize="large" />
-          </IconButton>
-          <IconButton>
-            <GitHubIcon fontSize="large" />
-          </IconButton>
-          <IconButton>
-            <InstagramIcon fontSize="large" />
-          </IconButton>
-        </Stack> */}
       </Box>
     </Box>
   );

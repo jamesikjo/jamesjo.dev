@@ -10,7 +10,13 @@ import {
   Button,
   useTheme,
   useMediaQuery,
+  IconButton,
 } from "@mui/material";
+import WhatsappOutlinedIcon from "@mui/icons-material/WhatsappOutlined";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import InstagramIcon from "@mui/icons-material/Instagram";
+import KeyboardDoubleArrowDownIcon from "@mui/icons-material/KeyboardDoubleArrowDown";
 
 const Copyright = () => {
   return (
@@ -46,7 +52,7 @@ const Footer = ({ navLinks }) => {
               },
             }}
           >
-            {navLinks.map(({ title, route }) => (
+            {navLinks.slice(0, 3).map(({ title, route }) => (
               <React.Fragment key={title}>
                 <Link href={route} passHref>
                   <Button variant="text" component="a" color="primary">
@@ -59,7 +65,20 @@ const Footer = ({ navLinks }) => {
         </Box>
         <Divider flexItem sx={{ my: 0.5 }} />
         <Stack alignItems="flex-end">
-          <Copyright />
+          <Stack direction="row" spacing={1} alignItems="center">
+            <IconButton>
+              <LinkedInIcon />
+            </IconButton>
+            <IconButton>
+              <WhatsappOutlinedIcon />
+            </IconButton>
+            <IconButton>
+              <GitHubIcon />
+            </IconButton>
+            <IconButton>
+              <InstagramIcon />
+            </IconButton>
+          </Stack>
         </Stack>
       </Container>
     </Box>
