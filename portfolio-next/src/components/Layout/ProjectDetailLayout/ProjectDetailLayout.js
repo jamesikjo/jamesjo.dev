@@ -24,9 +24,10 @@ import ReactMarkdown from "react-markdown";
 const ProjectDetailLayout = ({ singleProject }) => {
   const theme = useTheme();
   const isSm = useMediaQuery(theme.breakpoints.up("sm"));
-
   const { title, stacks, summary, highlights, thumbnail, links } =
     singleProject;
+  console.log(stacks.data);
+
   return (
     <Container maxWidth="md">
       <BreadNavCrumbs
@@ -120,7 +121,7 @@ const ProjectDetailLayout = ({ singleProject }) => {
                 key={stack.stack}
               >
                 <Avatar
-                  src={stack.icon}
+                  src={getStrapiMedia(stack.icon)}
                   sx={{
                     width: { xs: 30, sm: 30 },
                     height: { xs: 30, sm: 30 },
