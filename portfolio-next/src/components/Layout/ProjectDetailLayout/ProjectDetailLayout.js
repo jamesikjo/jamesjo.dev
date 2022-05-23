@@ -26,7 +26,7 @@ const ProjectDetailLayout = ({ singleProject }) => {
   const isSm = useMediaQuery(theme.breakpoints.up("sm"));
   const { title, stacks, summary, highlights, thumbnail, links, preview } =
     singleProject;
-
+  console.log(links);
   return (
     <Container maxWidth="md">
       <BreadNavCrumbs
@@ -143,7 +143,7 @@ const ProjectDetailLayout = ({ singleProject }) => {
         {links.map((link) => (
           <React.Fragment key={link.title}>
             <Typography variant="body1" color="primary" gutterBottom>
-              {link.title !== "GitHub" ? "Visit Site" : "Repository"}:{" "}
+              {link.title}:{" "}
               <Typography
                 component="a"
                 target="_blank"
@@ -151,13 +151,21 @@ const ProjectDetailLayout = ({ singleProject }) => {
                 color="info.main"
                 fontWeight="500"
               >
-                {link.url.replace(/^https?:\/\//, "")}
+                {link.name}
               </Typography>
             </Typography>
           </React.Fragment>
         ))}
       </Box>
-      <Box mb={5}>
+      <Box
+        mb={5}
+        // sx={{
+        //   "& img": {
+        //     border: "1px solid #c9cfd6 !important",
+        //     borderRadius: "5px",
+        //   },
+        // }}
+      >
         <Typography variant="h6" color="primary" mb={2} fontWeight="500">
           Site Preview
         </Typography>
@@ -167,9 +175,10 @@ const ProjectDetailLayout = ({ singleProject }) => {
           width={preview.data.attributes.width}
           height={preview.data.attributes.height}
           priority
-          quality={100}
+          quality={90}
         />
       </Box>
+
       <Box mb={10} display="flex" justifyContent="flex-end">
         <Link href="/portfolio" passHref>
           <Button
