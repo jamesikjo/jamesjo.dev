@@ -41,7 +41,7 @@ export const getStaticProps = async ({ params }) => {
 
   const singleProject = res.data[0].attributes;
 
-  return { props: { singleProject } };
+  return { props: { singleProject }, revalidate: 1 };
 };
 
 export default ProjectPage;

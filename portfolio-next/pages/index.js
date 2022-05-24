@@ -34,5 +34,6 @@ export const getStaticProps = async () => {
       homeData: homepageRes.data.attributes,
       latestProjects: latestRes.data,
     },
+    revalidate: 1,
   };
 };

@@ -26,6 +26,7 @@ export const getStaticProps = async () => {
       about: aboutRes.data,
       stacks: stackRes.data,
     },
+    revalidate: 1,
   };
 };
 
