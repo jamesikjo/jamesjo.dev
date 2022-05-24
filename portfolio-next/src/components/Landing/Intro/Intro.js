@@ -44,15 +44,8 @@ const Intro = ({ profession, intro }) => {
             variant={isSm ? "subtitle1" : "subtitle2"}
             color="primary"
             component="div"
-            fontWeight="400"
             className="markdown"
-            sx={{
-              lineHeight: "1.8em",
-              "& a": {
-                color: "info.main",
-                fontWeight: "600",
-              },
-            }}
+            pr={{ xs: 0, md: 5 }}
           >
             <ReactMarkdown children={intro} />
           </Typography>

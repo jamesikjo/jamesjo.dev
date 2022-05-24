@@ -19,7 +19,7 @@ const Latest = ({ latestProjects }) => {
         component="h3"
         color="primary"
         fontWeight="600"
-        mb={5}
+        mb={3}
         sx={{ letterSpacing: "-.10rem" }}
       >
         Latest
