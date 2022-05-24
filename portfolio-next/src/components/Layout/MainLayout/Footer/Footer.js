@@ -70,13 +70,10 @@ const Footer = ({ navLinks }) => {
               <LinkedInIcon />
             </IconButton>
             <IconButton>
-              <WhatsappOutlinedIcon />
+              <InstagramIcon />
             </IconButton>
             <IconButton>
               <GitHubIcon />
-            </IconButton>
-            <IconButton>
-              <InstagramIcon />
             </IconButton>
           </Stack>
         </Stack>

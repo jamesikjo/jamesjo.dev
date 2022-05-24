@@ -38,6 +38,7 @@ const Bio = ({ bio }) => {
           component="div"
           color="primary"
           className="markdown"
+          sx={{ maxWidth: 750 }}
         >
           <ReactMarkdown children={bio.short} />
         </Typography>
@@ -53,7 +54,6 @@ const Bio = ({ bio }) => {
           color="primary"
           fontWeight="400"
           onClick={toggleShowText}
-          className="markdown"
           display="inline"
           sx={{ cursor: "pointer" }}
         >
@@ -62,7 +62,13 @@ const Bio = ({ bio }) => {
         </Typography>
 
         {showText && (
-          <Typography variant="subtitle1" component="p" color="primary" mt={-1}>
+          <Typography
+            variant="subtitle1"
+            component="div"
+            color="primary"
+            sx={{ maxWidth: 750 }}
+            className="markdown"
+          >
             <ReactMarkdown children={bio.long} />
           </Typography>
         )}

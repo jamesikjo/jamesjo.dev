@@ -9,6 +9,7 @@ import {
   IconButton,
   Avatar,
 } from "@mui/material";
+import ReactMarkdown from "react-markdown";
 
 const Intro = ({ profession, intro }) => {
   const theme = useTheme();
@@ -23,7 +24,7 @@ const Intro = ({ profession, intro }) => {
             component="h1"
             color="primary"
             fontWeight="600"
-            mb={1}
+            mb={{ xs: 0, sm: 1 }}
             sx={{ letterSpacing: "-.10rem" }}
           >
             James Jo,
@@ -33,7 +34,7 @@ const Intro = ({ profession, intro }) => {
             component="h2"
             color="secondary"
             fontWeight="400"
-            mb={2}
+            mb={1}
             sx={{ letterSpacing: "-.05rem" }}
           >
             {profession}
@@ -42,7 +43,9 @@ const Intro = ({ profession, intro }) => {
           <Typography
             variant={isSm ? "subtitle1" : "subtitle2"}
             color="primary"
+            component="div"
             fontWeight="400"
+            className="markdown"
             sx={{
               lineHeight: "1.8em",
               "& a": {
@@ -51,7 +54,7 @@ const Intro = ({ profession, intro }) => {
               },
             }}
           >
-            {intro}
+            <ReactMarkdown children={intro} />
           </Typography>
         </Box>
         <Box

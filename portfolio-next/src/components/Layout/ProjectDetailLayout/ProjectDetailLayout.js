@@ -175,7 +175,7 @@ const ProjectDetailLayout = ({ singleProject }) => {
           width={preview.data.attributes.width}
           height={preview.data.attributes.height}
           priority
-          quality={90}
+          quality={100}
         />
       </Box>
 
@@ -188,7 +188,7 @@ const ProjectDetailLayout = ({ singleProject }) => {
             size="large"
             startIcon={<KeyboardArrowLeftIcon />}
           >
-            Back to Portfolio
+            To Portfolio
           </Button>
         </Link>
       </Box>

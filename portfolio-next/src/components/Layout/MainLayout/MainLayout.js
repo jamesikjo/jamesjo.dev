@@ -8,7 +8,7 @@ const NAV_LINKS = [
   { title: "About", route: "/about" },
   { title: "Portfolio", route: "/portfolio" },
   { title: "Contact", route: "/#contact" },
-  { title: "Resume", route: "/" },
+  { title: "Resume", route: "/resume" },
 ];
 
 const MainLayout = ({ children, title }) => {

@@ -95,7 +95,7 @@ const CardList = ({ latestProjects }) => {
                     fontWeight: 600,
                   }}
                 >
-                  Project Page
+                  Project Info
                 </Button>
               </Link>
               <Stack direction="row" spacing={{ xs: 0, sm: 1 }}>
