@@ -8,39 +8,27 @@ import {
   Divider,
   Stack,
   Button,
-  useTheme,
-  useMediaQuery,
   IconButton,
 } from "@mui/material";
-import WhatsappOutlinedIcon from "@mui/icons-material/WhatsappOutlined";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import InstagramIcon from "@mui/icons-material/Instagram";
-import KeyboardDoubleArrowDownIcon from "@mui/icons-material/KeyboardDoubleArrowDown";
-
-const Copyright = () => {
-  return (
-    <Typography color="primary" align="center" sx={{ fontSize: 10, mt: 1 }}>
-      Copyright © James Jo {new Date().getFullYear()}.
-    </Typography>
-  );
-};
 
 const Footer = ({ navLinks }) => {
-  const theme = useTheme();
   return (
     <Box component="footer" sx={{ py: 6, mt: "auto" }} id="contact">
       <Container maxWidth="md">
         <Box display="flex" justifyContent="space-between" alignItems="center">
-          <Box width={60} height={45} position="relative">
-            <Image
-              src="https://res.cloudinary.com/jjo/image/upload/v1651530311/Portfolio/Profile/JJ_f59a4z.svg"
-              alt="footer logo"
-              layout="fill"
-              objectFit="contain"
-            />
-          </Box>
-
+          <Link href="/" passHref>
+            <Box width={60} height={45} position="relative" component="a">
+              <Image
+                src="https://res.cloudinary.com/jjo/image/upload/v1651530311/Portfolio/Profile/JJ_f59a4z.svg"
+                alt="footer logo"
+                layout="fill"
+                objectFit="contain"
+              />
+            </Box>
+          </Link>
           <Stack
             direction="row"
             alignItems="center"
