@@ -17,7 +17,6 @@ export const getStaticPaths = async () => {
   const paths = res.data.map(({ attributes: p }) => ({
     params: { project: p.slug },
   }));
-  console.log(paths);
   return { paths, fallback: false };
 };
 
