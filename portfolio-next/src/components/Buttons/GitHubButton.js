@@ -1,4 +1,3 @@
-import React from "react";
 import { Button, IconButton, useMediaQuery, useTheme } from "@mui/material";
 import GitHubIcon from "@mui/icons-material/GitHub";
 

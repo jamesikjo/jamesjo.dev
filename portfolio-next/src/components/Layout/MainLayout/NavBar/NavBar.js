@@ -1,21 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { useRouter } from "next/router";
 import Link from "next/link";
 import Image from "next/image";
-import {
-  AppBar,
-  Container,
-  Button,
-  Stack,
-  useTheme,
-  useMediaQuery,
-  Box,
-} from "@mui/material";
+import { AppBar, Container, Button, Stack, Box } from "@mui/material";
 import NavDrawer from "./NavDrawer/NavDrawer";
 
 const NavBar = ({ navLinks }) => {
-  const theme = useTheme();
-  const isSm = useMediaQuery(theme.breakpoints.up("sm"));
   const router = useRouter();
 
   const activeLinkStyles = (path) => {

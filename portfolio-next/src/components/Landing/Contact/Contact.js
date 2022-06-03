@@ -1,4 +1,3 @@
-import React from "react";
 import { useRouter } from "next/router";
 import { Button, Stack, Typography, Box } from "@mui/material";
 import ReactMarkdown from "react-markdown";
@@ -8,7 +7,7 @@ const Contact = ({ contact }) => {
   const router = useRouter();
 
   const highLight = router.asPath === "/#contact";
-  console.log(highLight);
+
   return (
     <Box component="section">
       <Stack

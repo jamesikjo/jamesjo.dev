@@ -1,4 +1,3 @@
-import React from "react";
 import { MainLayout, ProjectDetailLayout } from "../../src/components/Layout";
 import { fetchData } from "../../src/lib/fetchData";
 

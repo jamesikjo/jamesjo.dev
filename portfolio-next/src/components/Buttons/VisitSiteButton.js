@@ -1,4 +1,3 @@
-import React from "react";
 import { Button, IconButton, useMediaQuery, useTheme } from "@mui/material";
 import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 

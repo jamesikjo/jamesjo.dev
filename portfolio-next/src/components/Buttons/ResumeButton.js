@@ -1,4 +1,3 @@
-import React from "react";
 import { Button } from "@mui/material";
 import FeedOutlinedIcon from "@mui/icons-material/FeedOutlined";
 

@@ -7,8 +7,6 @@ import {
   Stack,
   Grid,
   Box,
-  useTheme,
-  useMediaQuery,
   IconButton,
   Avatar,
   Tooltip,
@@ -22,11 +20,7 @@ import getStrapiMedia from "../../../lib/media";
 import ReactMarkdown from "react-markdown";
 
 const ProjectDetailLayout = ({ singleProject }) => {
-  const theme = useTheme();
-  const isSm = useMediaQuery(theme.breakpoints.up("sm"));
-  const { title, stacks, summary, highlights, thumbnail, links, preview } =
-    singleProject;
-  console.log(links);
+  const { title, stacks, summary, highlights, links, preview } = singleProject;
   return (
     <Container maxWidth="md">
       <BreadNavCrumbs

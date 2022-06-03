@@ -1,6 +1,4 @@
-import React from "react";
 import { Box, Container } from "@mui/material";
-
 import { MainLayout } from "../src/components/Layout";
 import About from "../src/components/About";
 import { fetchData } from "../src/lib/fetchData";

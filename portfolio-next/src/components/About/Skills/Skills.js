@@ -1,4 +1,3 @@
-import React from "react";
 import { Grid, Typography, Stack, Box, Divider } from "@mui/material";
 import TechGridList from "./TechGridList";
 import ReactMarkdown from "react-markdown";

@@ -1,14 +1,5 @@
-import React from "react";
 import Image from "next/image";
-import Link from "next/link";
-import {
-  Typography,
-  Box,
-  useTheme,
-  useMediaQuery,
-  IconButton,
-  Avatar,
-} from "@mui/material";
+import { Typography, Box, useTheme, useMediaQuery } from "@mui/material";
 import ReactMarkdown from "react-markdown";
 
 const Intro = ({ profession, intro }) => {
