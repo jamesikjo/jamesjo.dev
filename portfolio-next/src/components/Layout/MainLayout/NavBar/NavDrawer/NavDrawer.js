@@ -44,6 +44,7 @@ const NavDrawer = ({ navLinks }) => {
                   <ListItemText
                     primary={title}
                     component="a"
+                    onClick={handleDrawerClose}
                     primaryTypographyProps={{
                       align: "center",
                       variant: "body1",
