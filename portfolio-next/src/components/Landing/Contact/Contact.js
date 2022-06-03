@@ -1,22 +1,14 @@
 import React from "react";
-import {
-  Avatar,
-  Button,
-  IconButton,
-  Stack,
-  Typography,
-  Container,
-  Box,
-} from "@mui/material";
-import MailOutlineIcon from "@mui/icons-material/MailOutline";
-import WhatsappOutlinedIcon from "@mui/icons-material/WhatsappOutlined";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import GitHubIcon from "@mui/icons-material/GitHub";
-import InstagramIcon from "@mui/icons-material/Instagram";
+import { useRouter } from "next/router";
+import { Button, Stack, Typography, Box } from "@mui/material";
 import ReactMarkdown from "react-markdown";
 
 const Contact = ({ contact }) => {
   const { description, email } = contact;
+  const router = useRouter();
+
+  const highLight = router.asPath === "/#contact";
+  console.log(highLight);
   return (
     <Box component="section">
       <Stack
@@ -33,7 +25,7 @@ const Contact = ({ contact }) => {
         </Typography>
         <Typography
           variant="h4"
-          color="primary"
+          color={highLight ? "info.dark" : "primary"}
           fontWeight="600"
           gutterBottom
           sx={{ letterSpacing: "-.10rem" }}
