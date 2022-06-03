@@ -123,12 +123,7 @@ const ProjectDetailLayout = ({ singleProject }) => {
                   }}
                   variant="square"
                 />
-                <Typography
-                  variant="body2"
-                  color="primary"
-                  ml={2}
-                  fontWeight="500"
-                >
+                <Typography variant="body2" color="primary" ml={2}>
                   {stack.stack}
                 </Typography>
               </Box>
