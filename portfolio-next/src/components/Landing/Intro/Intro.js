@@ -36,14 +36,15 @@ const Intro = ({ profession, intro }) => {
             color="primary"
             component="div"
             className="markdown"
+            fontWeight="400"
             pr={{ xs: 0, md: 3 }}
           >
             <ReactMarkdown children={intro} />
           </Typography>
         </Box>
         <Box
-          minWidth={165}
-          width={{ xs: 130, sm: 165 }}
+          maxWidth={{ xs: 130, sm: 165 }}
+          width={500}
           height={{ xs: 130, sm: 165 }}
           mb={{ xs: 2, sm: 0 }}
           position="relative"
