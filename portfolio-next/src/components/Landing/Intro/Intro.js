@@ -36,21 +36,21 @@ const Intro = ({ profession, intro }) => {
             color="primary"
             component="div"
             className="markdown"
-            pr={{ xs: 0, md: 5 }}
+            pr={{ xs: 0, md: 3 }}
           >
             <ReactMarkdown children={intro} />
           </Typography>
         </Box>
         <Box
-          minWidth={150}
-          width={{ xs: 120, sm: 150 }}
-          height={{ xs: 120, sm: 150 }}
+          minWidth={165}
+          width={{ xs: 130, sm: 165 }}
+          height={{ xs: 130, sm: 165 }}
           mb={{ xs: 2, sm: 0 }}
           position="relative"
         >
           <Image
             alt="headshot"
-            src="https://res.cloudinary.com/jjo/image/upload/v1651530508/Portfolio/Profile/headshot-2_iudufa.png"
+            src="https://res.cloudinary.com/jjo/image/upload/v1654297450/Portfolio/Profile/headshot_1_jjqdbt.png"
             layout="fill"
             objectFit="contain"
           />
