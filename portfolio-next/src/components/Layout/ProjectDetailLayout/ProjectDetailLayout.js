@@ -21,6 +21,7 @@ import ReactMarkdown from "react-markdown";
 
 const ProjectDetailLayout = ({ singleProject }) => {
   const { title, stacks, summary, highlights, links, preview } = singleProject;
+
   return (
     <Container maxWidth="md">
       <BreadNavCrumbs
@@ -34,7 +35,7 @@ const ProjectDetailLayout = ({ singleProject }) => {
             {title}
           </Typography>
 
-          <Link href={links[0].url} passHref>
+          <Link href={links[1].url} passHref>
             <Tooltip
               title={<Typography variant="body2">View Repository</Typography>}
               arrow
@@ -50,7 +51,7 @@ const ProjectDetailLayout = ({ singleProject }) => {
               </IconButton>
             </Tooltip>
           </Link>
-          <Link href={links[1].url} passHref>
+          <Link href={links[0].url} passHref>
             <Tooltip
               title={<Typography variant="body2">View Site</Typography>}
               arrow
