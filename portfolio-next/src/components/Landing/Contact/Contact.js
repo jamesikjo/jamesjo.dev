@@ -41,18 +41,19 @@ const Contact = ({ contact }) => {
           <ReactMarkdown children={description} />
         </Typography>
 
-        <Button
-          variant="text"
-          size="large"
-          color="info"
+        <Typography
+          component="a"
+          href="mailto:jamesjodev@gmail.com"
+          color="info.main"
+          variant="subtitle1"
+          fontWeight="500"
           sx={{
-            pl: 0,
             textDecoration: "underline",
           }}
           // startIcon={<MailOutlineIcon />}
         >
           {email}
-        </Button>
+        </Typography>
       </Stack>
       {/* <Stack
         direction="row"

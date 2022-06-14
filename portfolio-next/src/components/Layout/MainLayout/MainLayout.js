@@ -6,8 +6,7 @@ import { Box } from "@mui/material";
 const NAV_LINKS = [
   { title: "About", route: "/about" },
   { title: "Portfolio", route: "/portfolio" },
-  { title: "Contact", route: "/#contact" },
-  { title: "Resume", route: "/resume" },
+  { title: "Contact", route: "mailto:jamesjodev@gmail.com" },
 ];
 
 const MainLayout = ({ children, title }) => {
