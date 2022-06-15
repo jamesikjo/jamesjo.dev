@@ -29,7 +29,7 @@ const ProjectDetailLayout = ({ singleProject }) => {
         prevHref={"/portfolio"}
         current={title}
       />
-      <Box mb={8}>
+      <Box mb={6}>
         <Stack direction="row" alignItems="center" pb={2}>
           <Typography variant={"h4"} color="primary" fontWeight="700" pr={2}>
             {title}
