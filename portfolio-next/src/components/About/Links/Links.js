@@ -20,11 +20,13 @@ const Links = ({ links }) => {
                 <Typography
                   variant="subtitle1"
                   component="a"
+                  alt={link.title}
                   href={link.url}
+                  target="_blank"
                   fontWeight="500"
                   sx={{ color: "info.main" }}
                 >
-                  {link.url.replace("https://", "")}
+                  {link.name}
                 </Typography>
               }
             </Typography>

@@ -35,6 +35,11 @@ const Skills = ({ skills, stacks }) => {
             color="primary"
             component="div"
             className="markdown"
+            sx={{
+              "& strong": {
+                fontWeight: 500,
+              },
+            }}
           >
             <ReactMarkdown children={skills.technologies} />
           </Typography>
