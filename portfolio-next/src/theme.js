@@ -42,6 +42,9 @@ let theme = createTheme({
       },
     },
     MuiButton: {
+      defaultProps: {
+        disableRipple: true,
+      },
       styleOverrides: {
         root: {
           borderRadius: "3px",
