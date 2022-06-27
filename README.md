@@ -1,10 +1,10 @@
-<img src="https://res.cloudinary.com/jjo/image/upload/c_scale,h_100/v1651530311/Portfolio/Profile/JJ_f59a4z.svg" width="125">
+### <img src="https://res.cloudinary.com/jjo/image/upload/c_scale,h_100/v1651530311/Portfolio/Profile/JJ_f59a4z.svg" width="125">
 
 # jamesjo.dev
 
-My developer portfolio, featuring both my freelance work and personal projects.
+My developer portfolio, showcasing some of my freelance work and personal projects.
 
-[jamesjo.dev](https://jamesjo.dev)
+[Website](https://jamesjo.dev)
 
 ## Technologies
 
