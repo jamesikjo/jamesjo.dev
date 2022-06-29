@@ -31,13 +31,18 @@ const NavDrawer = ({ navLinks }) => {
         </IconButton>
       </Box>
       <Drawer
+        PaperProps={{
+          sx: {
+            bgcolor: "#F9FAFB",
+          },
+        }}
         variant="temporary"
         anchor="right"
         open={open}
         onClose={handleDrawerClose}
       >
-        <Box sx={{ width: 200 }}>
-          <List sx={{ py: 1 }}>
+        <Box width={200}>
+          <List sx={{ py: 2 }}>
             {navLinks.map(({ title, route }) => (
               <ListItem button key={title}>
                 <Link href={route} passHref>
@@ -48,7 +53,6 @@ const NavDrawer = ({ navLinks }) => {
                     primaryTypographyProps={{
                       align: "center",
                       variant: "body1",
-                      fontWeight: 500,
                     }}
                   />
                 </Link>

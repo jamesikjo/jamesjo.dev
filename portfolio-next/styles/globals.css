@@ -6,7 +6,6 @@ a {
   text-decoration: none;
   color: #2196f3;
   font-weight: 500;
-
 }
 
 /* Custom style for fetched Strapi content derived with  <Markdown children={content}/>
@@ -16,11 +15,6 @@ div.markdown p{
   margin: 0;
   line-height: 28px
 }
-/* @media screen and (max-width: 600px) {
-  div.markdown p{
-  line-height: 24px
-}
-} */
 
 div.markdown ul{
   padding-left: 20px;
