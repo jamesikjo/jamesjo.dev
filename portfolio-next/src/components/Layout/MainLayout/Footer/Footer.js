@@ -54,13 +54,25 @@ const Footer = ({ navLinks }) => {
         <Divider flexItem sx={{ my: 0.5 }} />
         <Stack alignItems="flex-end">
           <Stack direction="row" spacing={1} alignItems="center">
-            <IconButton>
+            <IconButton
+              component="a"
+              href="https://linkedin.com/in/jamesikjo"
+              target="_blank"
+            >
               <LinkedInIcon />
             </IconButton>
-            <IconButton>
+            <IconButton
+              component="a"
+              href="https://instagram.com/jam._.jo"
+              target="_blank"
+            >
               <InstagramIcon />
             </IconButton>
-            <IconButton>
+            <IconButton
+              component="a"
+              href="https://github.com/jamesikjo"
+              target="_blank"
+            >
               <GitHubIcon />
             </IconButton>
           </Stack>
