@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_shared_resume_links",
+  "info": {
+    "displayName": "SingleLink",
+    "icon": "external-link-square-alt",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string"
+    }
+  }
+}

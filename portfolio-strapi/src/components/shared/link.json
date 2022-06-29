@@ -11,6 +11,9 @@
       "type": "enumeration",
       "enum": [
         "GitHub",
+        "Repo",
+        "Google Doc",
+        "Notion",
         "Visit",
         "Project Page",
         "Website",
@@ -29,6 +32,11 @@
     },
     "name": {
       "type": "string"
+    },
+    "resume": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.resume-link"
     }
   }
 }

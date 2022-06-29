@@ -27,11 +27,17 @@
       "component": "sections.contact"
     },
     "headshot": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
+    },
+    "icon_links": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.resume-link"
     }
   }
 }
