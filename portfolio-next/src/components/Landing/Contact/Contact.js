@@ -1,10 +1,14 @@
 import { useRouter } from "next/router";
-import { Button, Stack, Typography, Box } from "@mui/material";
+import { Button, Stack, Typography, Box, useMediaQuery } from "@mui/material";
 import ReactMarkdown from "react-markdown";
+import { useTheme } from "@emotion/react";
 
 const Contact = ({ contact }) => {
-  const { description, email } = contact;
+  const theme = useTheme();
+  const isSm = useMediaQuery(theme.breakpoints.up("sm"));
   const router = useRouter();
+
+  const { description, email } = contact;
 
   const highLight = router.asPath === "/#contact";
 
@@ -32,10 +36,11 @@ const Contact = ({ contact }) => {
           {"Get in touch"}
         </Typography>
         <Typography
-          variant="subtitle1"
+          variant={isSm ? "subtitle1" : "subtitle2"}
           component="div"
-          color="primary"
+          color="secondary"
           gutterBottom
+          fontWeight="400"
           className="markdown"
         >
           <ReactMarkdown children={description} />

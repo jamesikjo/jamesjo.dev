@@ -30,14 +30,15 @@ const Bio = ({ bio }) => {
       </Typography>
 
       <Box mb={3}>
-        <Typography variant="subtitle1" color="primary" fontWeight="600">
+        <Typography variant="subtitle1" color="primary" fontWeight="500">
           Short
         </Typography>
         <Typography
           variant="subtitle1"
           component="div"
-          color="primary"
+          color="secondary"
           className="markdown"
+          fontWeight="400"
           sx={{ maxWidth: 750 }}
         >
           <ReactMarkdown children={bio.short} />
@@ -45,14 +46,13 @@ const Bio = ({ bio }) => {
       </Box>
 
       <Box>
-        <Typography variant="subtitle1" color="primary" fontWeight="600">
+        <Typography variant="subtitle1" color="primary" fontWeight="500">
           Long
         </Typography>
         <Typography
           variant="caption"
           component="div"
           color="primary"
-          fontWeight="400"
           onClick={toggleShowText}
           display="inline"
           sx={{ cursor: "pointer" }}

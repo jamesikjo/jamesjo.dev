@@ -23,7 +23,7 @@ const Intro = ({ profession, intro }) => {
           <Typography
             variant={isSm ? "h5" : "h6"}
             component="h2"
-            color="secondary"
+            color="primary"
             fontWeight="400"
             mb={1}
             sx={{ letterSpacing: "-.05rem" }}
@@ -33,7 +33,7 @@ const Intro = ({ profession, intro }) => {
 
           <Typography
             variant={isSm ? "subtitle1" : "subtitle2"}
-            color="primary"
+            color="secondary"
             component="div"
             className="markdown"
             fontWeight="400"
@@ -43,9 +43,9 @@ const Intro = ({ profession, intro }) => {
           </Typography>
         </Box>
         <Box
-          maxWidth={{ xs: 130, sm: 165 }}
+          maxWidth={{ xs: 130, sm: 150 }}
           width={500}
-          height={{ xs: 130, sm: 165 }}
+          height={{ xs: 130, sm: 150 }}
           mb={{ xs: 2, sm: 0 }}
           position="relative"
         >

@@ -11,6 +11,7 @@ import {
   Avatar,
   Tooltip,
   Button,
+  useMediaQuery,
 } from "@mui/material";
 import KeyboardArrowLeftIcon from "@mui/icons-material/KeyboardArrowLeft";
 import GitHubIcon from "@mui/icons-material/GitHub";
@@ -18,8 +19,11 @@ import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 import BreadNavCrumbs from "../../BreadNavCrumbs";
 import getStrapiMedia from "../../../lib/media";
 import ReactMarkdown from "react-markdown";
+import { useTheme } from "@emotion/react";
 
 const ProjectDetailLayout = ({ singleProject }) => {
+  const theme = useTheme();
+  const isSm = useMediaQuery(theme.breakpoints.up("sm"));
   const { title, stacks, summary, highlights, links, preview } = singleProject;
 
   return (
@@ -31,7 +35,7 @@ const ProjectDetailLayout = ({ singleProject }) => {
       />
       <Box mb={6}>
         <Stack direction="row" alignItems="center" pb={2}>
-          <Typography variant={"h4"} color="primary" fontWeight="700" pr={2}>
+          <Typography variant={"h4"} color="primary" fontWeight="600" pr={2}>
             {title}
           </Typography>
 
@@ -68,30 +72,32 @@ const ProjectDetailLayout = ({ singleProject }) => {
           </Link>
         </Stack>
         <Typography
-          variant="subtitle1"
+          variant={isSm ? "subtitle1" : "subtitle2"}
           component="div"
-          color="primary"
+          color="secondary"
           className="markdown"
+          fontWeight="400"
         >
           <ReactMarkdown children={summary} />
         </Typography>
       </Box>
 
       <Box mb={8}>
-        <Typography variant="h6" color="primary" fontWeight="500" mb={2}>
+        <Typography variant="h6" color="primary" mb={2}>
           Project Highlights
         </Typography>
         <Typography
-          variant="subtitle1"
+          variant={isSm ? "subtitle1" : "subtitle2"}
           component="div"
-          color="primary"
+          color="secondary"
+          fontWeight="400"
           className="markdown"
         >
           <ReactMarkdown children={highlights} />
         </Typography>
       </Box>
       <Box mb={10}>
-        <Typography variant="h6" color="primary" pb={2} fontWeight="500">
+        <Typography variant="h6" color="primary" pb={2}>
           Web Stack
         </Typography>
         <Grid container spacing={2}>
@@ -118,7 +124,14 @@ const ProjectDetailLayout = ({ singleProject }) => {
                   }}
                   variant="square"
                 />
-                <Typography variant="body2" color="primary" ml={2}>
+                <Typography
+                  variant="body2"
+                  color="primary"
+                  ml={2}
+                  component="a"
+                  href={stack.url}
+                  target="_blank"
+                >
                   {stack.stack}
                 </Typography>
               </Box>
@@ -127,7 +140,7 @@ const ProjectDetailLayout = ({ singleProject }) => {
         </Grid>
       </Box>
       <Box mb={10}>
-        <Typography variant="h6" color="primary" fontWeight="500" mb={2}>
+        <Typography variant="h6" color="primary" mb={2}>
           Links
         </Typography>
         {links.map((link) => (
@@ -147,16 +160,8 @@ const ProjectDetailLayout = ({ singleProject }) => {
           </React.Fragment>
         ))}
       </Box>
-      <Box
-        mb={5}
-        // sx={{
-        //   "& img": {
-        //     border: "1px solid #c9cfd6 !important",
-        //     borderRadius: "5px",
-        //   },
-        // }}
-      >
-        <Typography variant="h6" color="primary" mb={2} fontWeight="500">
+      <Box mb={5}>
+        <Typography variant="h6" color="primary" mb={2}>
           Site Preview
         </Typography>
         <Image

@@ -16,7 +16,7 @@ const NavBar = ({ navLinks }) => {
         textTransform: "capitalize",
       };
     }
-    return { textTransform: "capitalize" };
+    return { textTransform: "capitalize", fontWeight: "400" };
   };
 
   return (
@@ -49,7 +49,7 @@ const NavBar = ({ navLinks }) => {
         </Link>
         <Stack
           direction="row"
-          spacing={1}
+          spacing={0.5}
           sx={{
             display: { xs: "none", md: "block" },
           }}
