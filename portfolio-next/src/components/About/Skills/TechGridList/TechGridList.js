@@ -17,18 +17,15 @@ const TechList = ({ stacks }) => {
 
   return stacks.slice(0, 9).map(({ attributes: item }, i) => (
     <Grid item xs={4} key={i}>
-      <Box
-        width={1}
-        height={1}
-        sx={{
-          transition: "all .2s ease-in-out",
-          "&:hover": {
-            transform: `translateY(-${theme.spacing(1 / 2)})`,
-          },
-        }}
-      >
-        <Card sx={{ boxShadow: `0 3px 6px 0 ${alpha("#8c98a4", 0.25)}` }}>
+      <Box width={1} height={1}>
+        <Card
+          elevation={0}
+          sx={{ border: `0.5px solid #c9cfd6`, borderRadius: 1 }}
+        >
           <CardContent
+            component="a"
+            href={item.url}
+            target="_blank"
             sx={{
               display: "flex",
               flexDirection: "column",
