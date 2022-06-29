@@ -40,7 +40,7 @@ const Footer = ({ navLinks }) => {
               },
             }}
           >
-            {navLinks.slice(0, 3).map(({ title, route }) => (
+            {navLinks.map(({ title, route }) => (
               <React.Fragment key={title}>
                 <Link href={route} passHref>
                   <Button variant="text" component="a" color="primary">

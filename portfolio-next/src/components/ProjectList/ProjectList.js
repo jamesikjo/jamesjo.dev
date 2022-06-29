@@ -46,8 +46,8 @@ const ProjectList = ({ projects }) => {
                   <Image
                     src={getStrapiMedia(item.thumbnail)}
                     alt={item.title}
-                    width={520}
-                    height={285}
+                    width={item.thumbnail.data.attributes.width}
+                    height={item.thumbnail.data.attributes.height}
                   />
                 </Box>
               </Link>
