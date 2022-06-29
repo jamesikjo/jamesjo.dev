@@ -1,5 +1,4 @@
 import { Box } from "@mui/material";
-
 import Bio from "./Bio";
 import Skills from "./Skills";
 import BreadNavCrumbs from "../BreadNavCrumbs";
@@ -7,7 +6,6 @@ import Links from "./Links";
 
 const About = ({ aboutData, stacks }) => {
   const { bio, skills, links } = aboutData;
-
   return (
     <Box component="section">
       <BreadNavCrumbs current="About" />

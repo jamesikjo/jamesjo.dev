@@ -14,20 +14,9 @@ const Skills = ({ skills, stacks }) => {
       >
         Skills
       </Typography>
-
-      <Box mb={3}>
-        <Typography
-          variant="subtitle1"
-          color="primary"
-          component="div"
-          className="markdown"
-        >
-          <ReactMarkdown children={skills.content} />
-        </Typography>
-      </Box>
       <Grid container spacing={4}>
         <Grid item xs={12} md={6} alignItems="flex-start">
-          <Typography variant="subtitle1" color="primary" fontWeight="600">
+          <Typography variant="subtitle1" color="primary" fontWeight="500">
             Technologies
           </Typography>
           <Typography
@@ -35,11 +24,6 @@ const Skills = ({ skills, stacks }) => {
             color="primary"
             component="div"
             className="markdown"
-            sx={{
-              "& strong": {
-                fontWeight: 500,
-              },
-            }}
           >
             <ReactMarkdown children={skills.technologies} />
           </Typography>

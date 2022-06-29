@@ -5,7 +5,6 @@ import { fetchData } from "../src/lib/fetchData";
 
 const AboutPage = ({ about, stacks }) => {
   const { attributes: aboutData } = about;
-
   return (
     <Box>
       <MainLayout title="About Me">
