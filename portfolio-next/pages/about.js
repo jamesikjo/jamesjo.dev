@@ -16,7 +16,19 @@ const AboutPage = ({ about, stacks }) => {
   );
 };
 export const getStaticProps = async () => {
-  const aboutRes = await fetchData("/about", { populate: "*" });
+  const aboutRes = await fetchData("/about", {
+    populate: {
+      links: {
+        populate: "*",
+      },
+      skills: {
+        populate: "*",
+      },
+      bio: {
+        populate: "*",
+      },
+    },
+  });
   const stackRes = await fetchData("/stacks", { sort: ["order"] });
   return {
     props: {
