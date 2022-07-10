@@ -27,7 +27,7 @@ const ProjectDetailLayout = ({ singleProject }) => {
   const { title, stacks, summary, highlights, links, preview } = singleProject;
 
   return (
-    <Container maxWidth="md">
+    <Container sx={{ maxWidth: 800 }} maxWidth={false}>
       <BreadNavCrumbs
         prevTitle={"Portfolio"}
         prevHref={"/portfolio"}
@@ -97,7 +97,7 @@ const ProjectDetailLayout = ({ singleProject }) => {
         </Typography>
       </Box>
       <Box mb={10}>
-        <Typography variant="h6" color="primary" pb={2}>
+        <Typography variant="h6" color="primary" mb={2}>
           Web Stack
         </Typography>
         <Grid container spacing={2}>

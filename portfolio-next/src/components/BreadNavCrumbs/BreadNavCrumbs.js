@@ -13,7 +13,7 @@ const BreadNavCrumbs = ({ prevTitle, prevHref, current }) => {
   const isSm = useMediaQuery(theme.breakpoints.up("sm"));
 
   return (
-    <Box mb={5}>
+    <Box mb={4}>
       <Breadcrumbs
         aria-label="breadcrumb"
         sx={{ "& nav": { paddingLeft: 0 }, pb: 1 }}

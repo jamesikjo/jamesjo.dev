@@ -6,7 +6,7 @@ import { fetchData } from "../../src/lib/fetchData";
 const PortfolioPage = ({ projects }) => {
   return (
     <MainLayout title="Portfolio">
-      <Container maxWidth="md" sx={{ pb: 10 }}>
+      <Container sx={{ maxWidth: 800, pb: 10 }} maxWidth={false}>
         <ProjectList projects={projects} />
       </Container>
     </MainLayout>

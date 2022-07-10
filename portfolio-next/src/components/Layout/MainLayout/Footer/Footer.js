@@ -17,7 +17,7 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 const Footer = ({ navLinks }) => {
   return (
     <Box component="footer" sx={{ py: 6, mt: "auto" }} id="contact">
-      <Container maxWidth="md">
+      <Container sx={{ maxWidth: 800 }} maxWidth={false}>
         <Box display="flex" justifyContent="space-between" alignItems="center">
           <Link href="/" passHref>
             <Box width={60} height={45} position="relative" component="a">

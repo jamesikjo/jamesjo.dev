@@ -30,9 +30,9 @@ const NavBar = ({ navLinks }) => {
       }}
     >
       <Container
-        maxWidth="md"
-        disableGutters
+        maxWidth={false}
         sx={{
+          maxWidth: 800,
           display: "flex",
           justifyContent: "space-between",
           alignItems: "center",

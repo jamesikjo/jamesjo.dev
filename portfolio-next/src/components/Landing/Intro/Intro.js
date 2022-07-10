@@ -9,7 +9,7 @@ const Intro = ({ profession, intro }) => {
   return (
     <Box component="section">
       <Box display="flex" flexDirection={{ xs: "column-reverse", sm: "row" }}>
-        <Box pr={{ xs: 5, sm: 10 }}>
+        <Box pr={{ xs: 5, sm: 5 }}>
           <Typography
             variant={isSm ? "h3" : "h4"}
             component="h1"

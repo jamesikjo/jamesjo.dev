@@ -8,7 +8,7 @@ const AboutPage = ({ about, stacks }) => {
   return (
     <Box>
       <MainLayout title="About Me">
-        <Container maxWidth="md">
+        <Container sx={{ maxWidth: 800 }} maxWidth={false}>
           <About aboutData={aboutData} stacks={stacks} />
         </Container>
       </MainLayout>
