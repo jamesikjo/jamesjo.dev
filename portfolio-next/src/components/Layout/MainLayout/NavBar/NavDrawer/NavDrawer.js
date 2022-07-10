@@ -9,6 +9,7 @@ import {
   ListItem,
   ListItemText,
   Divider,
+  Typography,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 
@@ -44,9 +45,9 @@ const NavDrawer = ({ navLinks }) => {
         <Box width={200}>
           <List sx={{ py: 2 }}>
             {navLinks.map(({ title, route }) => (
-              <ListItem key={title}>
+              <ListItem key={title} sx={{ textAlign: "center", py: 1.5 }}>
                 <Link href={route} passHref>
-                  <ListItemText
+                  {/* <ListItemText
                     primary={title}
                     component="a"
                     target="_self"
@@ -55,7 +56,16 @@ const NavDrawer = ({ navLinks }) => {
                       align: "center",
                       variant: "body1",
                     }}
-                  />
+                  /> */}
+                  <Typography
+                    component="a"
+                    variant="body1"
+                    color="primary"
+                    onClick={handleDrawerClose}
+                    sx={{ width: 1 }}
+                  >
+                    {title}
+                  </Typography>
                 </Link>
               </ListItem>
             ))}
