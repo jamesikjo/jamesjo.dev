@@ -78,7 +78,7 @@ const ProjectDetailLayout = ({ singleProject }) => {
           className="markdown"
           fontWeight="400"
         >
-          <ReactMarkdown children={summary} />
+          <ReactMarkdown children={summary} linkTarget="_blank" />
         </Typography>
       </Box>
 
@@ -93,7 +93,7 @@ const ProjectDetailLayout = ({ singleProject }) => {
           fontWeight="400"
           className="markdown"
         >
-          <ReactMarkdown children={highlights} />
+          <ReactMarkdown children={highlights} linkTarget="_blank" />
         </Typography>
       </Box>
       <Box mb={10}>
