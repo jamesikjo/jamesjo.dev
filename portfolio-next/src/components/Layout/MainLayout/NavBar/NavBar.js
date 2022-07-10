@@ -63,7 +63,6 @@ const NavBar = ({ navLinks }) => {
                   color="primary"
                   size="large"
                   disableRipple
-                  target={title === "Resume" ? "_blank" : "_self"}
                   sx={activeLinkStyles(route)}
                 >
                   {title}

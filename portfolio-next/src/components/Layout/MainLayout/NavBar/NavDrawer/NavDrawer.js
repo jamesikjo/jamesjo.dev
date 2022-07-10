@@ -44,11 +44,12 @@ const NavDrawer = ({ navLinks }) => {
         <Box width={200}>
           <List sx={{ py: 2 }}>
             {navLinks.map(({ title, route }) => (
-              <ListItem button key={title}>
+              <ListItem key={title}>
                 <Link href={route} passHref>
                   <ListItemText
                     primary={title}
                     component="a"
+                    target="_self"
                     onClick={handleDrawerClose}
                     primaryTypographyProps={{
                       align: "center",
