@@ -12,10 +12,10 @@ const CATEGORIES = [
   { title: "Other", path: "/" },
 ];
 
-const Resources = ({ allPropertyvalues }) => {
+const Blog = ({ allPropertyvalues }) => {
   return (
     <Box>
-      <BreadNavCrumbs current="Resources" />
+      <BreadNavCrumbs current="Blog" />
       <Box mb={6}>
         <Typography
           variant="h4"
@@ -102,7 +102,7 @@ const Resources = ({ allPropertyvalues }) => {
                 mb={1}
               >
                 <Link
-                  href={`/resources/${Slug.results[0].rich_text.plain_text}`}
+                  href={`/blog/${Slug.results[0].rich_text.plain_text}`}
                   passHref
                 >
                   <Typography component="a" variant="h6" color="primary">
@@ -138,4 +138,4 @@ const Resources = ({ allPropertyvalues }) => {
   );
 };
 
-export default Resources;
+export default Blog;

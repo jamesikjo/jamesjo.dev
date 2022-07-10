@@ -7,7 +7,7 @@ import {
   getPostBlockContent,
   getUser,
 } from "../../src/lib/notion";
-import PostBlocks from "../../src/components/Resources/PostBlocks";
+import PostBlocks from "../../src/components/Blog/PostBlocks";
 import BreadNavCrumbs from "../../src/components/BreadNavCrumbs";
 
 const SinglePost = ({ postContent, author, propertyValues, slug }) => {
@@ -16,8 +16,8 @@ const SinglePost = ({ postContent, author, propertyValues, slug }) => {
       <MainLayout title="Resources">
         <Container sx={{ maxWidth: 800 }} maxWidth={false}>
           <BreadNavCrumbs
-            prevTitle={"Resources"}
-            prevHref={"/resources"}
+            prevTitle={"Blog"}
+            prevHref={"/blog"}
             current={slug.charAt(0).toUpperCase() + slug.slice(1)}
           />
           <PostBlocks
