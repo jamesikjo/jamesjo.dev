@@ -57,15 +57,6 @@ let theme = createTheme({
         },
       },
     },
-    MuiContainer: {
-      styleOverrides: {
-        root: {
-          maxWidth: "1300px",
-          paddingLeft: "20px",
-          paddingRight: "20px",
-        },
-      },
-    },
   },
 });
 
