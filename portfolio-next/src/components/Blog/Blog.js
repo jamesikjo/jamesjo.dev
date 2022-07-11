@@ -12,7 +12,7 @@ const CATEGORIES = [
   { title: "Other", path: "/" },
 ];
 
-const Blog = ({ allPropertyvalues }) => {
+const Blog = ({ allPropertyValues }) => {
   return (
     <Box>
       <BreadNavCrumbs current="Blog" />
@@ -27,10 +27,9 @@ const Blog = ({ allPropertyvalues }) => {
           Resource Blog
         </Typography>
         <Typography variant="subtitle1" color="secondary">
-          The following is a list of useful developer tools and resources I
-          compiled while self-learning web development.{" "}
-          <a href="mailto:jamesjodev@gmail.com">Let me know</a> if these are
-          helpful in any way or if you have any other recommendations!
+          Here is a list of web development resources that I found helpful when
+          I started learning web development from scratch. I have also included
+          a few developer tools that I've used on my projects.
         </Typography>
       </Box>
 
@@ -92,7 +91,7 @@ const Blog = ({ allPropertyvalues }) => {
         >
           All Posts
         </Typography>
-        {allPropertyvalues.map(
+        {allPropertyValues.map(
           ({ Description, Slug, Title, FormatDate, Tags }) => (
             <Box key={Title.results[0].title.plain_text} mb={4}>
               <Box

@@ -4,12 +4,12 @@ import { MainLayout } from "../../src/components/Layout";
 import Blog from "../../src/components/Blog";
 import { getAllPropertyValues } from "../../src/lib/notion";
 
-const BlogPage = ({ allPropertyvalues }) => {
+const BlogPage = ({ allPropertyValues }) => {
   return (
     <Box>
       <MainLayout title="Resources">
         <Container sx={{ maxWidth: 800 }} maxWidth={false}>
-          <Blog allPropertyvalues={allPropertyvalues} />
+          <Blog allPropertyValues={allPropertyValues} />
         </Container>
       </MainLayout>
     </Box>
@@ -19,10 +19,10 @@ const BlogPage = ({ allPropertyvalues }) => {
 export default BlogPage;
 
 export const getStaticProps = async () => {
-  const allPropertyvalues = await getAllPropertyValues();
+  const allPropertyValues = await getAllPropertyValues();
   return {
     props: {
-      allPropertyvalues,
+      allPropertyValues,
     },
     revalidate: 1,
   };

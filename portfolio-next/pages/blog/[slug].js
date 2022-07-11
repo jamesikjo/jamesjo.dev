@@ -54,7 +54,6 @@ export const getStaticProps = async ({ params }) => {
 
   const author = await getUser(created_by.id);
   const postContent = await getPostBlockContent(id);
-
   const propertyValues = await getPropertyValues(id, { FormatDate, Tags });
 
   return {
