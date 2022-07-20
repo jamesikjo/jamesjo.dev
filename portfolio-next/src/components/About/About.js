@@ -10,7 +10,7 @@ const About = ({ aboutData, stacks }) => {
     <Box component="section">
       <BreadNavCrumbs current="About" />
       <Links links={links} />
-      <Box pt={6} pb={8}>
+      <Box mt={6} mb={7}>
         <Bio bio={bio} />
       </Box>
       <Box>
