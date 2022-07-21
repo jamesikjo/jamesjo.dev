@@ -11,9 +11,11 @@ import PostBlocks from "../../src/components/Blog/PostBlocks";
 import BreadNavCrumbs from "../../src/components/BreadNavCrumbs";
 
 const SinglePost = ({ postContent, author, propertyValues, slug }) => {
+  const postTitle = postContent.results[0].heading_1.rich_text[0].plain_text;
+
   return (
     <Box>
-      <MainLayout title="Resources">
+      <MainLayout title={postTitle}>
         <Container sx={{ maxWidth: 800 }} maxWidth={false}>
           <BreadNavCrumbs
             prevTitle={"Blog"}

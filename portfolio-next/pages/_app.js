@@ -5,8 +5,8 @@ import { CacheProvider } from "@emotion/react";
 import { CssBaseline } from "@mui/material";
 import createCache from "@emotion/cache";
 import theme from "../src/theme";
-import "/styles/globals.css";
 import mailgo from "mailgo";
+import "/styles/globals.css";
 
 export const cache = createCache({ key: "css", prepend: true });
 
@@ -27,10 +27,8 @@ export default function MyApp(props) {
     <CacheProvider value={cache}>
       <Head>
         {/* global default head values  */}
-        <title>James Jo</title>
-        <meta name="description" content="Developer Portfolio - James Jo" />
+        <meta name="description" content="Developer Portfolio" />
         <meta name="viewport" content="initial-scale=1, width=device-width" />
-        <link rel="icon" href="/favicon.ico" />
       </Head>
       <ThemeProvider theme={theme}>
         <CssBaseline />

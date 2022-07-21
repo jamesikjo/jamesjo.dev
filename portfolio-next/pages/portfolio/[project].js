@@ -3,7 +3,7 @@ import { fetchData } from "../../src/lib/fetchData";
 
 const ProjectPage = ({ singleProject }) => {
   return (
-    <MainLayout title={"title"}>
+    <MainLayout title={singleProject.title}>
       <ProjectDetailLayout singleProject={singleProject} />
     </MainLayout>
   );

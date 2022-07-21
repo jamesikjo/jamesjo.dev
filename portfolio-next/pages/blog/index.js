@@ -7,7 +7,7 @@ import { getAllPropertyValues } from "../../src/lib/notion";
 const BlogPage = ({ allPropertyValues }) => {
   return (
     <Box>
-      <MainLayout title="Resources">
+      <MainLayout title="Blog">
         <Container sx={{ maxWidth: 800 }} maxWidth={false}>
           <Blog allPropertyValues={allPropertyValues} />
         </Container>

@@ -7,7 +7,7 @@ export default function Home({ latestProjects, homeData }) {
   const { profession, intro, contact } = homeData;
 
   return (
-    <MainLayout title="Web Developer">
+    <MainLayout title="James Jo - Web Developer">
       <Container sx={{ maxWidth: 800 }} maxWidth={false}>
         <Box sx={{ py: 8 }}>
           <Intro intro={intro} profession={profession} />

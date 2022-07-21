@@ -14,7 +14,7 @@ const MainLayout = ({ children, title }) => {
   return (
     <>
       <Head>
-        <title>James Jo | {title}</title>
+        <title>{title}</title>
       </Head>
       {/* add div style for sticky footer */}
       <Box
