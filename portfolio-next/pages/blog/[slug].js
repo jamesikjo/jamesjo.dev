@@ -1,5 +1,5 @@
 import { Container, Box } from "@mui/material";
-import { MainLayout } from "../../src/components/Layout";
+import { useRouter } from "next/router";
 import {
   getAllPropertyValues,
   getPropertyValues,
@@ -7,15 +7,22 @@ import {
   getPostBlockContent,
   getUser,
 } from "../../src/lib/notion";
+import { MainLayout } from "../../src/components/Layout";
 import PostBlocks from "../../src/components/Blog/PostBlocks";
 import BreadNavCrumbs from "../../src/components/BreadNavCrumbs";
 
 const SinglePost = ({ postContent, author, propertyValues, slug }) => {
-  const postTitle = postContent.results[0].heading_1.rich_text[0].plain_text;
+  const router = useRouter();
+
+  if (router.isFallback) {
+    return <div>Loading...</div>;
+  }
 
   return (
     <Box>
-      <MainLayout title={postTitle}>
+      <MainLayout
+        title={postContent.results[0].heading_1.rich_text[0].plain_text}
+      >
         <Container sx={{ maxWidth: 800 }} maxWidth={false}>
           <BreadNavCrumbs
             prevTitle={"Blog"}
@@ -44,7 +51,7 @@ export const getStaticPaths = async () => {
 
   return {
     paths: slugPaths,
-    fallback: false,
+    fallback: true,
   };
 };
 
