@@ -24,10 +24,9 @@ const Blog = ({ allPropertyValues }) => {
           color="secondary"
           fontWeight="400"
         >
-          This is my personal blog where I share my collection of useful web
-          developer resources, tools, and productivity tips along with my
-          day-to-day experiences on my journey to becoming a self-taught web
-          developer.
+          My collection of useful web developer resources, tools, and
+          productivity tips along with my day-to-day experiences on becoming a
+          self-taught web developer.
         </Typography>
       </Box>
 

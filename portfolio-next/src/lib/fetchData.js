@@ -19,7 +19,6 @@ export const getStrapiURL = (path = "") => {
  * @returns Parsed API call response
  */
 export const fetchData = async (path, urlParamsObject = {}, options = {}) => {
-  console.log(path);
   // Merge default and user options
   const mergedOptions = {
     headers: {
@@ -34,7 +33,6 @@ export const fetchData = async (path, urlParamsObject = {}, options = {}) => {
     `/api${path}${queryString ? `?${queryString}` : ""}`
   )}`;
 
-  console.log(requestUrl);
   // Trigger API call
   const response = await fetch(requestUrl, mergedOptions);
 
