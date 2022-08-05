@@ -16,7 +16,7 @@ This is my developer portfolio, which includes highlights of my noteworthy proje
 
 ## Project Overview
 
-portfolio-next/
+**portfolio-next/**
 
 - `pages/blog/*` - Static pre-rendered blog pages generated with data fetched from Notion.
 - `pages/portfolio/*` - Static pre-rendered project pages generated with data fetched from Strapi.
