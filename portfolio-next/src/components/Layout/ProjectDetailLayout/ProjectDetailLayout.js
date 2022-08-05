@@ -164,6 +164,11 @@ const ProjectDetailLayout = ({ singleProject }) => {
         <Typography variant="h6" color="primary" mb={2}>
           Site Preview
         </Typography>
+        {title === "ArmonVan Photography" && (
+          <Box mb={5}>
+            <Box src={"/video/gallery-vid.webp"} component="img" width={1} />
+          </Box>
+        )}
         <Image
           src={getStrapiMedia(preview)}
           alt={title}
