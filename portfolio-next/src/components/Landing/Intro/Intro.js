@@ -1,5 +1,10 @@
-import Image from "next/image";
-import { Typography, Box, useTheme, useMediaQuery } from "@mui/material";
+import {
+  Typography,
+  Box,
+  useTheme,
+  useMediaQuery,
+  Avatar,
+} from "@mui/material";
 import ReactMarkdown from "react-markdown";
 
 const Intro = ({ profession, intro }) => {
@@ -42,18 +47,11 @@ const Intro = ({ profession, intro }) => {
             <ReactMarkdown children={intro} />
           </Typography>
         </Box>
-        <Box
-          maxWidth={{ xs: 130, sm: 150 }}
-          width={500}
-          height={{ xs: 130, sm: 150 }}
-          mb={{ xs: 2, sm: 0 }}
-          position="relative"
-        >
-          <Image
+        <Box mb={{ xs: 1, sm: 0 }}>
+          <Avatar
             alt="headshot"
-            src="https://res.cloudinary.com/jjo/image/upload/v1654297450/Portfolio/Profile/headshot_1_jjqdbt.png"
-            layout="fill"
-            objectFit="contain"
+            src="https://res.cloudinary.com/jjo/image/upload/v1661480487/Portfolio/Profile/headshot-portfolio_qpymmq.webp"
+            sx={{ width: { xs: 120, sm: 150 }, height: { xs: 120, sm: 150 } }}
           />
         </Box>
       </Box>
