@@ -47,32 +47,33 @@ const Blog = ({ allPropertyValues }) => {
                 display="flex"
                 alignItems={{ xs: "flex-start", md: "center" }}
                 flexDirection={{ xs: "column", md: "row" }}
+                justifyContent="space-between"
                 mb={1}
               >
                 <Link
                   href={`/blog/${Slug.results[0].rich_text.plain_text}`}
                   passHref
                 >
-                  <Typography component="a" variant="h6" color="primary">
+                  <Typography component="a" variant="h6" color="primary" mr={1}>
                     {Title.results[0].title.plain_text}
-                    {Tags.multi_select.map((tag, i) => (
-                      <Chip
-                        key={i}
-                        label={tag.name}
-                        size="small"
-                        sx={{
-                          bgcolor: notionColors(tag.color),
-                          mx: 1,
-                          fontWeight: 400,
-                        }}
-                      />
-                    ))}
                   </Typography>
                 </Link>
-
-                <Typography variant="caption" color="secondary">
-                  {FormatDate.formula.string}
-                </Typography>
+                <Box display="flex" alignItems="center">
+                  {Tags.multi_select.map((tag, i) => (
+                    <Chip
+                      key={i}
+                      label={tag.name}
+                      size="small"
+                      sx={{
+                        bgcolor: notionColors(tag.color),
+                        fontWeight: 400,
+                      }}
+                    />
+                  ))}
+                  <Typography variant="caption" color="text.primary" ml={0.75}>
+                    {FormatDate.formula.string}
+                  </Typography>
+                </Box>
               </Box>
 
               <Typography
