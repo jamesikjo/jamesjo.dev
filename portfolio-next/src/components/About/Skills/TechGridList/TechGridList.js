@@ -1,20 +1,8 @@
 import Image from "next/image";
-import {
-  Stack,
-  Divider,
-  Typography,
-  Grid,
-  Card,
-  CardContent,
-  Box,
-  useTheme,
-} from "@mui/material";
-import { alpha } from "@mui/material/styles";
+import { Typography, Grid, Card, CardContent, Box } from "@mui/material";
 import getStrapiMedia from "../../../../lib/media";
 
 const TechList = ({ stacks }) => {
-  const theme = useTheme();
-
   return stacks.slice(0, 9).map(({ attributes: item }, i) => (
     <Grid item xs={4} key={i}>
       <Box width={1} height={1}>

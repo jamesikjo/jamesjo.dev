@@ -27,6 +27,7 @@ const Bio = ({ bio }) => {
           sx={{ maxWidth: 750 }}
         >
           <ReactMarkdown children={bio.short} />
+          <ReactMarkdown children={bio.long} />
         </Typography>
       </Box>
     </Box>
