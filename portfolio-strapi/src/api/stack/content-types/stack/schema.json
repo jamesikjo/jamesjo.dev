@@ -24,7 +24,11 @@
         "Vercel",
         "Netlify",
         "Heroku",
-        "Javascript"
+        "Javascript",
+        "Typescript",
+        "Notion",
+        "Mongoose",
+        "Express"
       ],
       "required": true
     },
