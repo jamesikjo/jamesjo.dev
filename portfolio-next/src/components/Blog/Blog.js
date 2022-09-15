@@ -54,7 +54,13 @@ const Blog = ({ allPropertyValues }) => {
                   href={`/blog/${Slug.results[0].rich_text.plain_text}`}
                   passHref
                 >
-                  <Typography component="a" variant="h6" color="primary" mr={1}>
+                  <Typography
+                    component="a"
+                    variant="h6"
+                    color="primary"
+                    mr={1}
+                    mb={{ xs: 0.5, sm: 0 }}
+                  >
                     {Title.results[0].title.plain_text}
                   </Typography>
                 </Link>
@@ -67,6 +73,8 @@ const Blog = ({ allPropertyValues }) => {
                       sx={{
                         bgcolor: notionColors(tag.color),
                         fontWeight: 400,
+                        fontSize: ".70rem",
+                        height: "20px",
                       }}
                     />
                   ))}
