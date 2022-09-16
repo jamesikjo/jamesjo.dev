@@ -16,7 +16,6 @@ const MainLayout = ({ children, title }) => {
       <Head>
         <title>{title}</title>
       </Head>
-      {/* add div style for sticky footer */}
       <Box
         sx={{
           minHeight: "100vh",

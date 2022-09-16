@@ -47,16 +47,6 @@ const NavDrawer = ({ navLinks }) => {
             {navLinks.map(({ title, route }) => (
               <ListItem key={title} sx={{ textAlign: "center", py: 1.5 }}>
                 <Link href={route} passHref>
-                  {/* <ListItemText
-                    primary={title}
-                    component="a"
-                    target="_self"
-                    onClick={handleDrawerClose}
-                    primaryTypographyProps={{
-                      align: "center",
-                      variant: "body1",
-                    }}
-                  /> */}
                   <Typography
                     component="a"
                     variant="body1"
