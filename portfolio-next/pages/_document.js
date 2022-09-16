@@ -49,6 +49,23 @@ export default class MyDocument extends Document {
           <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
           <meta name="msapplication-TileColor" content="#da532c" />
           <meta name="theme-color" content="#F9FAFB" />
+          <meta name="description" content="My developer portfolio and blog." />
+          <meta property="og:type" content="website" />
+          <meta property="og:url" content="https://jamesjo.dev/" />
+          <meta property="og:title" content="James Jo - Web Developer" />
+          <meta
+            property="og:description"
+            content="My developer portfolio and blog."
+          />
+          <meta property="og:image" content="/meta-image.png" />
+          <meta property="twitter:card" content="summary_large_image" />
+          <meta property="twitter:url" content="https://jamesjo.dev/" />
+          <meta property="twitter:title" content="James Jo - Web Developer" />
+          <meta
+            property="twitter:description"
+            content="My developer portfolio and blog."
+          />
+          <meta property="twitter:image" content="/meta-image.png" />
         </Head>
         <body
           style={{
