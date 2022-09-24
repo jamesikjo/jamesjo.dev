@@ -20,7 +20,6 @@ export const getStaticPaths = async () => {
 };
 
 export const getStaticProps = async ({ params }) => {
-  //from getStaticPaths
   const { project } = params;
 
   const res = await fetchData("/projects", {
@@ -28,7 +27,6 @@ export const getStaticProps = async ({ params }) => {
     //You can populate either as a whole on the 1st level or
     //populate each field indiviually to populate deeper levels
     //can't combine to do both
-    //look back into this later
     populate: {
       stacks: { populate: "*", sort: ["order"] },
       links: { populate: "*" },
