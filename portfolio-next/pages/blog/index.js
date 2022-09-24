@@ -2,14 +2,14 @@ import { Container } from "@mui/material";
 import { Box } from "@mui/system";
 import { MainLayout } from "../../src/components/Layout";
 import Blog from "../../src/components/Blog";
-import { getAllPropertyValues } from "../../src/lib/notion";
+import { getDatabase } from "../../src/lib/notion";
 
-const BlogPage = ({ allPropertyValues }) => {
+const BlogPage = ({ blogPosts }) => {
   return (
     <Box>
       <MainLayout title="Blog">
         <Container sx={{ maxWidth: 800 }} maxWidth={false}>
-          <Blog allPropertyValues={allPropertyValues} />
+          <Blog blogPosts={blogPosts} />
         </Container>
       </MainLayout>
     </Box>
@@ -19,11 +19,11 @@ const BlogPage = ({ allPropertyValues }) => {
 export default BlogPage;
 
 export const getStaticProps = async () => {
-  const allPropertyValues = await getAllPropertyValues();
+  const blogPosts = await getDatabase();
   return {
     props: {
-      allPropertyValues,
+      blogPosts,
     },
-    revalidate: 1,
+    revalidate: 10,
   };
 };

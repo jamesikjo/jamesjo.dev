@@ -3,7 +3,7 @@ import BreadNavCrumbs from "../BreadNavCrumbs";
 import Link from "next/link";
 import notionColors from "../../lib/notionColors";
 
-const Blog = ({ allPropertyValues }) => {
+const Blog = ({ blogPosts }) => {
   const theme = useTheme();
   const isSm = useMediaQuery(theme.breakpoints.up("sm"));
   return (
@@ -40,9 +40,9 @@ const Blog = ({ allPropertyValues }) => {
         >
           All Posts
         </Typography>
-        {allPropertyValues.map(
-          ({ Description, Slug, Title, FormatDate, Tags }) => (
-            <Box key={Title.results[0].title.plain_text} mb={4}>
+        {blogPosts.map(
+          ({ properties: { Title, Slug, Tags, FormatDate, Description } }) => (
+            <Box key={Title.title[0].plain_text} mb={4}>
               <Box
                 display="flex"
                 alignItems={{ xs: "flex-start", md: "center" }}
@@ -50,10 +50,7 @@ const Blog = ({ allPropertyValues }) => {
                 justifyContent="space-between"
                 mb={1}
               >
-                <Link
-                  href={`/blog/${Slug.results[0].rich_text.plain_text}`}
-                  passHref
-                >
+                <Link href={`/blog/${Slug.rich_text[0].plain_text}`} passHref>
                   <Typography
                     component="a"
                     variant="h6"
@@ -61,17 +58,17 @@ const Blog = ({ allPropertyValues }) => {
                     mr={1}
                     mb={{ xs: 0.5, sm: 0 }}
                   >
-                    {Title.results[0].title.plain_text}
+                    {Title.title[0].plain_text}
                   </Typography>
                 </Link>
                 <Box display="flex" alignItems="center">
-                  {Tags.multi_select.map((tag, i) => (
+                  {Tags.multi_select.map(({ name, color }) => (
                     <Chip
-                      key={i}
-                      label={tag.name}
+                      key={name}
+                      label={name}
                       size="small"
                       sx={{
-                        bgcolor: notionColors(tag.color),
+                        bgcolor: notionColors(color),
                         fontWeight: 400,
                         fontSize: ".70rem",
                         height: "20px",
@@ -89,7 +86,7 @@ const Blog = ({ allPropertyValues }) => {
                 color="secondary"
                 fontWeight="400"
               >
-                {Description.results[0]?.rich_text.plain_text}
+                {Description.rich_text[0]?.plain_text}
               </Typography>
             </Box>
           )
