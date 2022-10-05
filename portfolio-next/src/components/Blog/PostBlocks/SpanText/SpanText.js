@@ -18,7 +18,7 @@ const annotationStyles = (value, props) => {
 
 const SpanText = (props) => {
   const { text, variant, component, id } = props;
-  if (!text) return;
+  if (!text) return null;
 
   return text.map((value, i) => {
     return (
