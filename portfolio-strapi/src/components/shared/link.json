@@ -7,25 +7,6 @@
   },
   "options": {},
   "attributes": {
-    "title": {
-      "type": "enumeration",
-      "enum": [
-        "GitHub",
-        "Repo",
-        "Google Doc",
-        "Notion",
-        "Visit",
-        "Project Page",
-        "Website",
-        "LinkedIn",
-        "Instagram",
-        "Resume",
-        "Visit Page",
-        "Repository",
-        "Project Details"
-      ],
-      "required": false
-    },
     "url": {
       "type": "string",
       "default": "https://"
@@ -33,10 +14,8 @@
     "name": {
       "type": "string"
     },
-    "resume": {
-      "type": "component",
-      "repeatable": true,
-      "component": "shared.resume-link"
+    "title": {
+      "type": "string"
     }
   }
 }

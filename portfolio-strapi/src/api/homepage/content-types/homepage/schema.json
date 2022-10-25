@@ -33,11 +33,6 @@
       "allowedTypes": [
         "images"
       ]
-    },
-    "icon_links": {
-      "type": "component",
-      "repeatable": true,
-      "component": "shared.resume-link"
     }
   }
 }
