@@ -8,32 +8,27 @@ a {
   font-weight: 500;
 }
 
-/* Custom style for fetched Strapi content derived with  <Markdown children={content}/>
-<Markdown> is wrapped in <Typography component="div"> */
+/* Custom style for fetched Strapi markdown content
+ */
 
-div.markdown p{
+.markdown p {
   margin: 0;
-  line-height: 28px
+  line-height: 28px;
+  font-weight: 400;
 }
 
-div.markdown ul{
+.markdown ul {
   padding-left: 20px;
 }
 
-div.markdown ul li::marker{
-  color:#5c5c5c;
+.markdown ul li::marker {
+  color: #5c5c5c;
 }
 
-div.markdown li:not(:last-child) {
-  margin-bottom: 5px;
+.markdown li:not(:last-child) {
+  margin-bottom: 10px;
 }
 
-div.markdown strong {
-  font-weight: 500;
+.markdown strong {
+  font-weight: 600;
 }
-
-div.markdown.links li:not(:last-child) {
-  margin-bottom: 0px;
-}
-
-
