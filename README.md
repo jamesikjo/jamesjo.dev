@@ -8,7 +8,9 @@ This is my developer portfolio, which includes highlights of my noteworthy proje
 
 ## Technologies
 
-- **Framework**: [Next.js](https://nextjs.org)
+- **Framework**:
+  - [Next.js](https://nextjs.org)
+  - [TypeScript](https://www.typescriptlang.org/)
 - **Styling**: [MUI](https://mui.org)
 - **Content (Portfolio)**: [Strapi](https://strapi.org)
 - **Content (Blog)**: [Notion API](https://developers.notion.com/reference/intro)
