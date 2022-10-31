@@ -59,7 +59,7 @@ const ProjectLayout = ({ singleProject }: ProjectLayoutProps) => {
                     target="_blank"
                     sx={{ p: 0, pr: 1.1 }}
                   >
-                    {link.title !== "Repository" ? (
+                    {link.title === "Repository" ? (
                       <GitHubIcon sx={{ fontSize: "1.6rem" }} />
                     ) : (
                       <OpenInNewIcon sx={{ fontSize: "1.8rem", pt: "2px" }} />
