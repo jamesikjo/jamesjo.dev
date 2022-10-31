@@ -5,8 +5,10 @@ interface ButtonProps {
   variant?: "text";
   color?: "primary";
   size?: "medium";
-  href: string;
+  href: Href;
 }
+
+type Href = string | undefined;
 
 const GitHubButton = ({
   size = "medium",
@@ -16,6 +18,9 @@ const GitHubButton = ({
 }: ButtonProps) => {
   const theme = useTheme();
   const isSm = useMediaQuery(theme.breakpoints.up("sm"));
+
+  if (!href) return null;
+
   return (
     <>
       {isSm ? (

@@ -103,7 +103,7 @@ const CardList = ({ latestProjects }: CardListProps) => {
                 </Button>
               </Link>
               <Stack direction="row" spacing={{ xs: 0, sm: 1 }}>
-                <GitHubButton href={attributes.github.url} />
+                <GitHubButton href={attributes?.github?.url} />
                 <VisitSiteButton href={attributes.visit.url} />
               </Stack>
             </Stack>
