@@ -3,6 +3,8 @@ import Document, { Html, Head, Main, NextScript } from "next/document";
 import createEmotionServer from "@emotion/server/create-instance";
 import createEmotionCache from "../src/utils/createEmotionCache";
 
+const isProd = process.env.NODE_ENV === "production";
+
 export default class MyDocument extends Document {
   render() {
     return (
@@ -28,6 +30,13 @@ export default class MyDocument extends Document {
         >
           <Main />
           <NextScript />
+          {isProd && (
+            <script
+              defer
+              src="https://static.cloudflareinsights.com/beacon.min.js"
+              data-cf-beacon={`{"token": "${process.env.CLOUDFLARE_TOKEN}"}`}
+            />
+          )}
         </body>
       </Html>
     );
