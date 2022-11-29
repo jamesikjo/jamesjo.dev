@@ -1,4 +1,4 @@
-### <img src="https://res.cloudinary.com/jjo/image/upload/c_scale,h_100/v1651530311/Portfolio/Profile/JJ_f59a4z.svg" width="125">
+### <img src="https://res.cloudinary.com/jjo/image/upload/v1651530311/Portfolio/Profile/jjo-light.svg" width="125">
 
 # jamesjo.dev
 
