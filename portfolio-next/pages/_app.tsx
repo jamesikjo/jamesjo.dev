@@ -1,7 +1,7 @@
 import * as React from "react";
 import type { AppProps } from "next/app";
 import { CacheProvider, EmotionCache } from "@emotion/react";
-import { ThemeProvider, CssBaseline } from "@mui/material";
+import { ThemeProvider, CssBaseline, PaletteMode } from "@mui/material";
 import createEmotionCache from "../src/utils/createEmotionCache";
 import globalTheme from "../styles/globalTheme";
 import mailgo from "mailgo";
@@ -12,10 +12,28 @@ interface MyAppProps extends AppProps {
   emotionCache?: EmotionCache;
 }
 
+interface ColorModeContext {
+  mode: PaletteMode;
+  colorMode: { toggleColorMode: () => void };
+}
+
+export const ColorModeContext = React.createContext({} as ColorModeContext);
+
 const clientSideEmotionCache = createEmotionCache();
 
 const MyApp: React.FunctionComponent<MyAppProps> = (props) => {
   const { Component, emotionCache = clientSideEmotionCache, pageProps } = props;
+
+  const [mode, setMode] = React.useState<PaletteMode>("light");
+
+  const colorMode = React.useMemo(
+    () => ({
+      toggleColorMode: () => {
+        setMode((prevMode) => (prevMode === "light" ? "dark" : "light"));
+      },
+    }),
+    []
+  );
 
   React.useEffect(() => {
     mailgo({ showFooter: false });
@@ -23,10 +41,12 @@ const MyApp: React.FunctionComponent<MyAppProps> = (props) => {
 
   return (
     <CacheProvider value={emotionCache}>
-      <ThemeProvider theme={globalTheme}>
-        <CssBaseline />
-        <Component {...pageProps} />
-      </ThemeProvider>
+      <ColorModeContext.Provider value={{ mode, colorMode }}>
+        <ThemeProvider theme={globalTheme(mode)}>
+          <CssBaseline />
+          <Component {...pageProps} />
+        </ThemeProvider>
+      </ColorModeContext.Provider>
     </CacheProvider>
   );
 };

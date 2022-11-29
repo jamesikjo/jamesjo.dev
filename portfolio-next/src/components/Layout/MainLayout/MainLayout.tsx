@@ -3,6 +3,8 @@ import { useRouter } from "next/router";
 import { Box } from "@mui/material";
 import TopBar from "./TopBar/";
 import Footer from "./Footer";
+import { useContext } from "react";
+import { ColorModeContext } from "../../../../pages/_app";
 
 const NAV_LINKS = [
   { title: "About", path: "/about" },
@@ -25,6 +27,12 @@ interface MainLayoutProps {
 
 const MainLayout = ({ children, title }: MainLayoutProps) => {
   const router = useRouter();
+  const { mode } = useContext(ColorModeContext);
+
+  const mainLogo =
+    mode === "light"
+      ? "https://res.cloudinary.com/jjo/image/upload/v1651530311/Portfolio/Profile/jjo-light.svg"
+      : "https://res.cloudinary.com/jjo/image/upload/v1669679560/Portfolio/Profile/jjo-dark.svg";
 
   return (
     <>
@@ -58,9 +66,9 @@ const MainLayout = ({ children, title }: MainLayoutProps) => {
           scrollBehavior: "smooth",
         }}
       >
-        <TopBar navLinks={NAV_LINKS} />
+        <TopBar navLinks={NAV_LINKS} mainLogo={mainLogo} />
         {children}
-        <Footer navLinks={NAV_LINKS} />
+        <Footer navLinks={NAV_LINKS} mainLogo={mainLogo} />
       </Box>
     </>
   );

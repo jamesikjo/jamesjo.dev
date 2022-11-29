@@ -11,12 +11,14 @@ import {
   Typography,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
+import ModeIconButton from "../../ModeIconButton";
 
 interface NavSideBarProps {
   navLinks: { title: string; path: string }[];
+  mainLogo: string;
 }
 
-const NavSideBar = ({ navLinks }: NavSideBarProps) => {
+const NavSideBar = ({ navLinks, mainLogo }: NavSideBarProps) => {
   const [open, setOpen] = useState(false);
 
   const handleDrawerOpen = () => {
@@ -35,11 +37,6 @@ const NavSideBar = ({ navLinks }: NavSideBarProps) => {
         </IconButton>
       </Box>
       <Drawer
-        PaperProps={{
-          sx: {
-            bgcolor: "#F9FAFB",
-          },
-        }}
         variant="temporary"
         anchor="right"
         open={open}
@@ -62,15 +59,14 @@ const NavSideBar = ({ navLinks }: NavSideBarProps) => {
                 </Link>
               </ListItem>
             ))}
+            <Box display="flex" justifyContent="center">
+              <ModeIconButton />
+            </Box>
           </List>
           <Divider sx={{ mb: 2 }} />
           <Box display="flex" justifyContent="center">
             <Box width={50} height={45} position="relative">
-              <Image
-                src="https://res.cloudinary.com/jjo/image/upload/v1651530311/Portfolio/Profile/JJ_f59a4z.svg"
-                alt="Nav drawer logo"
-                layout="fill"
-              />
+              <Image src={mainLogo} alt="Nav drawer logo" layout="fill" />
             </Box>
           </Box>
         </Box>

@@ -1,15 +1,20 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useRouter } from "next/router";
 import Link from "next/link";
 import Image from "next/image";
-import { AppBar, Container, Button, Stack, Box } from "@mui/material";
+import { AppBar, Container, Button, Stack, Box, useTheme } from "@mui/material";
 import NavSideBar from "./NavSideBar";
+import { ColorModeContext } from "../../../../../pages/_app";
+import ModeIconButton from "../ModeIconButton";
 
 interface TopBarProps {
   navLinks: { title: string; path: string }[];
+  mainLogo: string;
 }
 
-const TopBar = ({ navLinks }: TopBarProps) => {
+const TopBar = ({ navLinks, mainLogo }: TopBarProps) => {
+  const { colorMode } = useContext(ColorModeContext);
+  const theme = useTheme();
   const router = useRouter();
 
   const activeLinkStyles = (path: string) => {
@@ -44,16 +49,12 @@ const TopBar = ({ navLinks }: TopBarProps) => {
       >
         <Link href="/" passHref>
           <Box component="a" width={80} height={50} position="relative">
-            <Image
-              src="https://res.cloudinary.com/jjo/image/upload/v1651530311/Portfolio/Profile/JJ_f59a4z.svg"
-              alt="James Jo"
-              layout="fill"
-            />
+            <Image src={mainLogo} alt="James Jo" layout="fill" />
           </Box>
         </Link>
         <Stack
           direction="row"
-          spacing={0.5}
+          // spacing={0.5}
           sx={{
             display: { xs: "none", md: "block" },
           }}
@@ -74,8 +75,9 @@ const TopBar = ({ navLinks }: TopBarProps) => {
               </Link>
             </React.Fragment>
           ))}
+          <ModeIconButton />
         </Stack>
-        <NavSideBar navLinks={navLinks} />
+        <NavSideBar navLinks={navLinks} mainLogo={mainLogo} />
       </Container>
     </AppBar>
   );

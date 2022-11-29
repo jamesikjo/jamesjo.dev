@@ -53,7 +53,6 @@ const Contact = ({ contact }: ContactProps) => {
         <Typography
           component="a"
           href={`mailto:${email}`}
-          color="info.main"
           variant="subtitle1"
           fontWeight="500"
           sx={{

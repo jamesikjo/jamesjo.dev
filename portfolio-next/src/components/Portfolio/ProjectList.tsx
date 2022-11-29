@@ -72,6 +72,7 @@ const ProjectList = ({ projects }: ProjectListProps) => {
                       opacity: 0,
                       px: 1,
                       bgcolor: "info.main",
+                      color: "#fff",
                       "&: hover": { bgcolor: "info.dark" },
                     }}
                   >

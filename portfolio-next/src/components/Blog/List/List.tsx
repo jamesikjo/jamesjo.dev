@@ -3,6 +3,8 @@ import BreadNavCrumbs from "../../BreadNavCrumbs";
 import Link from "next/link";
 import notionColors from "../../../utils/notionColors";
 import { BlogProperties } from "../../../types/notion/Interface";
+import { useContext } from "react";
+import { ColorModeContext } from "../../../../pages/_app";
 
 interface ListProps {
   blogProperties: BlogProperties[];
@@ -81,7 +83,7 @@ const List = ({ blogProperties }: ListProps) => {
                       }}
                     />
                   ))}
-                  <Typography variant="caption" color="text.primary" ml={0.75}>
+                  <Typography variant="caption" color="primary" ml={0.75}>
                     {formatDate.formula.string}
                   </Typography>
                 </Box>

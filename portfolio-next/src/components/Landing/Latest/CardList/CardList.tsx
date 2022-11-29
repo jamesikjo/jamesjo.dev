@@ -35,7 +35,7 @@ const CardList = ({ latestProjects }: CardListProps) => {
           borderRadius={1}
           sx={{
             border: { xs: "none", sm: `0.5px solid #c9cfd6` },
-            bgcolor: { xs: "none", sm: "common.white" },
+            bgcolor: { xs: "none", sm: theme.palette.background.paper },
           }}
         >
           <Box

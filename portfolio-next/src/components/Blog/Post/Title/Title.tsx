@@ -11,7 +11,12 @@ const Title = ({ blogPost }: TitleProps) => {
   const { title, author, tags, formatDate } = blogPost;
   return (
     <Box mb={4}>
-      <Typography variant="h4" component="h1" sx={{ fontWeight: 600 }}>
+      <Typography
+        variant="h4"
+        component="h1"
+        sx={{ fontWeight: 600 }}
+        color="primary"
+      >
         {title}
       </Typography>
       <Box display="flex" alignItems="center" mt={2}>

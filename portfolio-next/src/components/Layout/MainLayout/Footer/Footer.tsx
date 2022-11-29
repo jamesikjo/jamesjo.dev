@@ -15,10 +15,11 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 
 interface FooterProps {
   navLinks: { title: string; path: string }[];
+  mainLogo: string;
 }
 
-//TODO: Store footer content to Strapi
-const Footer = ({ navLinks }: FooterProps) => {
+//TODO: Store footer links to Strapi CMS
+const Footer = ({ navLinks, mainLogo }: FooterProps) => {
   return (
     <Box component="footer" sx={{ py: 6, mt: "auto" }} id="contact">
       <Container sx={{ maxWidth: 800 }} maxWidth={false}>
@@ -26,7 +27,7 @@ const Footer = ({ navLinks }: FooterProps) => {
           <Link href="/" passHref>
             <Box width={60} height={45} position="relative" component="a">
               <Image
-                src="https://res.cloudinary.com/jjo/image/upload/v1651530311/Portfolio/Profile/JJ_f59a4z.svg"
+                src={mainLogo}
                 alt="footer logo"
                 layout="fill"
                 objectFit="contain"

@@ -150,7 +150,6 @@ const ProjectLayout = ({ singleProject }: ProjectLayoutProps) => {
                 component="a"
                 target="_blank"
                 href={link.url}
-                color="info.main"
                 fontWeight="500"
               >
                 {link.name}
