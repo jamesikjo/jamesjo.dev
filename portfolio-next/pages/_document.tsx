@@ -23,11 +23,7 @@ export default class MyDocument extends Document {
           <meta name="emotion-insertion-point" content="" />
           {(this.props as any).emotionStyleTags}
         </Head>
-        <body
-          style={{
-            backgroundColor: "#F9FAFB",
-          }}
-        >
+        <body>
           <Main />
           <NextScript />
           {isProd && (
