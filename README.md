@@ -13,7 +13,7 @@ This is my developer portfolio, which includes highlights of my noteworthy proje
 - **Styling**: [MUI](https://mui.org)
 - **Content (Portfolio)**: [Strapi](https://strapi.org)
 - **Content (Blog)**: [Notion API](https://developers.notion.com/reference/intro)
-- **Deployment**: [Vercel](https://nextjs.org) & [Heroku](https://heroku.com)
+- **Deployment**: [Vercel](https://nextjs.org) & [Railway](https://railway.app)
 
 ## Project Overview
 
