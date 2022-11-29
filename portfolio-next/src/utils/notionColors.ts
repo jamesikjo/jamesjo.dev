@@ -25,7 +25,7 @@ const notionColors = (color: string) => {
       return "#FBE4E4";
 
     default:
-      return "EBECED";
+      return "#E5E6E7";
   }
 };
 
