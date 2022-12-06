@@ -1,53 +1,61 @@
 import * as React from "react";
-import type { AppProps } from "next/app";
+import { AppProps } from "next/app";
 import { CacheProvider, EmotionCache } from "@emotion/react";
-import { ThemeProvider, CssBaseline, PaletteMode } from "@mui/material";
+import {
+  ThemeProvider,
+  CssBaseline,
+  PaletteMode,
+  GlobalStyles,
+} from "@mui/material";
 import createEmotionCache from "../src/utils/createEmotionCache";
 import globalTheme from "../styles/globalTheme";
+import { globalStyles } from "../styles/globalTheme";
 import mailgo from "mailgo";
-
+import { ThemeProvider as NextThemeProvider } from "next-themes";
+import { useTheme } from "next-themes";
 import "../styles/globals.css";
 
 interface MyAppProps extends AppProps {
   emotionCache?: EmotionCache;
 }
 
-interface ColorModeContext {
-  mode: PaletteMode;
-  colorMode: { toggleColorMode: () => void };
-}
-
-export const ColorModeContext = React.createContext({} as ColorModeContext);
-
 const clientSideEmotionCache = createEmotionCache();
 
-const MyApp: React.FunctionComponent<MyAppProps> = (props) => {
-  const { Component, emotionCache = clientSideEmotionCache, pageProps } = props;
+function ThemeProviderMUI({ children }: { children: React.ReactNode }) {
+  const { resolvedTheme } = useTheme();
+  const [mode, setMode] = React.useState("light");
 
-  const [mode, setMode] = React.useState<PaletteMode>("light");
+  React.useEffect(() => {
+    resolvedTheme === "light" ? setMode("light") : setMode("dark");
+  }, [resolvedTheme]);
 
-  const colorMode = React.useMemo(
-    () => ({
-      toggleColorMode: () => {
-        setMode((prevMode) => (prevMode === "light" ? "dark" : "light"));
-      },
-    }),
-    []
+  return (
+    <>
+      <ThemeProvider theme={globalTheme(mode as PaletteMode)}>
+        <CssBaseline />
+        <GlobalStyles styles={globalStyles} />
+
+        {children}
+      </ThemeProvider>
+    </>
   );
+}
+
+const MyApp = (props: MyAppProps) => {
+  const { Component, emotionCache = clientSideEmotionCache, pageProps } = props;
 
   React.useEffect(() => {
     mailgo({ showFooter: false });
   }, []);
 
   return (
-    <CacheProvider value={emotionCache}>
-      <ColorModeContext.Provider value={{ mode, colorMode }}>
-        <ThemeProvider theme={globalTheme(mode)}>
-          <CssBaseline />
+    <NextThemeProvider>
+      <CacheProvider value={emotionCache}>
+        <ThemeProviderMUI>
           <Component {...pageProps} />
-        </ThemeProvider>
-      </ColorModeContext.Provider>
-    </CacheProvider>
+        </ThemeProviderMUI>
+      </CacheProvider>
+    </NextThemeProvider>
   );
 };
 
