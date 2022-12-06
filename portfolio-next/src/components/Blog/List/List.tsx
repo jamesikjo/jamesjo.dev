@@ -3,8 +3,6 @@ import BreadNavCrumbs from "../../BreadNavCrumbs";
 import Link from "next/link";
 import notionColors from "../../../utils/notionColors";
 import { BlogProperties } from "../../../types/notion/Interface";
-import { useContext } from "react";
-import { ColorModeContext } from "../../../../pages/_app";
 
 interface ListProps {
   blogProperties: BlogProperties[];

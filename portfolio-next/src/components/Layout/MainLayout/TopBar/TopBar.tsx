@@ -4,8 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { AppBar, Container, Button, Stack, Box, useTheme } from "@mui/material";
 import NavSideBar from "./NavSideBar";
-import { ColorModeContext } from "../../../../../pages/_app";
-import ModeIconButton from "../ModeIconButton";
+import ColorModeButton from "../ColorModeButton";
 
 interface TopBarProps {
   navLinks: { title: string; path: string }[];
@@ -13,8 +12,6 @@ interface TopBarProps {
 }
 
 const TopBar = ({ navLinks, mainLogo }: TopBarProps) => {
-  const { colorMode } = useContext(ColorModeContext);
-  const theme = useTheme();
   const router = useRouter();
 
   const activeLinkStyles = (path: string) => {
@@ -75,7 +72,7 @@ const TopBar = ({ navLinks, mainLogo }: TopBarProps) => {
               </Link>
             </React.Fragment>
           ))}
-          <ModeIconButton />
+          <ColorModeButton />
         </Stack>
         <NavSideBar navLinks={navLinks} mainLogo={mainLogo} />
       </Container>
