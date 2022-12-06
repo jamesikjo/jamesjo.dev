@@ -1,11 +1,9 @@
 import Head from "next/head";
 import { useRouter } from "next/router";
-import { Box } from "@mui/material";
+import { Box, useTheme } from "@mui/material";
 import TopBar from "./TopBar/";
 import Footer from "./Footer";
-import { useContext } from "react";
-import { ColorModeContext } from "../../../../pages/_app";
-import globalTheme from "../../../../styles/globalTheme";
+
 const NAV_LINKS = [
   { title: "About", path: "/about" },
   { title: "Blog", path: "/blog" },
@@ -27,21 +25,20 @@ interface MainLayoutProps {
 
 const MainLayout = ({ children, title }: MainLayoutProps) => {
   const router = useRouter();
-  const { mode } = useContext(ColorModeContext);
+  const theme = useTheme();
 
   const mainLogo =
-    mode === "light"
+    theme.palette.mode === "light"
       ? "https://res.cloudinary.com/jjo/image/upload/v1651530311/Portfolio/Profile/jjo-light.svg"
       : "https://res.cloudinary.com/jjo/image/upload/v1669679560/Portfolio/Profile/jjo-dark.svg";
+
+  const themeColor = theme.palette.mode === "light" ? "#F9FAFB" : "#0E141B";
 
   return (
     <>
       <Head>
         <title>{title || meta.title}</title>
-        <meta
-          name="theme-color"
-          content={globalTheme(mode).palette.background.default}
-        />
+        <meta name="theme-color" content={themeColor} />
         <meta name="description" content={meta.description} />
         <link rel="canonical" href={`https://jamesjo.dev${router.asPath}`} />
         <meta
