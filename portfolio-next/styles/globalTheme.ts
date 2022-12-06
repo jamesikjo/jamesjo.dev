@@ -1,4 +1,4 @@
-import { createTheme } from "@mui/material/styles";
+import { createTheme, css } from "@mui/material/styles";
 import { blue } from "@mui/material/colors";
 import { PaletteMode } from "@mui/material";
 
@@ -87,5 +87,21 @@ const globalTheme = (mode: PaletteMode) =>
       },
     },
   });
+
+export const globalStyles = css`
+  :root {
+    body {
+      background-color: #f9fafb;
+      color: #5c5c5c;
+    }
+  }
+
+  [data-theme="dark"] {
+    body {
+      background-color: #0e141b;
+      color: #b2b9c0;
+    }
+  }
+`;
 
 export default globalTheme;
