@@ -11,7 +11,7 @@ import {
   Typography,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
-import ModeIconButton from "../../ModeIconButton";
+import ColorModeButton from "../../ColorModeButton";
 
 interface NavSideBarProps {
   navLinks: { title: string; path: string }[];
@@ -60,7 +60,7 @@ const NavSideBar = ({ navLinks, mainLogo }: NavSideBarProps) => {
               </ListItem>
             ))}
             <Box display="flex" justifyContent="center">
-              <ModeIconButton />
+              <ColorModeButton />
             </Box>
           </List>
           <Divider sx={{ mb: 2 }} />
