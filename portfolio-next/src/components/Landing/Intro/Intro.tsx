@@ -38,7 +38,7 @@ const Intro = ({ profile }: IntroProps) => {
             component="h2"
             color="primary"
             fontWeight="400"
-            mb={1}
+            mb={-1}
             sx={{ letterSpacing: "-.05rem" }}
           >
             {profession}
@@ -48,7 +48,8 @@ const Intro = ({ profile }: IntroProps) => {
             variant={isSm ? "subtitle1" : "subtitle2"}
             color="secondary"
             component="div"
-            className="markdown"
+            fontWeight="400"
+            // className="markdown"
             pr={{ xs: 0, md: 3 }}
           >
             <ReactMarkdown>{intro}</ReactMarkdown>
