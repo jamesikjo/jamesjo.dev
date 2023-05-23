@@ -2,7 +2,7 @@
 
 # jamesjo.dev
 
-This is my developer portfolio, which includes highlights of my projects.
+This is my developer portfolio, featuring a few highlights of my projects.
 
 [Website](https://jamesjo.dev)
 
