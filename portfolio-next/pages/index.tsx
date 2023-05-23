@@ -6,7 +6,6 @@ import {
   NoSsr,
   Grid,
   Typography,
-  Grow,
   useTheme,
   useMediaQuery,
   Fade,
