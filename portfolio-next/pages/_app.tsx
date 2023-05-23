@@ -1,18 +1,11 @@
 import * as React from "react";
 import { AppProps } from "next/app";
+import Head from "next/head";
 import { CacheProvider, EmotionCache } from "@emotion/react";
-import {
-  ThemeProvider,
-  CssBaseline,
-  PaletteMode,
-  GlobalStyles,
-} from "@mui/material";
+import { ThemeProvider, CssBaseline, GlobalStyles } from "@mui/material";
 import createEmotionCache from "../src/utils/createEmotionCache";
-import globalTheme from "../styles/globalTheme";
-import { globalStyles } from "../styles/globalTheme";
+import theme, { globalStyles } from "../styles/globalTheme";
 import mailgo from "mailgo";
-import { ThemeProvider as NextThemeProvider } from "next-themes";
-import { useTheme } from "next-themes";
 import "../styles/globals.css";
 
 interface MyAppProps extends AppProps {
@@ -20,26 +13,6 @@ interface MyAppProps extends AppProps {
 }
 
 const clientSideEmotionCache = createEmotionCache();
-
-function ThemeProviderMUI({ children }: { children: React.ReactNode }) {
-  const { resolvedTheme } = useTheme();
-  const [mode, setMode] = React.useState("light");
-
-  React.useEffect(() => {
-    resolvedTheme === "light" ? setMode("light") : setMode("dark");
-  }, [resolvedTheme]);
-
-  return (
-    <>
-      <ThemeProvider theme={globalTheme(mode as PaletteMode)}>
-        <CssBaseline />
-        <GlobalStyles styles={globalStyles} />
-
-        {children}
-      </ThemeProvider>
-    </>
-  );
-}
 
 const MyApp = (props: MyAppProps) => {
   const { Component, emotionCache = clientSideEmotionCache, pageProps } = props;
@@ -49,13 +22,19 @@ const MyApp = (props: MyAppProps) => {
   }, []);
 
   return (
-    <NextThemeProvider>
+    <>
+      <Head>
+        <title>James Jo | Software Developer</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </Head>
       <CacheProvider value={emotionCache}>
-        <ThemeProviderMUI>
+        <ThemeProvider theme={theme}>
+          <CssBaseline />
+          <GlobalStyles styles={globalStyles} />
           <Component {...pageProps} />
-        </ThemeProviderMUI>
+        </ThemeProvider>
       </CacheProvider>
-    </NextThemeProvider>
+    </>
   );
 };
 
