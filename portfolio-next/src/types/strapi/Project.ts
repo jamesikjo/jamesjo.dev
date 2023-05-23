@@ -1,5 +1,3 @@
-import { Stack } from "./Stack";
-
 export interface Project {
   id: number;
   attributes: {
@@ -12,7 +10,6 @@ export interface Project {
     type: string;
     links: Link[];
     preview: Preview;
-    stacks: { data: Stack[] };
     thumbnail: Thumbnail;
     created_at: Date;
     updated_at: Date;
