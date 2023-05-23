@@ -10,11 +10,21 @@ export default class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
+          <meta charSet="utf-8" />
           <link rel="shortcut icon" href="/favicon.ico" />
+          <meta name="theme-color" content="#1D1D20" />
+          <meta name="description" content="Developer Portfolio" />
+          <meta property="og:locale" content="en_US" />
+          <meta property="og:type" content="website" />
+          <meta property="og:image" content="/meta-image.png" />
+          <meta property="og:site_name" content="jamesjo.dev" />
+          <meta property="og:url" content="https://jamesjo.dev" />
+          <meta property="og:title" content="James Jo | Software Developer" />
+          <meta property="og:description" content="Developer Portfolio" />
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link rel="preconnect" href="https://fonts.gstatic.com" />
           <link
-            href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap"
             rel="stylesheet"
           />
           <meta name="emotion-insertion-point" content="" />
