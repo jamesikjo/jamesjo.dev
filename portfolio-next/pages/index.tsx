@@ -12,7 +12,7 @@ import {
 } from "@mui/material";
 import { fetchStrapi } from "../src/lib/strapi/fetchStrapi";
 import { Project as ProjectType } from "../src/types/strapi/Project";
-import { Profile } from "../src/types/strapi/Profile";
+import { About } from "../src/types/strapi/About";
 import { generateRandomColors } from "../src/utils/colorUtils";
 import {
   Welcome,
@@ -24,7 +24,7 @@ import {
 } from "../src/components";
 
 interface APICall {
-  profileData: Profile;
+  profileData: About;
   projectData: ProjectType[];
 }
 
@@ -37,6 +37,7 @@ const Home: NextPage<APICall> = ({ profileData, projectData }) => {
     defaultMatches: true,
   });
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   const colors = useMemo(() => generateRandomColors(), [selectedProject]);
 
   const selectedProjectData = useMemo(() => {
@@ -148,7 +149,7 @@ export default Home;
 
 export const getStaticProps: GetStaticProps = async () => {
   const profileRes = await fetchStrapi<{ data: { attributes: APICall } }>(
-    "/homepage",
+    "/about",
     { populate: "*" }
   );
 

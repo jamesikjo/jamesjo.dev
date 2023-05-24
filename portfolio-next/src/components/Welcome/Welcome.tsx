@@ -1,11 +1,11 @@
 /* eslint-disable react/no-unescaped-entities */
 import { Box, Typography, useTheme, useMediaQuery } from "@mui/material";
 import { animated, useSpring } from "@react-spring/web";
-import { Profile } from "../../types/strapi/Profile";
+import { About } from "../../types/strapi/About";
 
 interface WelcomeProps {
   colors: { color1: string; color2: string };
-  profileData: Profile;
+  profileData: About;
 }
 const AnimatedPath = animated("path");
 
@@ -15,7 +15,7 @@ const Welcome = ({ colors, profileData }: WelcomeProps) => {
     defaultMatches: true,
   });
 
-  const { intro, contact } = profileData;
+  const { long, short } = profileData;
   const { color1, color2 } = colors;
 
   const verticalLineStyle = {
@@ -85,7 +85,7 @@ const Welcome = ({ colors, profileData }: WelcomeProps) => {
             },
           }}
         >
-          {intro}
+          {long}
         </Typography>
         <Typography
           color="primary"
@@ -96,7 +96,7 @@ const Welcome = ({ colors, profileData }: WelcomeProps) => {
             },
           }}
         >
-          {contact.description}
+          {short}
         </Typography>
       </Box>
     </Box>
