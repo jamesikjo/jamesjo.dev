@@ -12,20 +12,11 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "bio": {
-      "type": "component",
-      "repeatable": false,
-      "component": "sections.bio"
+    "long": {
+      "type": "richtext"
     },
-    "skills": {
-      "type": "component",
-      "repeatable": false,
-      "component": "sections.skills"
-    },
-    "links": {
-      "type": "component",
-      "repeatable": true,
-      "component": "shared.link"
+    "short": {
+      "type": "richtext"
     }
   }
 }
